@@ -1,0 +1,405 @@
+Apollo Guidance Computer (AGC) assembler, version TBD, built Jul 12 2021, target AGC4
+(c)2003-2005,2009-2010,2016-2018 Ronald S. Burkey
+Refer to http://www.ibiblio.org/apollo/index.html for more information.
+Pass #1
+Pass #2
+Pass #3
+000001,000001: 
+000002,000002:                                                                                         	# Test Program:  This program tests the assembly instructions.
+000003,000003:                                                                                         	#                The more common instructions are tested by the
+000004,000004:                                                                                         	#                very nature of using them.  There are a number
+000005,000005:                                                                                         	#                of lesser used instructions that are specifically
+000006,000006:                                                                                         	#                tested such as MP, DV, SU, MSU, AUG and DIM.
+000007,000007: 
+000008,000008:                                                                                         	# Output: The output of whether or not a specific sub-test passed
+000009,000009:                                                                                         	#         is sent to the DSKY display.  A 1 indicates success and
+000010,000010:                                                                                         	#         a 0 indicates the test failed.  Each sub-test is assigned
+000011,000011:                                                                                         	#         a specific 7-segment LED using the AGC designators.
+000012,000012: 
+000013,000013:                                                                                         	#         R1D1 =
+000014,000014:                                                                                         	#         R1D2 =
+000015,000015:                                                                                         	#         R1D3 =
+000016,000016:                                                                                         	#         R1D4 =
+000017,000017:                                                                                         	#         R1D5 =
+000018,000018:                                                                                         	#         R2D1 =
+000019,000019:                                                                                         	#         R2D2 =
+000020,000020:                                                                                         	#         R2D3 =
+000021,000021:                                                                                         	#         R2D4 =
+000022,000022:                                                                                         	#         R2D5 = CYL, CYR, SR, EDOP
+000023,000023:                                                                                         	#         R3D1 = DCS
+000024,000024:                                                                                         	#         R3D2 = SU & MSU
+000025,000025:                                                                                         	#         R3D3 = AUG & DIM
+000026,000026:                                                                                         	#         R3D4 = Divide
+000027,000027:                                                                                         	#         R3D5 = Multiply
+000028,000028: 
+000029,000029:                                                                                         	# The general structure of each sub-test is once a failure is
+000030,000030:                                                                                         	# detected, the entire sub-test stops and is flagged as failed.
+000031,000031: 
+000032,000032: 
+000033,000033:                                                                                         	# Erasable memory definitions and constants.
+000034,000034:    0061                                          SETLOC   61                            	#
+000035,000035: 
+000036,000036:    0061                        MPLOC             ERASE                                  	#
+000037,000037:    0062                        DVLOC             ERASE                                  	#
+000038,000038:    0063                        AUGLOC            ERASE                                  	#
+000039,000039:    0064                        SULOC             ERASE                                  	#
+000040,000040:    0065                        MSULOC            ERASE                                  	#
+000041,000041:    0066                        DCS1LOC           ERASE                                  	#
+000042,000042:    0067                        DCS2LOC           ERASE                                  	#
+000043,000043: 
+000044,000044:                                                                                         	# These are the relay words
+000045,000045:    0070                        DSPTAB            ERASE    +11D                          	#
+000046,000046: 
+000047,000047:                                                                                         	# Various constants
+000048,000048:    0104                        OUT0              EQUALS   10                            	#
+000049,000049:    0104                        A                 EQUALS   0                             	#
+000050,000050:    0104                        L                 EQUALS   1                             	#
+000051,000051:    0104                        Q                 EQUALS   2                             	#
+000052,000052:    0104                        CYR               EQUALS   20                            	#
+000053,000053:    0104                        SR                EQUALS   21                            	#
+000054,000054:    0104                        CYL               EQUALS   22                            	#
+000055,000055:    0104                        EDOP              EQUALS   23                            	#
+000056,000056: 
+000057,000057:                                                                                         	# Program Start
+000058,000058:    4000                                          SETLOC   4000                          	#
+000059,000059: 
+000060,000060:                                                                                         	# Setup Memory
+000061,000061:    4000           34333                          CAF      DSP10                         	#
+000062,000062:    4001           54102                          TS       DSPTAB     +10D               	#
+000063,000063:    4002           34334                          CAF      DSP9                          	#
+000064,000064:    4003           54101                          TS       DSPTAB     +9D                	#
+000065,000065:    4004           34335                          CAF      DSP8                          	#
+000066,000066:    4005           54100                          TS       DSPTAB     +8D                	#
+000067,000067:    4006           34361                          CAF      AUGVAL                        	#
+000068,000068:    4007           54063                          TS       AUGLOC                        	#
+000069,000069:    4010           34364                          CAF      SUVAL                         	#
+000070,000070:    4011           54064                          TS       SULOC                         	#
+000071,000071:    4012           34366                          CAF      MSUVAL                        	#
+000072,000072:    4013           54065                          TS       MSULOC                        	#
+000073,000073:    4014           34371                          CAF      DCS1VAL                       	#
+000074,000074:    4015           54066                          TS       DCS1LOC                       	#
+000075,000075:    4016           34372                          CAF      DCS2VAL                       	#
+000076,000076:    4017           54067                          TS       DCS2LOC                       	#
+000077,000077: 
+000078,000078:                                                                                         	# Test Multiply:  This tests both examples detailed in the 
+000079,000079:                                                                                         	#                 agcis_32_blk2_instructions.pdf manual.
+000080,000080:                                                                                         	#                 There are two examples; both operator and
+000081,000081:                                                                                         	#                 operand are positive and one is positive
+000082,000082:                                                                                         	#                 and the other is negative.  
+000083,000083: 
+000084,000084:                                                                                         	# Test Multiply #1: both positive
+000085,000085:    4020           34346        TESTMP1           CAF      MULTK1                        	#
+000086,000086:    4021           54061                          TS       MPLOC                         	#
+000087,000087:    4022           34345                          CAF      MULTA                         	#
+000088,000088:    4023           00006                          EXTEND                                 	#
+000089,000089:    4024           70061                          MP       MPLOC                         	#
+000090,000090: 
+000091,000091:                                                                                         	# Verify Multiply #1
+000092,000092:    4025           40000                          COM                                    	#
+000093,000093:    4026           74350                          MASK     ANSM1A                        	#
+000094,000094:    4027           00006                          EXTEND                                 	#
+000095,000095:    4030           14032                          BZF      A1WORKED                      	#
+000096,000096:    4031           04065                          TC       MPFAILED                      	#
+000097,000097:    4032           56001        A1WORKED          XCH      L                             	#
+000098,000098:    4033           40000                          COM                                    	#
+000099,000099:    4034           74351                          MASK     ANSM1L                        	#
+000100,000100:    4035           00006                          EXTEND                                 	#
+000101,000101:    4036           14040                          BZF      TESTMP2                       	#
+000102,000102:    4037           04065                          TC       MPFAILED                      	#
+000103,000103: 
+000104,000104:                                                                                         	# Test Multiply #2: K is negative
+000105,000105:    4040           34347        TESTMP2           CAF      MULTK2                        	#
+000106,000106:    4041           54061                          TS       MPLOC                         	#
+000107,000107:    4042           34345                          CAF      MULTA                         	#
+000108,000108:    4043           00006                          EXTEND                                 	#
+000109,000109:    4044           70061                          MP       MPLOC                         	#
+000110,000110: 
+000111,000111:                                                                                         	# Verify Multiply #2
+000112,000112:    4045           74352                          MASK     ANSM2A                        	#
+000113,000113:    4046           00006                          EXTEND                                 	#
+000114,000114:    4047           14051                          BZF      A2WORKED                      	#
+000115,000115:    4050           04065                          TC       MPFAILED                      	#
+000116,000116:    4051           56001        A2WORKED          XCH      L                             	#
+000117,000117:    4052           74353                          MASK     ANSM2L                        	#
+000118,000118:    4053           00006                          EXTEND                                 	#
+000119,000119:    4054           14056                          BZF      MPWORKED                      	#
+000120,000120:    4055           04065                          TC       MPFAILED                      	#
+000121,000121: 
+000122,000122:    4056           30102        MPWORKED          CA       DSPTAB     +10D               	#
+000123,000123:    4057           74330                          MASK     RMASK                         	#
+000124,000124:    4060           64324                          AD       RTRUE                         	#
+000125,000125:    4061           54102                          TS       DSPTAB     +10D               	#
+000126,000126:    4062           00006                          EXTEND                                 	#
+000127,000127:    4063           01010                          WRITE    OUT0                          	#
+000128,000128:    4064           04073                          TC       TESTDV                        	#
+000129,000129: 
+000130,000130:                                                                                         	# Multiply failed
+000131,000131:    4065           30102        MPFAILED          CA       DSPTAB     +10D               	#
+000132,000132:    4066           74330                          MASK     RMASK                         	#
+000133,000133:    4067           64325                          AD       RFALSE                        	#
+000134,000134:    4070           54102                          TS       DSPTAB     +10D               	#
+000135,000135:    4071           00006                          EXTEND                                 	#
+000136,000136:    4072           01010                          WRITE    OUT0                          	#
+000137,000137: 
+000138,000138:                                                                                         	# Test Divide:  This tests the example detailed in the 
+000139,000139:                                                                                         	#               agcis_32_blk2_instructions.pdf manual.
+000140,000140: 
+000141,000141:    4073           34356        TESTDV            CAF      DIVE                          	#
+000142,000142:    4074           54062                          TS       DVLOC                         	#
+000143,000143:    4075           34355                          CAF      DIVL                          	#
+000144,000144:    4076           56001                          XCH      L                             	#
+000145,000145:    4077           34354                          CAF      DIVA                          	#
+000146,000146: 
+000147,000147:    4100           00006                          EXTEND                                 	#
+000148,000148:    4101           10062                          DV       DVLOC                         	#
+000149,000149: 
+000150,000150:                                                                                         	# Verify Divide
+000151,000151:    4102           40000                          COM                                    	#
+000152,000152:    4103           74357                          MASK     ANSDA1                        	#
+000153,000153:    4104           00006                          EXTEND                                 	#
+000154,000154:    4105           14107                          BZF      A3WORKED                      	#
+000155,000155:    4106           04124                          TC       DVFAILED                      	#
+000156,000156:    4107           56001        A3WORKED          XCH      L                             	#
+000157,000157:    4110           40000                          COM                                    	#
+000158,000158:    4111           74360                          MASK     ANSDL1                        	#
+000159,000159:    4112           00006                          EXTEND                                 	#
+000160,000160:    4113           14115                          BZF      DVWORKED                      	#
+000161,000161:    4114           04124                          TC       DVFAILED                      	#
+000162,000162: 
+000163,000163:    4115           30102        DVWORKED          CA       DSPTAB     +10D               	#
+000164,000164:    4116           74331                          MASK     LMASK                         	#
+000165,000165:    4117           64326                          AD       LTRUE                         	#
+000166,000166:    4120           54102                          TS       DSPTAB     +10D               	#
+000167,000167:    4121           00006                          EXTEND                                 	#
+000168,000168:    4122           01010                          WRITE    OUT0                          	#
+000169,000169:    4123           04132                          TC       TESTAUG                       	#
+000170,000170: 
+000171,000171:    4124           30102        DVFAILED          CA       DSPTAB     +10D               	#
+000172,000172:    4125           74331                          MASK     LMASK                         	#
+000173,000173:    4126           64327                          AD       LFALSE                        	#
+000174,000174:    4127           54102                          TS       DSPTAB     +10D               	#
+000175,000175:    4130           00006                          EXTEND                                 	#
+000176,000176:    4131           01010                          WRITE    OUT0                          	#
+000177,000177: 
+000178,000178:                                                                                         	# Test AUG & DIM: These instructions are very similar in that
+000179,000179:                                                                                         	#                 they increment or decrement based on the 
+000180,000180:                                                                                         	#                 sign of the operand.  
+000181,000181: 
+000182,000182:                                                                                         	# Test AUG
+000183,000183:    4132           00006        TESTAUG           EXTEND                                 	#
+000184,000184:    4133           24063                          AUG      AUGLOC                        	#
+000185,000185: 
+000186,000186:                                                                                         	# Verify AUG
+000187,000187:    4134           30063                          CAE      AUGLOC                        	#
+000188,000188:    4135           40000                          COM                                    	#
+000189,000189:    4136           74362                          MASK     AUGANS                        	#
+000190,000190:    4137           00006                          EXTEND                                 	#
+000191,000191:    4140           14142                          BZF      TESTDIM                       	#
+000192,000192:    4141           04161                          TC       AUGFAILED                     	#
+000193,000193: 
+000194,000194:                                                                                         	# Test DIM
+000195,000195:    4142           00006        TESTDIM           EXTEND                                 	#
+000196,000196:    4143           26063                          DIM      AUGLOC                        	#
+000197,000197: 
+000198,000198:                                                                                         	# Verify DIM
+000199,000199:    4144           30063                          CAE      AUGLOC                        	#
+000200,000200:    4145           40000                          COM                                    	#
+000201,000201:    4146           74363                          MASK     DIMANS                        	#
+000202,000202:    4147           00006                          EXTEND                                 	#
+000203,000203:    4150           14152                          BZF      AUGWORKED                     	#
+000204,000204:    4151           04161                          TC       AUGFAILED                     	#
+000205,000205: 
+000206,000206:    4152           30101        AUGWORKED          CA       DSPTAB     +9D                	#
+000207,000207:    4153           74330                          MASK     RMASK                         	#
+000208,000208:    4154           64324                          AD       RTRUE                         	#
+000209,000209:    4155           54101                          TS       DSPTAB     +9D                	#
+000210,000210:    4156           00006                          EXTEND                                 	#
+000211,000211:    4157           01010                          WRITE    OUT0                          	#
+000212,000212:    4160           04167                          TC       TESTSU                        	#
+000213,000213: 
+000214,000214:    4161           30101        AUGFAILED          CA       DSPTAB     +9D                	#
+000215,000215:    4162           74330                          MASK     RMASK                         	#
+000216,000216:    4163           64325                          AD       RFALSE                        	#
+000217,000217:    4164           54101                          TS       DSPTAB     +9D                	#
+000218,000218:    4165           00006                          EXTEND                                 	#
+000219,000219:    4166           01010                          WRITE    OUT0                          	#
+000220,000220: 
+000221,000221:                                                                                         	# Test SU & MSU:  These instructions are very similar in that
+000222,000222:                                                                                         	#                 they both perform subtractions.  The MSU
+000223,000223:                                                                                         	#                 instruction is a special subtract that 
+000224,000224:                                                                                         	#                 subtracts two 2's compliment numbers, 
+000225,000225:                                                                                         	#                 producing a 1's compliment result.
+000226,000226: 
+000227,000227:                                                                                         	# Test SU
+000228,000228:    4167           34361        TESTSU            CAF      AUGVAL                        	# Load 11 into A
+000229,000229:    4170           00006                          EXTEND                                 	#
+000230,000230:    4171           60064                          SU       SULOC                         	# Subtract 2 from A
+000231,000231: 
+000232,000232:                                                                                         	# Verify SU
+000233,000233:    4172           40000                          COM                                    	#
+000234,000234:    4173           74365                          MASK     SUANS                         	#
+000235,000235:    4174           00006                          EXTEND                                 	#
+000236,000236:    4175           14177                          BZF      TESTMSU                       	#
+000237,000237:    4176           04217                          TC       SUFAILED                      	#
+000238,000238: 
+000239,000239:                                                                                         	# Test MSU
+000240,000240:    4177           34367        TESTMSU           CAF      MSUAVAL                       	#
+000241,000241:    4200           40000                          COM                                    	# The A value is 0143333
+000242,000242:    4201           00006                          EXTEND                                 	#
+000243,000243:    4202           20065                          MSU      MSULOC                        	#
+000244,000244: 
+000245,000245:                                                                                         	# Verify MSU
+000246,000246:    4203           40000                          COM                                    	#
+000247,000247:    4204           74370                          MASK     MSUANS                        	#
+000248,000248:    4205           00006                          EXTEND                                 	#
+000249,000249:    4206           14210                          BZF      SUWORKED                      	#
+000250,000250:    4207           04217                          TC       SUFAILED                      	#
+000251,000251: 
+000252,000252:    4210           30101        SUWORKED          CA       DSPTAB     +9D                	#
+000253,000253:    4211           74331                          MASK     LMASK                         	#
+000254,000254:    4212           64326                          AD       LTRUE                         	#
+000255,000255:    4213           54101                          TS       DSPTAB     +9D                	#
+000256,000256:    4214           00006                          EXTEND                                 	#
+000257,000257:    4215           01010                          WRITE    OUT0                          	#
+000258,000258:    4216           04225                          TC       TESTDCS                       	#
+000259,000259: 
+000260,000260:    4217           30101        SUFAILED          CA       DSPTAB     +9D                	#
+000261,000261:    4220           74331                          MASK     LMASK                         	#
+000262,000262:    4221           64327                          AD       LFALSE                        	#
+000263,000263:    4222           54101                          TS       DSPTAB     +9D                	#
+000264,000264:    4223           00006                          EXTEND                                 	#
+000265,000265:    4224           01010                          WRITE    OUT0                          	#
+000266,000266: 
+000267,000267:                                                                                         	# Test DCS:  This instruction moves the contents of K & K+1
+000268,000268:                                                                                         	#            into registers A & L. 
+000269,000269: 
+000270,000270:                                                                                         	# Test DCS
+000271,000271:    4225           00006        TESTDCS           EXTEND                                 	#
+000272,000272:    4226           40067                          DCS      DCS1LOC                       	#
+000273,000273: 
+000274,000274:                                                                                         	# Verify DCS
+000275,000275:    4227           74371                          MASK     DCS1VAL                       	#
+000276,000276:    4230           00006                          EXTEND                                 	#
+000277,000277:    4231           14233                          BZF      DCSAWORKED                    	#
+000278,000278:    4232           04247                          TC       DCSFAILED                     	#
+000279,000279: 
+000280,000280:    4233           56001        DCSAWORKED          XCH      L                             	#
+000281,000281:    4234           74372                          MASK     DCS2VAL                       	#
+000282,000282:    4235           00006                          EXTEND                                 	#
+000283,000283:    4236           14240                          BZF      DCSWORKED                     	#
+000284,000284:    4237           04247                          TC       DCSFAILED                     	#
+000285,000285: 
+000286,000286:    4240           30100        DCSWORKED          CA       DSPTAB     +8D                	#
+000287,000287:    4241           74330                          MASK     RMASK                         	#
+000288,000288:    4242           64324                          AD       RTRUE                         	#
+000289,000289:    4243           54100                          TS       DSPTAB     +8D                	#
+000290,000290:    4244           00006                          EXTEND                                 	#
+000291,000291:    4245           01010                          WRITE    OUT0                          	#
+000292,000292:    4246           04255                          TC       TESTCYCL                      	#
+000293,000293: 
+000294,000294:    4247           30100        DCSFAILED          CA       DSPTAB     +8D                	#
+000295,000295:    4250           74330                          MASK     RMASK                         	#
+000296,000296:    4251           64325                          AD       RFALSE                        	#
+000297,000297:    4252           54100                          TS       DSPTAB     +8D                	#
+000298,000298:    4253           00006                          EXTEND                                 	#
+000299,000299:    4254           01010                          WRITE    OUT0                          	#
+000300,000300: 
+000301,000301:                                                                                         	# Test CYR, CYL, SR, EDOP:  These instructions shift
+000302,000302:                                                                                         	#            and/or rotate the contents of data stored
+000303,000303:                                                                                         	#            when using specific addresses. This code
+000304,000304:                                                                                         	#            was taken from actual Luminary code.
+000305,000305: 
+000306,000306:                                                                                         	# Test CYR, CYL, SR, EDOP
+000307,000307:    4255           34373        TESTCYCL          CA       CONC+S1                       	# 25252
+000308,000308:    4256           54020                          TS       CYR                           	# C(CYR) = 12525
+000309,000309:    4257           54022                          TS       CYL                           	# C(CYL) = 52524
+000310,000310:    4260           54021                          TS       SR                            	# C(SR) = 12525
+000311,000311:    4261           54023                          TS       EDOP                          	# C(EDOP) = 00125
+000312,000312:    4262           60020                          AD       CYR                           	# 37777         C(CYR) = 45252
+000313,000313:    4263           60022                          AD       CYL                           	# 00-12524      C(CYL) = 25251
+000314,000314:    4264           60021                          AD       SR                            	# 00-25251      C(SR) = 05252
+000315,000315:    4265           60023                          AD       EDOP                          	# 00-25376      C(EDOP) = +0
+000316,000316:    4266           64374                          AD       CONC+S2                       	# C(CONC+S2) = 52400
+000317,000317:    4267           04277                          TC       -1CHK                         	#
+000318,000318:    4270           60020                          AD       CYR                           	# 45252
+000319,000319:    4271           60022                          AD       CYL                           	# 72523
+000320,000320:    4272           60021                          AD       SR                            	# 77775
+000321,000321:    4273           60023                          AD       EDOP                          	# 77775
+000322,000322:    4274           64375                          AD       S+1                           	# 77776
+000323,000323:    4275           04277                          TC       -1CHK                         	#
+000324,000324:    4276           04305                          TC       CYCLWORKED                    	#
+000325,000325: 
+000326,000326:    4277           10000        -1CHK             CCS      A                             	#
+000327,000327:    4300           14314                          TCF      CYCLFAILED                    	#
+000328,000328:    4301           14314                          TCF      CYCLFAILED                    	#
+000329,000329:    4302           10000                          CCS      A                             	#
+000330,000330:    4303           14314                          TCF      CYCLFAILED                    	#
+000331,000331:    4304           00002                          TC       Q                             	#
+000332,000332: 
+000333,000333:    4305           30100        CYCLWORKED          CA       DSPTAB     +8D                	#
+000334,000334:    4306           74331                          MASK     LMASK                         	#
+000335,000335:    4307           64326                          AD       LTRUE                         	#
+000336,000336:    4310           54100                          TS       DSPTAB     +8D                	#
+000337,000337:    4311           00006                          EXTEND                                 	#
+000338,000338:    4312           01010                          WRITE    OUT0                          	#
+000339,000339:    4313           04322                          TC       TESTEND                       	#
+000340,000340: 
+000341,000341:    4314           30100        CYCLFAILED          CA       DSPTAB     +8D                	#
+000342,000342:    4315           74331                          MASK     LMASK                         	#
+000343,000343:    4316           64327                          AD       LFALSE                        	#
+000344,000344:    4317           54100                          TS       DSPTAB     +8D                	#
+000345,000345:    4320           00006                          EXTEND                                 	#
+000346,000346:    4321           01010                          WRITE    OUT0                          	#
+000347,000347: 
+000348,000348:                                                                                         	# Test Complete
+000349,000349:    4322           14323        TESTEND           NOOP                                   	#
+000350,000350:    4323           04322                          TC       TESTEND                       	#
+000351,000351: 
+000352,000352:    4324           00034        RTRUE             OCT      34                            	#
+000353,000353:    4325           00005        RFALSE            OCT      5                             	#
+000354,000354:    4326           01600        LTRUE             OCT      1600                          	#
+000355,000355:    4327           00240        LFALSE            OCT      240                           	#
+000356,000356:    4330           77740        RMASK             OCT      77740                         	#
+000357,000357:    4331           76037        LMASK             OCT      76037                         	#
+000358,000358: 
+000359,000359:    4332           24000        DSP11             OCT      24000                         	#
+000360,000360:    4333           73777        DSP10             OCT      73777                         	#
+000361,000361:    4334           67777        DSP9              OCT      67777                         	#
+000362,000362:    4335           63777        DSP8              OCT      63777                         	#
+000363,000363:    4336           57777        DSP7              OCT      57777                         	#
+000364,000364:    4337           53777        DSP6              OCT      53777                         	#
+000365,000365:    4340           47777        DSP5              OCT      47777                         	#
+000366,000366:    4341           43777        DSP4              OCT      43777                         	#
+000367,000367:    4342           37777        DSP3              OCT      37777                         	#
+000368,000368:    4343           33777        DSP2              OCT      33777                         	#
+000369,000369:    4344           27777        DSP1              OCT      27777                         	#
+000370,000370:    4345           16344        MULTA             OCT      16344                         	#
+000371,000371:    4346           10101        MULTK1            OCT      10101                         	#
+000372,000372:    4347           67676        MULTK2            OCT      67676                         	#
+000373,000373:    4350           03526        ANSM1A            OCT      03526                         	#
+000374,000374:    4351           12744        ANSM1L            OCT      12744                         	#
+000375,000375:    4352           03526        ANSM2A            OCT      03526                         	#1's compliment of answer
+000376,000376:    4353           52744        ANSM2L            OCT      52744                         	#1's compliment of answer
+000377,000377:    4354           12345        DIVA              OCT      12345                         	#
+000378,000378:    4355           33400        DIVL              OCT      33400                         	#
+000379,000379:    4356           21212        DIVE              OCT      21212                         	#
+000380,000380:    4357           23271        ANSDA1            OCT      23271                         	#
+000381,000381:    4360           02506        ANSDL1            OCT      02506                         	#
+000382,000382: 
+000383,000383:    4361           00011        AUGVAL            OCT      00011                         	#
+000384,000384:    4362           00012        AUGANS            OCT      00012                         	#
+000385,000385:    4363           00011        DIMANS            OCT      00011                         	#
+000386,000386: 
+000387,000387:    4364           00002        SUVAL             OCT      00002                         	#
+000388,000388:    4365           00007        SUANS             OCT      00007                         	#
+000389,000389: 
+000390,000390:    4366           35555        MSUVAL            OCT      35555                         	#
+000391,000391:    4367           34444        MSUAVAL           OCT      34444                         	# 1's compliment of A
+000392,000392:    4370           05556        MSUANS            OCT      05556                         	#
+000393,000393: 
+000394,000394:    4371           01234        DCS1VAL           OCT      01234                         	# For these, the answer is the 1's complement of the results
+000395,000395:    4372           00001        DCS2VAL           OCT      00001                         	#
+000396,000396: 
+000397,000397:    4373           25252        CONC+S1           OCTAL    25252                         	#
+000398,000398:    4374           52400        CONC+S2           OCTAL    52400                         	#
+000399,000399:    4375           00001        S+1               OCT      00001                         	#
