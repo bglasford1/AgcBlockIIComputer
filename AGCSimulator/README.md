@@ -9,6 +9,20 @@ around the current line of code being executed.
 All of the code is contained in the "src" directory.  I have included the assembly output of the Test.agc code here
 for ease of execution.
 
+CPM EPROM Generator:
+
+The Control Pulse Matrix EPROM generator takes the control pulse matrix as defined in the R-700 document and generates a set of Motorola S-record files used to burn a series of EPROMs.  The original computer used a diode matrix to implement this data.  The data is organized by address as defined above in the Control Pulse Matrix module definition.  The data is burned into the EPROMs in a 1's compliment format.   Because each EPROM can contain an 8-bit byte per address, nine EPROMs are required.  The first EPROM contains control signals 1-8.  The second EPROM contains control signals 9-16 and so on.  The control signal numbers are defined in the Control Pulse table above.  
+
+This program outputs nine files containing records in the Motorola S-format. These files are used to burn the nine EPROMs required by the computer and are read into the software simulator.  
+
+Sub-Sequence Decoder EPROM Generator:
+
+The Sub-sequence Decoder EPROM generator takes the opcode of an instruction along with the stage value as an address and outputs the corresponding sub-sequence value.  This approach reduced the chip count. 
+
+This program outputs a Motorola S-format file. This file is used to burn an EPROM required by the computer and is read into the software simulator.  
+
+AGC Simulator:
+
 The simulator simulates the computer at a hardware level.  The EPROM files; code, control pulse matrix and sub-sequence decoder are read into the simulator.  The code is executed by replicating all the hardware components such as registers, buses, interrupts, control pulses, etc.  There is a control panel that displays many internal items such as registers and buses along with switches that can control the execution of the code by stepping through each instruction, subsequence or timing pulse.  This capability will be built into the replica computer so the actual hardware can be tested at the same level. 
 
 Low level hardware components such as registers and buses are abstracted into their own classes.  Each module is contained within its own class.  The control of hardware components is via control pulses which are method calls into the various module classes.  The user interface is via a main panel, similar to how the hardware will operate except the registers and buses contain octal numbers versus LED lights.  
