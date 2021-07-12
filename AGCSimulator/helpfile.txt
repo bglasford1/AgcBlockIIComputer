@@ -1,0 +1,46 @@
+PowerUp:  To power up from standby, perform the following:
+- Hit RESET button --> This moves state to PWRON.
+- Hit F13 button --> This moves state to TP1.
+- Hit CLK: STEP button --> This starts running the clock.  The states run to the next instruction or subsequence.
+- Toggle between EXEC: INST/SEQ to step to next instruction or next seq.
+- Toggle between CLK: RUN/STEP to free run or step the clock.
+- Toggle back to CLK: STEP to step the clock.
+
+Menu:
+  Control:
+    - Load: Input a file name (not extension) such as "agc" to load a program.
+    - Quit: Quit the program.
+  Debugger:
+    - Set Breakpoint: Set a breakpoint at a given address.  Halt execution at that address.  See below...
+    - Clear Breakpoint: Clear the breakpoint set previously.
+    - Interupt Breakpoint: Sets a breakpoint that stops execution when an interrupt occurs.
+    - Display Details: A check box that turns on/off the printing of timing pulses.
+    - Examine: Examine an address of memory in FF,AAAA format.  Ex: 05,2526
+    - Show Source: Show the currently executing line of code along with 10 lines above and below this line.
+  Help:
+    -- Help: Displays this help text.
+
+Set Breakpoint:
+- Enter a breakpoint in terms of an F-Bank,address as in the assembler listing (ex. 05,2526)
+- Toggle to FLCK to free run the clock.
+- Toggle to RUN INST to free run the TPG state machine.
+- When the address is reached, the clock will stop free-running.  The toggle switch will not switch.
+- Currently it stops at TP12.  Toggle MCLK/FCLK to FCLK to quickly go to end of this instruction.
+- NOTE: When the simulation stops, the FCLK/MCLK and RUN/STEP INST buttons are out of sync and should be
+        manually toggled.
+
+Control Panel:
+- (F2) CLK: RUN/STEP: Toggle the FCLK control signal.  Enables/Disables free-running 1 MHz clock.
+- (F1) STEP CLOCK: Single step the clock.  Only works if CLK: STEP is set.
+- SCALER: Toggle scaler on/off.  When scaler is off, F13 and F17 signals are not automatically generated.
+- (a) STBY ALLOW: Let the AGC software put the AGC in standby mode.
+- (r) EXEC: RUN/STEP: Toggles between run and step modes.  Either free-run or step the instruction.
+- (s) STEP: Step the instruction or sequence if RUN/STEP is set to STEP.
+- (n) EXEC: INST/SEQ: Toggle between instruction or subsequence steps.  Each subsequence is 12 timing pulses long.
+- (i) INTERRUPT: Generate an interrupt.  Will ask for an interrupt number.
+- (;) CLR PARALM: Clear parity alarm.  Alarm is generated when an error occurs in memory.
+- (x) F13: Manually generate an F13 scaler pulse.
+- (z) F17: Manually generate an F17 scaler pulse.
+- (h) RESET: Reset the simulation.
+- ([) INC CTR: Manually insert a + input to a priority counter cell.  Will ask for the cell number.
+- (]) DEC CTR: Manually insert a - input to a priority counter cell.  Will ask for the cell number.
