@@ -1,4 +1,17 @@
-
+#
+#  Copyright 2021, William Glasford
+#
+#  This file is part of the AGC Simulator.  You can redistribute it
+#  and/or modify it under the terms of the GNU General Public License as
+#  published by the Free Software Foundation; either version 3 of the License,
+#  or any later version. This software is distributed without any warranty
+#  expressed or implied. See the GNU General Public License for more details.
+#
+#  Purpose:	This program tests the assembly instructions.  The more common
+#           instructions are tested by the very nature of using them.
+#           There are a number of lesser used instructions that are specifically
+#           tested such as MP, DV, SU, MSU, AUG and DIM.
+#
 # Test Program:  This program tests the assembly instructions.
 #                The more common instructions are tested by the
 #                very nature of using them.  There are a number
