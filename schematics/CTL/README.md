@@ -14,10 +14,12 @@ CTL_CPM-B : The B portion of the Control Pulse Matrix Module
 
 CTL_CPM-C : The C portion of the Control Pulse Matrix Module
 
-CTL_SEQ_SEQA : The stage and branch registers of the Sequence Generator Module
+CTL_SEQ : The Sequence Generator Module
 
-CTL_SEQ_SEQB : The sequence register of the Sequence Generator Module
+    CTL_SEQ_SEQA : Contains the stage and branch registers
 
-CTL_SEQ_DCD : The sub-sequence decode logic of the Sequence Generator Module
+    CTL_SEQ_SEQB : Contains the sequence register
 
-CTL_SEQ_CTL : Various control signal generation logic of the Sequence Generator Module
+    CTL_SEQ_DCD : Contains the sub-sequence decode logic
+
+    CTL_SEQ_CTL : Contains various control signal generation logic
