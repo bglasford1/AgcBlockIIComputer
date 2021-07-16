@@ -1,5 +1,5 @@
 # AgcBlockIIComputer
-A software/hardware implementation of the Apollo Guidance Computer Block II computer using TTL chips.
+This is a software/hardware implementation of the Apollo Guidance Computer Block II computer using TTL chips.
 
 This project extends the work of Ronald Burkey who has created an extensive collection of NASA documents, original source code, 
 an assembler and a software based simulator.  This project also extends the work of John Pultorak who created a physical implementation 
