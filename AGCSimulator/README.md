@@ -1,3 +1,5 @@
+# AGC Simulator:
+
 This folder contains the AGC Simulator code.  This code is Java that was developed using IntelliJ Idea.
 
 The simulator runs the code contained in a file named AGC_H.hex.  This file represents a 16-bit EPROM format that is 
