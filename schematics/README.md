@@ -1,4 +1,4 @@
-#Overview: 
+# Overview: 
 
 The schematics have been drawn in a free tool called KiCad that seems to be the drawing tool of choice at this time.  In Ronald's words, its the software that all the cool kids are using.  Having never used one of these tools before I have found it to be easy to use and widely supported.  
 
@@ -8,7 +8,7 @@ I chose to combine all the LEDs and switches into a single display board and sta
 
 A single power supply supplies power to all the boards.  A backplane is constructed so that the logic boards are interchangeable.  This is so that the logic board under test can be placed in the rear slot for easy debugging access.  
 
-#Subsystems:
+# Subsystems:
 
 The modules are grouped into closely related functional sets called sub-systems.  The modules are grouped to limit the interconnections between sub-systems and the functionality in terms of chip count is evenly divided among physical hardware boards.  
 
