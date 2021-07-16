@@ -3,7 +3,7 @@ This is a software/hardware implementation of the Apollo Guidance Computer Block
 
 This project extends the work of Ronald Burkey who has created an extensive collection of NASA documents, original source code, 
 an assembler and a software based simulator.  This project also extends the work of John Pultorak who created a physical implementation 
-of the AGC Block I using TTL chips.  There are other AGC Block II projects using either VHDL or 3-input XOR chips.  As far I as 
+of the AGC Block I computer using TTL chips.  There are other AGC Block II projects using either VHDL or 3-input XOR chips.  As far I as 
 I can tell, this is the only project to implement an AGC Block II using TTL chips.
 
 The overall steps include 
