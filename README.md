@@ -12,7 +12,7 @@ The overall steps include
     3) creating hardware diagrams and
     4) building the actual hardware.
     
-The overall design is contained in the Wiki pages.  The software simulator and hardware diagrams are contained within the code
+The overall design is contained in the Wiki pages.  The hardware based simulator and hardware diagrams are contained within the code
 section.  
 
 A test program named Test.agc was created to test the more complex instructions such as multiply and divide.  The output
