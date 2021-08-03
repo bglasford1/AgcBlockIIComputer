@@ -40,3 +40,5 @@ BLOCK II MACHINE INSTRUCTIONS
 FR-2 - 132    
 
 This document was invaluable in understanding and testing the instructions.  Note that there are a few errors in the multiply and divide examples.  Within the actual AGC code I found test code for the CYR, CYL, SR and EDOP shift/rotate registers that I incorporated into my test code.  I also included instructions that I had not yet encountered in the AGC code.  These are AUG, DIM, SU, MSU and DCS.   The success/failure of each test is output to the DSKY 7-segment LEDs.  Each digit displays either a 1 or 0 for success/failure.  The code to accomplish all this utilizes many of the other instructions.   
+
+![GUI](SimulatorGUI.png)
