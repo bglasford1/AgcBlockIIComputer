@@ -17,7 +17,7 @@ The Control Pulse Matrix EPROM generator takes the control pulse matrix as defin
 
 This program outputs nine files containing records in the Motorola S-format. These files are used to burn the nine EPROMs required by the computer and are read into the software simulator.  
 
-Sub-Sequence Decoder EPROM Generator:
+# Sub-Sequence Decoder EPROM Generator:
 
 The Sub-sequence Decoder EPROM generator takes the opcode of an instruction along with the stage value as an address and outputs the corresponding sub-sequence value.  This approach reduced the chip count. 
 
