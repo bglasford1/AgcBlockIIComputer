@@ -34,6 +34,6 @@ however Eclipse is just as good.
 
 # Schematics:
 
-The schematics are created using KiCad, a free modern schematic tool that in Ronald's words are "what all the cool kids are using".  
-Each physical board is developed as a unique project.  
+The schematics are created using KiCad, a free modern schematic tool that in Ronald's words are "what all the cool kids are using".  Each 
+physical board is developed as a unique project.  
 
