@@ -1,6 +1,6 @@
 # AGC Simulator:
 
-This folder contains the AGC Simulator code.  This code is Java that was developed using IntelliJ Idea.
+This directory contains the AGC Simulator code.  This code is written in Java that was developed using the IntelliJ Idea IDE.
 
 The simulator runs the code contained in a file named AGC_H.hex.  This file represents a 16-bit EPROM format that is 
 produced by the YUL assembler.  It also requires the nine CPMx_y.hex file set that contains the Control Pulse Matrix
