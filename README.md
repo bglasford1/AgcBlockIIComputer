@@ -26,7 +26,7 @@ to the simulator and used to burn EPROMs for the physical hardware.  This code i
 outputs a .lst file and .symtab file.  The original code version I am using is the Luminary 099 which landed men on the moon during Apollo 11.  
 All the original code compiles as "MAIN".  The S-Record file is named MAIN.hex.  
 
-# Simulator:
+# AGCSimulator:
 
 The simulator is written in Java, the most used high level, object oriented language that is free, open source and platform independant.
 There are a number of free IDEs available including Eclipse and IntelliJ Idea.  This simulator was developed using IntelliJ Idea, 
