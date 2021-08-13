@@ -18,13 +18,13 @@ section.
 # YUL:
 
 The YUL directory contains a test program named Test.agc that was created to test the more complex instructions such as multiply and divide 
-along with some of the less frequentyly used instructions.  The output of each test segment is placed in one of the DSKY 7-segment numbers.  
-A 1 indicates success where as a 0 indicates failure.  
+along with some of the less frequentyly used instructions.  The output of each test segment is placed in one of the DSKY 7-segment numbers.  A 
+1 indicates success where as a 0 indicates failure.  
 
 The compiler created by Ronald Burkey was modified to output a file in Motorola S-Record format.  These files are used as input
 to the simulator and used to burn EPROMs for the physical hardware.  This code is contained within the YUL directory.  The compiler also 
-outputs a .lst file and .symtab file.  The original code version I am using is the Luminary 099 which landed men on the moon during Apollo 11.  
-All the original code compiles as "MAIN".  The S-Record file is named MAIN.hex.  
+outputs a .lst file and .symtab file.  The original code version I am using is the Luminary 099 which landed men on the moon during Apollo 
+11.  All the original code compiles as "MAIN".  The S-Record file is named MAIN.hex.  
 
 # AGCSimulator:
 
