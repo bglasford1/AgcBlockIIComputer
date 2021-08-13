@@ -1,19 +1,19 @@
-The I/O (IO) sub-system consists of the Keyboard, Display and IMI Interface modules. The following schematic sheets are used.
+The DSKY sub-system consists of the Keyboard, Display and IMI Interface modules. The following schematic sheets are used.
 
-IO_IMI : The I/O Interface Module
+DSKY_IMI : The DSKY Interface Module
 
-IO_KBD : The Keyboard Module
+DSKY_KBD : The Keyboard Module
 
-IO_DSP : The Display Module
+DSKY_DSP : The Display Module
 
-    IO_DSP_CHN : Contains I/O channel registers
+    DSKY_DSP_CHN : Contains I/O channel registers
     
-    IO_DSP_DCC : Contains display code converters
+    DSKY_DSP_DCC : Contains display code converters
     
-    IO_DSP_IND : Contains indicator lights logic
+    DSKY_DSP_IND : Contains indicator lights logic
     
-    IO_DSP_DCD2_3 : Contains decode logic for LCD drivers #2 & #3
+    DSKY_DSP_DCD2_3 : Contains decode logic for LCD drivers #2 & #3
     
-    IO_DSP_DCD1 : Contains decode logic for LCD Driver #1
+    DSKY_DSP_DCD1 : Contains decode logic for LCD Driver #1
     
-    IO_DSP_LCD : Contains LCDs and LCD drivers
+    DSKY_DSP_LCD : Contains LCDs and LCD drivers
