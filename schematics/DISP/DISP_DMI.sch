@@ -210,4 +210,241 @@ Text GLabel 1950 3050 2    50   Input ~ 0
 BP99
 Text GLabel 1950 2950 2    50   Input ~ 0
 BP98
+$Comp
+L Connector_Generic:Conn_02x10_Counter_Clockwise J104
+U 1 1 61156605
+P 4900 1850
+F 0 "J104" H 4950 2467 50  0000 C CNN
+F 1 "Conn_02x10" H 4950 2376 50  0000 C CNN
+F 2 "" H 4900 1850 50  0001 C CNN
+F 3 "~" H 4900 1850 50  0001 C CNN
+	1    4900 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_02x08_Counter_Clockwise J101
+U 1 1 611580FF
+P 7350 1750
+F 0 "J101" H 7400 2267 50  0000 C CNN
+F 1 "Conn_02x08" H 7400 2176 50  0000 C CNN
+F 2 "" H 7350 1750 50  0001 C CNN
+F 3 "~" H 7350 1750 50  0001 C CNN
+	1    7350 1750
+	1    0    0    -1  
+$EndComp
+Text Notes 4750 1150 0    80   ~ 0
+Channel\nBus
+Text Notes 7150 1150 0    80   ~ 0
+Write Bus
+Wire Bus Line
+	6800 2300 8000 2300
+Wire Bus Line
+	8000 1300 8050 1300
+Entry Wire Line
+	7900 1450 8000 1550
+Entry Wire Line
+	7900 1550 8000 1650
+Entry Wire Line
+	7900 1650 8000 1750
+Entry Wire Line
+	7900 1750 8000 1850
+Entry Wire Line
+	7900 1850 8000 1950
+Entry Wire Line
+	7900 1950 8000 2050
+Entry Wire Line
+	7900 2050 8000 2150
+Entry Wire Line
+	7900 2150 8000 2250
+Wire Wire Line
+	7650 1450 7900 1450
+Wire Wire Line
+	7650 1550 7900 1550
+Wire Wire Line
+	7650 1650 7900 1650
+Wire Wire Line
+	7650 1750 7900 1750
+Wire Wire Line
+	7650 1850 7900 1850
+Wire Wire Line
+	7650 1950 7900 1950
+Wire Wire Line
+	7650 2050 7900 2050
+Wire Wire Line
+	7650 2150 7900 2150
+Wire Wire Line
+	6900 1450 7150 1450
+Wire Wire Line
+	6900 1550 7150 1550
+Wire Wire Line
+	6900 1650 7150 1650
+Wire Wire Line
+	6900 1750 7150 1750
+Wire Wire Line
+	6900 1850 7150 1850
+Wire Wire Line
+	6900 1950 7150 1950
+Wire Wire Line
+	6900 2050 7150 2050
+Wire Wire Line
+	6900 2150 7150 2150
+Entry Wire Line
+	6800 1550 6900 1450
+Entry Wire Line
+	6800 1650 6900 1550
+Entry Wire Line
+	6800 1750 6900 1650
+Entry Wire Line
+	6800 1850 6900 1750
+Entry Wire Line
+	6800 1950 6900 1850
+Entry Wire Line
+	6800 2050 6900 1950
+Entry Wire Line
+	6800 2150 6900 2050
+Entry Wire Line
+	6800 2250 6900 2150
+Text Label 6900 1450 0    50   ~ 0
+W1
+Text Label 6900 1550 0    50   ~ 0
+W2
+Text Label 6900 1650 0    50   ~ 0
+W3
+Text Label 6900 1750 0    50   ~ 0
+W4
+Text Label 6900 1850 0    50   ~ 0
+W5
+Text Label 6900 1950 0    50   ~ 0
+W6
+Text Label 6900 2050 0    50   ~ 0
+W7
+Text Label 6900 2150 0    50   ~ 0
+W8
+Text Label 7900 2150 2    50   ~ 0
+W9
+Text Label 7900 2050 2    50   ~ 0
+W10
+Text Label 7900 1950 2    50   ~ 0
+W11
+Text Label 7900 1850 2    50   ~ 0
+W12
+Text Label 7900 1650 2    50   ~ 0
+W14
+Text Label 7900 1550 2    50   ~ 0
+W15
+Text Label 7900 1450 2    50   ~ 0
+W16
+Text Label 7900 1750 2    50   ~ 0
+W13
+Text HLabel 8050 1300 2    50   Output ~ 0
+W[1..16]
+Wire Bus Line
+	4350 2500 5550 2500
+Wire Bus Line
+	5550 1400 5600 1400
+Entry Wire Line
+	5450 1950 5550 2050
+Entry Wire Line
+	5450 2050 5550 2150
+Entry Wire Line
+	5450 2150 5550 2250
+Entry Wire Line
+	5450 2250 5550 2350
+Entry Wire Line
+	5450 2350 5550 2450
+Wire Wire Line
+	5200 1950 5450 1950
+Wire Wire Line
+	5200 2050 5450 2050
+Wire Wire Line
+	5200 2150 5450 2150
+Wire Wire Line
+	5200 2250 5450 2250
+Wire Wire Line
+	5200 2350 5450 2350
+Wire Wire Line
+	4450 1450 4700 1450
+Wire Wire Line
+	4450 1550 4700 1550
+Wire Wire Line
+	4450 1650 4700 1650
+Wire Wire Line
+	4450 1750 4700 1750
+Wire Wire Line
+	4450 1850 4700 1850
+Wire Wire Line
+	4450 1950 4700 1950
+Wire Wire Line
+	4450 2050 4700 2050
+Wire Wire Line
+	4450 2150 4700 2150
+Entry Wire Line
+	4350 1550 4450 1450
+Entry Wire Line
+	4350 1650 4450 1550
+Entry Wire Line
+	4350 1750 4450 1650
+Entry Wire Line
+	4350 1850 4450 1750
+Entry Wire Line
+	4350 1950 4450 1850
+Entry Wire Line
+	4350 2050 4450 1950
+Entry Wire Line
+	4350 2150 4450 2050
+Entry Wire Line
+	4350 2250 4450 2150
+Text Label 4450 1450 0    50   ~ 0
+CH1
+Text Label 4450 1550 0    50   ~ 0
+CH2
+Text Label 4450 1650 0    50   ~ 0
+CH3
+Text Label 4450 1750 0    50   ~ 0
+CH4
+Text Label 4450 1850 0    50   ~ 0
+CH5
+Text Label 4450 1950 0    50   ~ 0
+CH6
+Text Label 4450 2050 0    50   ~ 0
+CH7
+Text Label 4450 2150 0    50   ~ 0
+CH8
+Text Label 5450 2350 2    50   ~ 0
+CH11
+Text Label 5450 2250 2    50   ~ 0
+CH12
+Text Label 5450 2150 2    50   ~ 0
+CH13
+Text Label 5450 2050 2    50   ~ 0
+CH14
+Text Label 5450 1950 2    50   ~ 0
+CH15
+Text HLabel 5600 1400 2    50   Output ~ 0
+CH[1..15]
+Wire Wire Line
+	4450 2250 4700 2250
+Wire Wire Line
+	4450 2350 4700 2350
+Entry Wire Line
+	4350 2350 4450 2250
+Entry Wire Line
+	4350 2450 4450 2350
+Text Label 4450 2250 0    50   ~ 0
+CH9
+Text Label 4450 2350 0    50   ~ 0
+CH10
+NoConn ~ 5200 1450
+NoConn ~ 5200 1550
+NoConn ~ 5200 1650
+NoConn ~ 5200 1750
+NoConn ~ 5200 1850
+Wire Bus Line
+	5550 1400 5550 2500
+Wire Bus Line
+	6800 1400 6800 2300
+Wire Bus Line
+	8000 1300 8000 2300
+Wire Bus Line
+	4350 1400 4350 2500
 $EndSCHEMATC

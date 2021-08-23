@@ -240,7 +240,17 @@ F49 "RXOR0" I L 7500 5700 50
 F50 "RSM3" I L 7500 5800 50 
 F51 "RUPT0" I L 7500 5900 50 
 F52 "RUPT1" I L 7500 6000 50 
+F53 "W[1..16]" I R 8450 1050 50 
+F54 "CH[1..15]" I R 8450 1200 50 
 $EndSheet
 Text Notes 7100 6950 0    100  ~ 0
 DISP_MON:  Display Monitor\nCopyright 2021, William Glasford
+Wire Bus Line
+	8450 1050 8700 1050
+Wire Bus Line
+	8450 1200 8700 1200
+Text HLabel 8700 1050 2    50   Input ~ 0
+W[1..16]
+Text HLabel 8700 1200 2    50   Input ~ 0
+CH[1..15]
 $EndSCHEMATC
