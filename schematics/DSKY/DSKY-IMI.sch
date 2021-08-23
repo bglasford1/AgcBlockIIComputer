@@ -1,0 +1,250 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A 11000 8500
+encoding utf-8
+Sheet 9 10
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L power:GND #PWR0102
+U 1 1 5F61EFB4
+P 8100 2100
+AR Path="/5F5E4E3B/5F5F82D4/5F61EFB4" Ref="#PWR0102"  Part="1" 
+AR Path="/60F989FD/5F61EFB4" Ref="#PWR0102"  Part="1" 
+F 0 "#PWR0102" H 8100 1850 50  0001 C CNN
+F 1 "GND" H 8105 1927 50  0000 C CNN
+F 2 "" H 8100 2100 50  0001 C CNN
+F 3 "" H 8100 2100 50  0001 C CNN
+	1    8100 2100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8750 2000 8700 2000
+Text HLabel 7550 2000 2    50   Output ~ 0
+CLK2
+Text HLabel 8750 2000 2    50   Output ~ 0
+CLK1
+Text HLabel 7550 2100 2    50   Output ~ 0
+GENRST
+Wire Wire Line
+	4200 1750 3950 1750
+Wire Wire Line
+	4200 1850 3950 1850
+Wire Wire Line
+	4200 1950 3950 1950
+Wire Wire Line
+	4200 2050 3950 2050
+Wire Wire Line
+	4200 2150 3950 2150
+Wire Wire Line
+	4200 2250 3950 2250
+Wire Wire Line
+	4200 2350 3950 2350
+Wire Wire Line
+	4200 2450 3950 2450
+Wire Wire Line
+	4700 2650 5000 2650
+Wire Wire Line
+	4700 2550 5000 2550
+Wire Wire Line
+	4700 2450 5000 2450
+Wire Wire Line
+	4700 2350 5000 2350
+Wire Wire Line
+	4700 2250 5000 2250
+Text HLabel 7550 2200 2    50   Output ~ 0
+STBY
+Text HLabel 4700 2150 2    50   Input ~ 0
+KB_STR
+Text HLabel 4700 2050 2    50   Input ~ 0
+PARALM
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 63206258
+P 9600 1000
+F 0 "#FLG0101" H 9600 1075 50  0001 C CNN
+F 1 "PWR_FLAG" H 9600 1173 50  0000 C CNN
+F 2 "" H 9600 1000 50  0001 C CNN
+F 3 "~" H 9600 1000 50  0001 C CNN
+	1    9600 1000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0252
+U 1 1 63206B7C
+P 9600 1000
+F 0 "#PWR0252" H 9600 750 50  0001 C CNN
+F 1 "GND" H 9605 827 50  0000 C CNN
+F 2 "" H 9600 1000 50  0001 C CNN
+F 3 "" H 9600 1000 50  0001 C CNN
+	1    9600 1000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG0102
+U 1 1 63206EED
+P 9100 1000
+F 0 "#FLG0102" H 9100 1075 50  0001 C CNN
+F 1 "PWR_FLAG" H 9100 1173 50  0000 C CNN
+F 2 "" H 9100 1000 50  0001 C CNN
+F 3 "~" H 9100 1000 50  0001 C CNN
+	1    9100 1000
+	1    0    0    1   
+$EndComp
+$Comp
+L power:+5V #PWR0253
+U 1 1 6320B47A
+P 9100 1000
+F 0 "#PWR0253" H 9100 850 50  0001 C CNN
+F 1 "+5V" H 9115 1173 50  0000 C CNN
+F 2 "" H 9100 1000 50  0001 C CNN
+F 3 "" H 9100 1000 50  0001 C CNN
+	1    9100 1000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_02x08_Counter_Clockwise J103
+U 1 1 62CF5CC0
+P 7350 2200
+F 0 "J103" H 7400 2717 50  0000 C CNN
+F 1 "Conn_02x08" H 7400 2626 50  0000 C CNN
+F 2 "" H 7350 2200 50  0001 C CNN
+F 3 "~" H 7350 2200 50  0001 C CNN
+	1    7350 2200
+	-1   0    0    -1  
+$EndComp
+Wire Bus Line
+	3850 1450 3750 1450
+Text HLabel 3750 1450 0    50   BiDi ~ 0
+CH[1..15]
+Entry Wire Line
+	3850 1850 3950 1750
+Entry Wire Line
+	3850 1950 3950 1850
+Entry Wire Line
+	3850 2050 3950 1950
+Entry Wire Line
+	3850 2150 3950 2050
+Entry Wire Line
+	3850 2250 3950 2150
+Entry Wire Line
+	3850 2350 3950 2250
+Entry Wire Line
+	3850 2450 3950 2350
+Entry Wire Line
+	3850 2550 3950 2450
+Entry Wire Line
+	5100 2750 5000 2650
+Entry Wire Line
+	5100 2650 5000 2550
+Entry Wire Line
+	5100 2550 5000 2450
+Entry Wire Line
+	5100 2450 5000 2350
+Entry Wire Line
+	5100 2350 5000 2250
+Text Label 3950 1750 0    50   ~ 0
+CH1
+Text Label 3950 1850 0    50   ~ 0
+CH2
+Text Label 3950 1950 0    50   ~ 0
+CH3
+Text Label 3950 2050 0    50   ~ 0
+CH4
+Text Label 3950 2150 0    50   ~ 0
+CH5
+Text Label 3950 2250 0    50   ~ 0
+CH6
+Text Label 3950 2350 0    50   ~ 0
+CH7
+Text Label 3950 2450 0    50   ~ 0
+CH8
+Text Label 5000 2650 2    50   ~ 0
+CH11
+Text Label 5000 2550 2    50   ~ 0
+CH12
+Text Label 5000 2450 2    50   ~ 0
+CH13
+Text Label 5000 2350 2    50   ~ 0
+CH14
+Text Label 5000 2250 2    50   ~ 0
+CH15
+Text Notes 4900 1350 2    80   ~ 0
+Channel Bus
+Text Notes 7500 1550 2    80   ~ 0
+To CTL
+Text HLabel 7550 2300 2    50   Output ~ 0
+KBD1
+Text HLabel 7550 2400 2    50   Output ~ 0
+DISP
+Text HLabel 7550 2500 2    50   Output ~ 0
+INDC
+NoConn ~ 7050 2400
+NoConn ~ 7050 2500
+Wire Wire Line
+	7550 1900 8100 1900
+Wire Bus Line
+	5100 2800 3850 2800
+$Comp
+L 74xx:74LS32 U201
+U 1 1 5F6065A8
+P 8400 2000
+AR Path="/5F5E4E3B/5F5F82D4/5F6065A8" Ref="U201"  Part="1" 
+AR Path="/60F989FD/5F6065A8" Ref="U17"  Part="1" 
+F 0 "U17" H 8400 2325 50  0000 C CNN
+F 1 "74LS32" H 8400 2234 50  0000 C CNN
+F 2 "" H 8400 2000 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS32" H 8400 2000 50  0001 C CNN
+	1    8400 2000
+	1    0    0    -1  
+$EndComp
+Text Notes 6400 7150 0    100  ~ 0
+DSKY-IMI:  Interface\nCopyright 2021, William Glasford
+$Comp
+L Connector_Generic:Conn_02x10_Counter_Clockwise J104
+U 1 1 612DCF54
+P 4400 2150
+F 0 "J104" H 4450 2767 50  0000 C CNN
+F 1 "Conn_02x10" H 4450 2676 50  0000 C CNN
+F 2 "" H 4400 2150 50  0001 C CNN
+F 3 "~" H 4400 2150 50  0001 C CNN
+	1    4400 2150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4200 2550 3950 2550
+Wire Wire Line
+	4200 2650 3950 2650
+Entry Wire Line
+	3850 2650 3950 2550
+Entry Wire Line
+	3850 2750 3950 2650
+Text Label 3950 2550 0    50   ~ 0
+CH9
+Text Label 3950 2650 0    50   ~ 0
+CH10
+NoConn ~ 4700 1750
+NoConn ~ 4700 1850
+NoConn ~ 4700 1950
+NoConn ~ 7050 1900
+NoConn ~ 7050 2000
+NoConn ~ 7050 2100
+NoConn ~ 7050 2200
+NoConn ~ 7050 2300
+Text HLabel 7550 2600 2    50   Output ~ 0
+PROG
+Wire Bus Line
+	5100 2250 5100 2800
+Wire Bus Line
+	3850 1450 3850 2800
+Text HLabel 7050 2600 0    50   Output ~ 0
+RPRO
+$EndSCHEMATC
