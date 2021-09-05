@@ -241,10 +241,10 @@ NoConn ~ 7050 2200
 NoConn ~ 7050 2300
 Text HLabel 7550 2600 2    50   Output ~ 0
 PROG
+Text HLabel 7050 2600 0    50   Output ~ 0
+RPRO
 Wire Bus Line
 	5100 2250 5100 2800
 Wire Bus Line
 	3850 1450 3850 2800
-Text HLabel 7050 2600 0    50   Output ~ 0
-RPRO
 $EndSCHEMATC

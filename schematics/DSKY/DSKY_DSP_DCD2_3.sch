@@ -22,13 +22,13 @@ Text HLabel 750  3800 0    50   Input ~ 0
 CLK2
 $Comp
 L 74xx:74LS04 U42
-U 3 1 6394A228
+U 1 1 6394A228
 P 1050 3800
 F 0 "U42" H 1050 4117 50  0000 C CNN
 F 1 "74LS04" H 1050 4026 50  0000 C CNN
 F 2 "" H 1050 3800 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 1050 3800 50  0001 C CNN
-	3    1050 3800
+	1    1050 3800
 	1    0    0    -1  
 $EndComp
 Text HLabel 1550 3900 0    50   Input ~ 0
@@ -313,14 +313,14 @@ Wire Wire Line
 Entry Wire Line
 	4100 5900 4200 6000
 $Comp
-L 74xx:74LS04 U46
-U 6 1 67822F7A
+L 74xx:74LS04 U42
+U 2 1 67822F7A
 P 3550 6350
-F 0 "U46" H 3650 6600 50  0000 C CNN
+F 0 "U42" H 3650 6600 50  0000 C CNN
 F 1 "74LS04" H 3650 6500 50  0000 C CNN
 F 2 "" H 3550 6350 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 3550 6350 50  0001 C CNN
-	6    3550 6350
+	2    3550 6350
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -541,14 +541,14 @@ F 3 "http://www.ti.com/lit/gpn/sn74LS30" H 4850 2700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L 74xx:74LS04 U46
-U 1 1 6698A908
+L 74xx:74LS04 U42
+U 4 1 6698A908
 P 5450 2700
-F 0 "U46" H 5450 3017 50  0000 C CNN
+F 0 "U42" H 5450 3017 50  0000 C CNN
 F 1 "74LS04" H 5450 2926 50  0000 C CNN
 F 2 "" H 5450 2700 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 5450 2700 50  0001 C CNN
-	1    5450 2700
+	4    5450 2700
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1171,13 +1171,13 @@ Text HLabel 6100 2300 2    50   Output ~ 0
 WRITE2
 $Comp
 L 74xx:74LS04 U42
-U 6 1 669182D9
+U 3 1 669182D9
 P 5450 1900
 F 0 "U42" H 5450 2217 50  0000 C CNN
 F 1 "74LS04" H 5450 2126 50  0000 C CNN
 F 2 "" H 5450 1900 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 5450 1900 50  0001 C CNN
-	6    5450 1900
+	3    5450 1900
 	1    0    0    -1  
 $EndComp
 Wire Wire Line

@@ -531,6 +531,8 @@ Text Label 9450 1550 2    50   ~ 0
 IND6
 NoConn ~ 9150 2050
 NoConn ~ 8150 2050
+Wire Wire Line
+	3900 2350 8150 2350
 Wire Bus Line
 	7650 1150 7650 2100
 Wire Bus Line
@@ -539,6 +541,4 @@ Wire Bus Line
 	6150 2900 6150 6350
 Wire Bus Line
 	3500 3100 3500 6300
-Wire Wire Line
-	3900 2350 8150 2350
 $EndSCHEMATC

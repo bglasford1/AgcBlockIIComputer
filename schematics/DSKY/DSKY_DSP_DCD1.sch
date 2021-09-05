@@ -602,46 +602,12 @@ Text Label 4950 5400 0    50   ~ 0
 RWD8
 Text Label 4950 5500 0    50   ~ 0
 RWD9
-$Comp
-L 74xx:74LS126 U47
-U 2 1 6755A017
-P 9150 1050
-F 0 "U47" H 9150 1367 50  0000 C CNN
-F 1 "74LS126" H 9150 1276 50  0000 C CNN
-F 2 "" H 9150 1050 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS126" H 9150 1050 50  0001 C CNN
-	2    9150 1050
-	1    0    0    -1  
-$EndComp
-Text HLabel 9450 1050 2    50   Output ~ 0
-MODE1
-$Comp
-L power:+5V #PWR?
-U 1 1 6755CF6C
-P 8850 1050
-AR Path="/60F98A64/637944C1/6755CF6C" Ref="#PWR?"  Part="1" 
-AR Path="/60F98A64/64844A8A/6755CF6C" Ref="#PWR0198"  Part="1" 
-F 0 "#PWR0198" H 8850 900 50  0001 C CNN
-F 1 "+5V" H 8865 1223 50  0000 C CNN
-F 2 "" H 8850 1050 50  0001 C CNN
-F 3 "" H 8850 1050 50  0001 C CNN
-	1    8850 1050
-	1    0    0    -1  
-$EndComp
-Text Notes 9300 1400 0    80   ~ 0
-+5V = Hex\nFloat = Code B
 Wire Wire Line
 	5300 3500 5300 3600
-Wire Wire Line
-	9150 1300 9150 1600
 Wire Wire Line
 	5300 3600 6500 3600
 Wire Wire Line
 	5250 1300 5250 1800
-Wire Wire Line
-	8550 1500 8400 1500
-Wire Wire Line
-	8550 1700 8500 1700
 Entry Wire Line
 	7700 5500 7800 5600
 Entry Wire Line
@@ -715,13 +681,13 @@ F 3 "http://www.ti.com/lit/gpn/sn74LS27" H 1250 5550 50  0001 C CNN
 $EndComp
 $Comp
 L 74xx:74LS04 U46
-U 4 1 67B76243
+U 1 1 67B76243
 P 1800 3750
 F 0 "U46" H 1800 4067 50  0000 C CNN
 F 1 "74LS04" H 1800 3976 50  0000 C CNN
 F 2 "" H 1800 3750 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 1800 3750 50  0001 C CNN
-	4    1800 3750
+	1    1800 3750
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -889,17 +855,6 @@ F 1 "74LS02" H 5950 5200 50  0000 C CNN
 F 2 "" H 5800 5000 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74ls02" H 5800 5000 50  0001 C CNN
 	4    5800 5000
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:74LS00 U36
-U 3 1 67DD8A24
-P 8850 1600
-F 0 "U36" H 8850 1925 50  0000 C CNN
-F 1 "74LS00" H 8850 1834 50  0000 C CNN
-F 2 "" H 8850 1600 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74ls00" H 8850 1600 50  0001 C CNN
-	3    8850 1600
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1491,14 +1446,8 @@ Wire Wire Line
 	6500 3600 8400 3600
 Wire Wire Line
 	8500 3150 9150 3150
-Connection ~ 8400 3250
 Wire Wire Line
 	8400 3250 8400 3600
-Wire Wire Line
-	8400 1500 8400 3250
-Connection ~ 8500 3150
-Wire Wire Line
-	8500 3150 8500 1700
 Wire Wire Line
 	9050 2950 9150 2950
 Wire Wire Line

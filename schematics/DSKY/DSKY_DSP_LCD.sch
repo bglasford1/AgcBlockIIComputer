@@ -2006,10 +2006,6 @@ Wire Bus Line
 	950  2150 900  2150
 Text HLabel 1250 1400 0    50   Input ~ 0
 ID1[0..4]
-Wire Wire Line
-	1650 3450 1200 3450
-Wire Wire Line
-	1650 5900 1200 5900
 Text HLabel 1650 900  0    50   Input ~ 0
 WRITE1
 Text HLabel 1650 3350 0    50   Input ~ 0
@@ -2032,40 +2028,12 @@ Wire Bus Line
 	950  7050 900  7050
 Text HLabel 900  7050 0    50   Input ~ 0
 DA3[1..3]
-$Comp
-L power:+5V #PWR0178
-U 1 1 662FBB7A
-P 1200 5700
-F 0 "#PWR0178" H 1200 5550 50  0001 C CNN
-F 1 "+5V" H 1215 5873 50  0000 C CNN
-F 2 "" H 1200 5700 50  0001 C CNN
-F 3 "" H 1200 5700 50  0001 C CNN
-	1    1200 5700
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	1200 5900 1200 5700
-$Comp
-L power:+5V #PWR0179
-U 1 1 662FB6B2
-P 1200 3300
-F 0 "#PWR0179" H 1200 3150 50  0001 C CNN
-F 1 "+5V" H 1215 3473 50  0000 C CNN
-F 2 "" H 1200 3300 50  0001 C CNN
-F 3 "" H 1200 3300 50  0001 C CNN
-	1    1200 3300
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	1200 3450 1200 3300
 Text Notes 1050 1800 2    80   ~ 0
 Decoder1
 Text Notes 1050 4250 2    80   ~ 0
 Decoder2
 Text Notes 1050 6700 2    80   ~ 0
 Decoder3
-Text HLabel 1650 1000 0    50   Input ~ 0
-MODE1
 Text Label 1050 2500 0    50   ~ 0
 DA13
 Text Label 1050 2400 0    50   ~ 0
@@ -2076,6 +2044,10 @@ Text HLabel 900  2150 0    50   Input ~ 0
 DA1[1..3]
 Text Notes 6350 7200 0    100  ~ 0
 DSKY-DSP-LCD:  LCD Decode Logic\nCopyright 2021, William Glasford
+NoConn ~ 1650 1000
+NoConn ~ 1650 3450
+NoConn ~ 1650 5900
+NoConn ~ 3400 3300
 Wire Bus Line
 	950  7050 950  7600
 Wire Bus Line
