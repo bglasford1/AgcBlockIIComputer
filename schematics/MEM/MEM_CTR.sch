@@ -1,0 +1,117 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A 11000 8500
+encoding utf-8
+Sheet 15 18
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Sheet
+S 2900 2950 1400 1550
+U 60CC44CB
+F0 "MEM_CTR_CNT" 50
+F1 "MEM_CTR_CNT.sch" 50
+F2 "W[1..16]" O L 2900 3150 50 
+F3 "WOVR" I L 2900 3500 50 
+F4 "CLK1" I L 2900 3600 50 
+F5 "RSCT" I L 2900 3700 50 
+F6 "CT_CLK2" I L 2900 3800 50 
+F7 "SC[1..3]" O R 4300 3300 50 
+F8 "RP[1..4]" O R 4300 3500 50 
+F9 "runPINC" O R 4300 3950 50 
+F10 "WPCTR" I L 2900 3900 50 
+F11 "PI[1..4]" I R 4300 3700 50 
+F12 "GENRST" I L 2900 4000 50 
+$EndSheet
+$Sheet
+S 6650 2950 1400 1500
+U 60CC451E
+F0 "MEM_CTR_CTL" 50
+F1 "MEM_CTR_CTL.sch" 50
+F2 "F10X" I L 6650 4050 50 
+F3 "W[15..16]" I L 6650 3100 50 
+F4 "CT_CLK2" I L 6650 3950 50 
+F5 "GENRST" I L 6650 4150 50 
+F6 "WOVR" I L 6650 4250 50 
+F7 "SC[1..3]" I L 6650 3300 50 
+F8 "RP[1..4]" I L 6650 3500 50 
+F9 "TM3RUPT" O R 8050 3700 50 
+F10 "TM4RUPT" O R 8050 3800 50 
+F11 "PI[1..4]" O L 6650 3700 50 
+$EndSheet
+Wire Wire Line
+	6400 4050 6650 4050
+Wire Wire Line
+	6400 3950 6650 3950
+Wire Wire Line
+	6400 4150 6650 4150
+Wire Wire Line
+	2650 3500 2900 3500
+Wire Wire Line
+	2650 3600 2900 3600
+Wire Wire Line
+	2650 3700 2900 3700
+Wire Wire Line
+	2900 3800 2650 3800
+Text HLabel 2650 3500 0    50   Input ~ 0
+WOVR
+Text HLabel 2650 3600 0    50   Input ~ 0
+CLK1
+Text HLabel 2650 3700 0    50   Input ~ 0
+RSCT
+Text HLabel 2650 3800 0    50   Input ~ 0
+CT_CLK2
+Text HLabel 6400 4050 0    50   Input ~ 0
+F10X
+Text HLabel 6400 3950 0    50   Input ~ 0
+CT_CLK2
+Text HLabel 6400 4150 0    50   Input ~ 0
+GENRST
+Text HLabel 6400 4250 0    50   Input ~ 0
+WOVR
+Wire Wire Line
+	6400 4250 6650 4250
+Wire Wire Line
+	4300 3950 4550 3950
+Text HLabel 4550 3950 2    50   Output ~ 0
+runPINC
+Wire Wire Line
+	8050 3800 8300 3800
+Wire Wire Line
+	8050 3700 8300 3700
+Text HLabel 8300 3700 2    50   Output ~ 0
+TM3RUPT
+Text HLabel 8300 3800 2    50   Output ~ 0
+TM4RUPT
+Wire Wire Line
+	2900 3900 2650 3900
+Text HLabel 2650 3900 0    50   Input ~ 0
+WPCTR
+Wire Bus Line
+	2900 3150 2600 3150
+Text HLabel 2600 3150 0    50   Output ~ 0
+W[1..16]
+Wire Bus Line
+	4300 3300 6650 3300
+Wire Bus Line
+	4300 3500 6650 3500
+Wire Bus Line
+	6650 3100 6350 3100
+Text HLabel 6350 3100 0    50   Input ~ 0
+W[15..16]
+Wire Bus Line
+	4300 3700 6650 3700
+Wire Wire Line
+	2900 4000 2650 4000
+Text HLabel 2650 4000 0    50   Input ~ 0
+GENRST
+Text Notes 6350 7200 0    100  ~ 0
+MEM-CTR: Counters\nCopyright 2021, William Glasford
+$EndSCHEMATC

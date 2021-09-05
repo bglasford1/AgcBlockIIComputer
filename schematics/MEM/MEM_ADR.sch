@@ -1,0 +1,262 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A 11000 8500
+encoding utf-8
+Sheet 6 18
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Sheet
+S 5250 3100 1300 1300
+U 664B886F
+F0 "MEM_ADR_MDE" 50
+F1 " MEM_ADR_MDE.sch" 50
+F2 "MANDATA" O R 6550 3700 50 
+F3 "MEMA[1..16]" O R 6550 3250 50 
+F4 "A[1..14]" O R 6550 3550 50 
+F5 "MS[1..16]" O R 6550 3400 50 
+$EndSheet
+$Sheet
+S 2300 3000 1350 1400
+U 6649572B
+F0 "MEM_ADR_S" 50
+F1 "MEM_ADR_S.sch" 50
+F2 "W[1..16]" B L 2300 3150 50 
+F3 "WST" I L 2300 3450 50 
+F4 "SM[1..12]" O R 3650 3600 50 
+F5 "AD_CLK2A" I L 2300 3650 50 
+F6 "WS" I L 2300 3350 50 
+F7 "GENRST" I L 2300 3550 50 
+$EndSheet
+Wire Wire Line
+	9000 3200 9200 3200
+Wire Wire Line
+	9000 3300 9200 3300
+Wire Wire Line
+	9000 3400 9200 3400
+Text HLabel 9200 3200 2    50   Output ~ 0
+GTR1777
+Text HLabel 9200 3300 2    50   Output ~ 0
+GTR7
+Text HLabel 9200 3400 2    50   Output ~ 0
+EQU17
+Wire Wire Line
+	2300 3450 2100 3450
+Text HLabel 5100 2200 0    50   BiDi ~ 0
+W[1..16]
+Text HLabel 2100 3450 0    50   Input ~ 0
+WST
+Wire Wire Line
+	6750 3700 6550 3700
+Text HLabel 6750 3700 2    50   Output ~ 0
+MANDATA
+Wire Wire Line
+	2300 3650 2100 3650
+Text HLabel 2100 3650 0    50   Output ~ 0
+AD_CLK2A
+Wire Wire Line
+	5300 1150 5100 1150
+Wire Wire Line
+	2300 3550 2100 3550
+Text HLabel 5100 1150 0    50   Input ~ 0
+WEB
+Text HLabel 2100 3550 0    50   Input ~ 0
+GENRST
+Text HLabel 2100 3350 0    50   Input ~ 0
+WS
+Wire Wire Line
+	2300 3350 2100 3350
+Text HLabel 7450 2950 2    50   Output ~ 0
+MS[1..16]
+Text HLabel 5100 1250 0    50   Input ~ 0
+WFB
+Wire Wire Line
+	5300 1250 5100 1250
+Wire Bus Line
+	5300 2200 5100 2200
+Wire Bus Line
+	3650 3600 4400 3600
+Wire Bus Line
+	6750 3250 6550 3250
+Text HLabel 6750 3250 2    50   Output ~ 0
+MEMA[1..16]
+Wire Bus Line
+	6550 3550 7350 3550
+Wire Bus Line
+	7350 3550 7350 4900
+$Sheet
+S 5300 950  1200 1850
+U 84067FE8
+F0 "MEM_ADR_BNK" 50
+F1 "MEM_ADR_BNK.sch" 50
+F2 "W[1..16]" I L 5300 2200 50 
+F3 "WEB" I L 5300 1150 50 
+F4 "WFB" I L 5300 1250 50 
+F5 "WBB" I L 5300 1350 50 
+F6 "GENRST" I L 5300 1450 50 
+F7 "AD_CLK2A" I L 5300 1550 50 
+F8 "REB" I L 5300 1650 50 
+F9 "RFB" I L 5300 1750 50 
+F10 "RBBK" I L 5300 1850 50 
+F11 "EBM[1..3]" O L 5300 2650 50 
+F12 "WSB" I L 5300 1950 50 
+F13 "FBM[1..6]" O L 5300 2500 50 
+F14 "CH[7..7]" B L 5300 2350 50 
+F15 "RSB" I L 5300 2050 50 
+F16 "CLK1" I L 5300 1050 50 
+$EndSheet
+Wire Wire Line
+	5300 1350 5100 1350
+Text HLabel 5100 1350 0    50   Input ~ 0
+WBB
+Text HLabel 5100 1450 0    50   Input ~ 0
+GENRST
+Wire Wire Line
+	5300 1450 5100 1450
+Wire Wire Line
+	5300 1550 5100 1550
+Text HLabel 5100 1550 0    50   Input ~ 0
+AD_CLK2A
+Text HLabel 5100 1650 0    50   Input ~ 0
+REB
+Wire Wire Line
+	5300 1650 5100 1650
+Wire Wire Line
+	5300 1750 5100 1750
+Text HLabel 5100 1750 0    50   Input ~ 0
+RFB
+Text HLabel 5100 1850 0    50   Input ~ 0
+RBBK
+Wire Wire Line
+	5300 1850 5100 1850
+Wire Bus Line
+	6600 4900 7350 4900
+Wire Bus Line
+	4400 3600 4400 5250
+Wire Bus Line
+	4400 5250 5250 5250
+Wire Bus Line
+	5300 2650 4750 2650
+Text HLabel 5100 1950 0    50   Input ~ 0
+WSB
+Wire Wire Line
+	5100 1950 5300 1950
+$Sheet
+S 5250 4750 1350 1350
+U 664B8829
+F0 "MEM_ADR_ATS" 50
+F1 "MEM_ADR_ATS.sch" 50
+F2 "A[1..16]" O R 6600 4900 50 
+F3 "SM[1..12]" I L 5250 5250 50 
+F4 "EBM[1..3]" I L 5250 4850 50 
+F5 "WE" I L 5250 5700 50 
+F6 "SBWG" I L 5250 5800 50 
+F7 "RCH" I L 5250 5900 50 
+F8 "WCH" I L 5250 6000 50 
+F9 "FBM[1..6]" I L 5250 5050 50 
+F10 "GETBP" I L 5250 5600 50 
+F11 "CLK1" I L 5250 5500 50 
+$EndSheet
+$Sheet
+S 8050 2850 950  1400
+U 8BF4F48A
+F0 "MEM_ADR_CTL" 50
+F1 "MEM_ADR_CTL.sch" 50
+F2 "A[1..16]" I L 8050 3550 50 
+F3 "GTR1777" O R 9000 3200 50 
+F4 "GTR7" O R 9000 3300 50 
+F5 "EQU17" O R 9000 3400 50 
+F6 "MS[1..16]" I L 8050 3400 50 
+F7 "GETBP" I L 8050 3750 50 
+F8 "AD_CLK2B" I L 8050 3850 50 
+F9 "ISBP" O R 9000 3500 50 
+$EndSheet
+Wire Wire Line
+	5250 5800 5050 5800
+Text HLabel 5050 5800 0    50   Input ~ 0
+SBWG
+Wire Wire Line
+	5250 6000 5050 6000
+Text HLabel 5050 6000 0    50   Input ~ 0
+WCH
+Wire Wire Line
+	5250 5900 5050 5900
+Text HLabel 5050 5900 0    50   Input ~ 0
+RCH
+Text HLabel 5050 5700 0    50   Input ~ 0
+WE
+Wire Wire Line
+	5250 5700 5050 5700
+Text HLabel 2100 3150 0    50   BiDi ~ 0
+W[1..16]
+Wire Bus Line
+	2300 3150 2100 3150
+Wire Bus Line
+	4750 4850 5250 4850
+Wire Bus Line
+	4750 2650 4750 4850
+Wire Bus Line
+	5300 2500 4600 2500
+Wire Bus Line
+	4600 5050 5250 5050
+Text HLabel 5100 2350 0    50   BiDi ~ 0
+CH[7..7]
+Wire Bus Line
+	5300 2350 5100 2350
+Text HLabel 5100 2050 0    50   Input ~ 0
+RSB
+Wire Wire Line
+	5100 2050 5300 2050
+Wire Wire Line
+	5250 5600 5050 5600
+Text HLabel 5050 5600 0    50   Input ~ 0
+GETBP
+Wire Wire Line
+	8050 3850 7850 3850
+Text HLabel 7850 3850 0    50   Input ~ 0
+AD_CLK2B
+Wire Wire Line
+	8050 3750 7850 3750
+Text HLabel 7850 3750 0    50   Input ~ 0
+GETBP
+Wire Wire Line
+	9200 3500 9000 3500
+Text HLabel 9200 3500 2    50   Output ~ 0
+ISBP
+Wire Bus Line
+	7450 2950 7350 2950
+Wire Bus Line
+	7350 2950 7350 3400
+Wire Bus Line
+	6550 3400 7350 3400
+Wire Bus Line
+	7350 3400 8050 3400
+Connection ~ 7350 3400
+Wire Wire Line
+	5300 1050 5100 1050
+Text HLabel 5100 1050 0    50   Input ~ 0
+CLK1
+Connection ~ 7350 3550
+Wire Bus Line
+	7350 4900 7450 4900
+Text HLabel 7450 4900 2    50   Output ~ 0
+A[1..7]
+Connection ~ 7350 4900
+Wire Bus Line
+	7350 3550 8050 3550
+Text Notes 6350 7200 0    100  ~ 0
+MEM-ADR:  Addressing\nCopyright 2021, William Glasford
+Wire Bus Line
+	4600 2500 4600 5050
+Wire Wire Line
+	5250 5500 5050 5500
+Text HLabel 5050 5500 0    50   Input ~ 0
+CLK1
+$EndSCHEMATC
