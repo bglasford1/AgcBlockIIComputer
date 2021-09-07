@@ -359,7 +359,6 @@ Wire Wire Line
 	2300 3100 2550 3100
 NoConn ~ 2300 3500
 NoConn ~ 2300 3400
-NoConn ~ 2300 3300
 NoConn ~ 2300 3200
 NoConn ~ 2300 3000
 NoConn ~ 2300 2900
@@ -476,17 +475,6 @@ Text Label 2750 5000 0    50   ~ 0
 L6
 Text Label 2750 5100 0    50   ~ 0
 L7
-$Comp
-L power:+5V #PWR0151
-U 1 1 637E2B4B
-P 3000 4400
-F 0 "#PWR0151" H 3000 4250 50  0001 C CNN
-F 1 "+5V" H 3015 4573 50  0000 C CNN
-F 2 "" H 3000 4400 50  0001 C CNN
-F 3 "" H 3000 4400 50  0001 C CNN
-	1    3000 4400
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	3000 3100 2900 3100
 Wire Wire Line
@@ -936,7 +924,6 @@ Wire Wire Line
 	7350 3200 7600 3200
 NoConn ~ 7350 3600
 NoConn ~ 7350 3500
-NoConn ~ 7350 3400
 NoConn ~ 7350 3300
 NoConn ~ 7350 3100
 NoConn ~ 7350 3000
@@ -1053,17 +1040,6 @@ Text Label 7800 5100 0    50   ~ 0
 H6
 Text Label 7800 5200 0    50   ~ 0
 H7
-$Comp
-L power:+5V #PWR0170
-U 1 1 638E459E
-P 8050 4500
-F 0 "#PWR0170" H 8050 4350 50  0001 C CNN
-F 1 "+5V" H 8065 4673 50  0000 C CNN
-F 2 "" H 8050 4500 50  0001 C CNN
-F 3 "" H 8050 4500 50  0001 C CNN
-	1    8050 4500
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	8050 3200 7950 3200
 Wire Wire Line
@@ -1409,6 +1385,30 @@ Text Label 10350 3200 2    50   ~ 0
 BI8
 Text Notes 6450 7150 0    100  ~ 0
 DSKY-DSP-DCC:  Decode High/Low Word\nCopyright 2021, William Glasford
+Wire Wire Line
+	2300 3300 2550 3300
+Entry Wire Line
+	2550 3300 2650 3400
+Text Label 2550 3300 2    50   ~ 0
+L0
+Wire Wire Line
+	3000 4400 2750 4400
+Entry Wire Line
+	2650 4500 2750 4400
+Text Label 2750 4400 0    50   ~ 0
+L0
+Wire Wire Line
+	7350 3400 7600 3400
+Entry Wire Line
+	7600 3400 7700 3500
+Text Label 7600 3400 2    50   ~ 0
+H0
+Wire Wire Line
+	8050 4500 7800 4500
+Entry Wire Line
+	7700 4600 7800 4500
+Text Label 7800 4500 0    50   ~ 0
+H0
 Wire Bus Line
 	6450 6050 6450 6650
 Wire Bus Line

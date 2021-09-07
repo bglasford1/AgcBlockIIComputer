@@ -68,13 +68,11 @@ $EndComp
 Wire Wire Line
 	3300 1650 3150 1650
 Wire Wire Line
-	3300 2450 3150 2450
+	3300 2250 3150 2250
 Wire Wire Line
-	3150 2450 3150 1950
+	3300 2450 2900 2450
 Wire Wire Line
-	3300 2250 2450 2250
-Wire Wire Line
-	3300 1450 2450 1450
+	3300 1450 2900 1450
 Wire Wire Line
 	3150 1950 2900 1950
 Connection ~ 3150 1950
@@ -85,36 +83,32 @@ CLK2
 $Comp
 L 74xx:74LS04 U?
 U 3 1 67D9AB30
-P 2150 1450
+P 2600 1450
 AR Path="/60F98A4F/67D9AB30" Ref="U?"  Part="5" 
 AR Path="/60F98A64/67D1D986/67D9AB30" Ref="U5"  Part="3" 
-F 0 "U5" H 2150 1767 50  0000 C CNN
-F 1 "74LS04" H 2150 1676 50  0000 C CNN
-F 2 "" H 2150 1450 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74ls00" H 2150 1450 50  0001 C CNN
-	3    2150 1450
+F 0 "U5" H 2600 1767 50  0000 C CNN
+F 1 "74LS04" H 2600 1676 50  0000 C CNN
+F 2 "" H 2600 1450 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74ls00" H 2600 1450 50  0001 C CNN
+	3    2600 1450
 	1    0    0    -1  
 $EndComp
 $Comp
 L 74xx:74LS04 U?
 U 4 1 67D9AB36
-P 2150 2250
+P 2600 2450
 AR Path="/60F98A4F/67D9AB36" Ref="U?"  Part="6" 
 AR Path="/60F98A64/67D1D986/67D9AB36" Ref="U5"  Part="4" 
-F 0 "U5" H 2150 2567 50  0000 C CNN
-F 1 "74LS04" H 2150 2476 50  0000 C CNN
-F 2 "" H 2150 2250 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74ls00" H 2150 2250 50  0001 C CNN
-	4    2150 2250
+F 0 "U5" H 2600 2767 50  0000 C CNN
+F 1 "74LS04" H 2600 2676 50  0000 C CNN
+F 2 "" H 2600 2450 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74ls00" H 2600 2450 50  0001 C CNN
+	4    2600 2450
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	1850 2250 1500 2250
-Wire Wire Line
-	1850 1450 1500 1450
-Text HLabel 1500 1450 0    50   Input ~ 0
+Text HLabel 2300 1450 0    50   Input ~ 0
 DISP
-Text HLabel 1500 2250 0    50   Input ~ 0
+Text HLabel 2300 2450 0    50   Input ~ 0
 GENRST
 Text Notes 4750 2750 0    100  ~ 0
 CH10 Reg.
@@ -491,27 +485,23 @@ Text Label 9450 1450 2    50   ~ 0
 IND7
 Connection ~ 3900 2350
 Wire Wire Line
-	8150 2250 8050 2250
-Wire Wire Line
-	8050 2250 8050 2750
-Wire Wire Line
-	8050 2750 7950 2750
+	7450 2150 7350 2150
 $Comp
 L 74xx:74LS00 U?
 U 4 1 78C759B0
-P 7650 2750
+P 7050 2150
 AR Path="/60F98A4F/78C759B0" Ref="U?"  Part="4" 
 AR Path="/60F98A64/67D1D986/78C759B0" Ref="U7"  Part="4" 
-F 0 "U7" H 7650 3075 50  0000 C CNN
-F 1 "74LS00" H 7650 2984 50  0000 C CNN
-F 2 "" H 7650 2750 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74ls00" H 7650 2750 50  0001 C CNN
-	4    7650 2750
+F 0 "U7" H 7050 2475 50  0000 C CNN
+F 1 "74LS00" H 7050 2384 50  0000 C CNN
+F 2 "" H 7050 2150 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74ls00" H 7050 2150 50  0001 C CNN
+	4    7050 2150
 	1    0    0    -1  
 $EndComp
-Text HLabel 7350 2850 0    50   Input ~ 0
+Text HLabel 6750 2250 0    50   Input ~ 0
 CLK2
-Text HLabel 7350 2650 0    50   Input ~ 0
+Text HLabel 6750 2050 0    50   Input ~ 0
 INDC
 NoConn ~ 5650 3350
 NoConn ~ 4650 3350
@@ -533,6 +523,12 @@ NoConn ~ 9150 2050
 NoConn ~ 8150 2050
 Wire Wire Line
 	3900 2350 8150 2350
+Wire Wire Line
+	7450 2250 8150 2250
+Wire Wire Line
+	7450 2150 7450 2250
+Wire Wire Line
+	3150 2250 3150 1950
 Wire Bus Line
 	7650 1150 7650 2100
 Wire Bus Line

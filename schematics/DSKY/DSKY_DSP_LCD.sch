@@ -1647,21 +1647,21 @@ DP-1
 Text Label 10400 6050 2    50   ~ 0
 DP-3
 Text Label 3000 950  0    50   ~ 0
-A-2
+A-1
 Text Label 3000 1050 0    50   ~ 0
-B-2
+B-1
 Text Label 3000 1150 0    50   ~ 0
-C-2
+C-1
 Text Label 3000 1250 0    50   ~ 0
-D-2
+D-1
 Text Label 3000 1350 0    50   ~ 0
-E-2
+E-1
 Text Label 3000 1450 0    50   ~ 0
-F-2
+F-1
 Text Label 3000 1550 0    50   ~ 0
-G-2
+G-1
 Text Label 3000 1650 0    50   ~ 0
-DP-2
+DP-1
 Text Label 5400 950  0    50   ~ 0
 A-2
 Text Label 5400 1050 0    50   ~ 0
@@ -1819,49 +1819,49 @@ A-2
 Text Label 8000 3900 0    50   ~ 0
 A-3
 Text Label 8000 5350 0    50   ~ 0
-A-1
+A-2
 Text Label 8000 2550 0    50   ~ 0
 B-2
 Text Label 8000 4000 0    50   ~ 0
 B-3
 Text Label 8000 5450 0    50   ~ 0
-B-1
+B-2
 Text Label 8000 2650 0    50   ~ 0
 C-2
 Text Label 8000 4100 0    50   ~ 0
 C-3
 Text Label 8000 5550 0    50   ~ 0
-C-1
+C-2
 Text Label 8000 2750 0    50   ~ 0
 D-2
 Text Label 8000 4200 0    50   ~ 0
 D-3
 Text Label 8000 5650 0    50   ~ 0
-D-1
+D-2
 Text Label 8000 2850 0    50   ~ 0
 E-2
 Text Label 8000 4300 0    50   ~ 0
 E-3
 Text Label 8000 5750 0    50   ~ 0
-E-1
+E-2
 Text Label 8000 2950 0    50   ~ 0
 F-2
 Text Label 8000 4400 0    50   ~ 0
 F-3
 Text Label 8000 5850 0    50   ~ 0
-F-1
+F-2
 Text Label 8000 3050 0    50   ~ 0
 G-2
 Text Label 8000 4500 0    50   ~ 0
 G-3
 Text Label 8000 5950 0    50   ~ 0
-G-1
+G-2
 Text Label 8000 3150 0    50   ~ 0
 DP-2
 Text Label 8000 4600 0    50   ~ 0
 DP-3
 Text Label 8000 6050 0    50   ~ 0
-DP-1
+DP-2
 Wire Wire Line
 	1650 1550 1400 1550
 Wire Wire Line
@@ -1906,10 +1906,6 @@ Wire Wire Line
 	1650 6750 1400 6750
 Wire Wire Line
 	1650 1950 1400 1950
-Wire Wire Line
-	1650 4400 1400 4400
-Wire Wire Line
-	1650 6850 1400 6850
 Entry Wire Line
 	1300 1650 1400 1550
 Entry Wire Line
@@ -1935,8 +1931,6 @@ Entry Wire Line
 Entry Wire Line
 	1300 4400 1400 4300
 Entry Wire Line
-	1300 4500 1400 4400
-Entry Wire Line
 	950  4850 1050 4750
 Entry Wire Line
 	950  4950 1050 4850
@@ -1950,8 +1944,6 @@ Entry Wire Line
 	1300 6750 1400 6650
 Entry Wire Line
 	1300 6850 1400 6750
-Entry Wire Line
-	1300 6950 1400 6850
 Entry Wire Line
 	950  7300 1050 7200
 Entry Wire Line
@@ -1996,10 +1988,6 @@ Text Label 1400 4300 0    50   ~ 0
 ID23
 Text Label 1400 6750 0    50   ~ 0
 ID33
-Text Label 1400 4400 0    50   ~ 0
-ID24
-Text Label 1400 6850 0    50   ~ 0
-ID34
 Wire Bus Line
 	1300 1400 1250 1400
 Wire Bus Line
@@ -2015,11 +2003,11 @@ WRITE3
 Wire Bus Line
 	1300 3900 1250 3900
 Text HLabel 1250 3900 0    50   Input ~ 0
-ID2[0..4]
+ID2[0..3]
 Wire Bus Line
 	1300 6350 1250 6350
 Text HLabel 1250 6350 0    50   Input ~ 0
-ID3[0..4]
+ID3[0..3]
 Wire Bus Line
 	950  4650 900  4650
 Text HLabel 900  4650 0    50   Input ~ 0
@@ -2044,10 +2032,9 @@ Text HLabel 900  2150 0    50   Input ~ 0
 DA1[1..3]
 Text Notes 6350 7200 0    100  ~ 0
 DSKY-DSP-LCD:  LCD Decode Logic\nCopyright 2021, William Glasford
-NoConn ~ 1650 1000
-NoConn ~ 1650 3450
-NoConn ~ 1650 5900
+NoConn ~ 1650 4400
 NoConn ~ 3400 3300
+NoConn ~ 1650 6850
 Wire Bus Line
 	950  7050 950  7600
 Wire Bus Line
@@ -2055,11 +2042,11 @@ Wire Bus Line
 Wire Bus Line
 	950  2150 950  2700
 Wire Bus Line
+	1300 3900 1300 4450
+Wire Bus Line
+	1300 6350 1300 6900
+Wire Bus Line
 	1300 1400 1300 2150
-Wire Bus Line
-	1300 3900 1300 4550
-Wire Bus Line
-	1300 6350 1300 7000
 Wire Bus Line
 	7900 650  7900 6350
 Wire Bus Line
@@ -2068,4 +2055,10 @@ Wire Bus Line
 	5300 650  5300 6350
 Wire Bus Line
 	2900 600  2900 7650
+Text HLabel 1650 1000 0    50   Input ~ 0
+MODE1
+Text HLabel 1650 3450 0    50   Input ~ 0
+MODE2
+Text HLabel 1650 5900 0    50   Input ~ 0
+MODE3
 $EndSCHEMATC

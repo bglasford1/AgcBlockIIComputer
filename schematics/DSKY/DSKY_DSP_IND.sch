@@ -1341,14 +1341,14 @@ $EndComp
 $Comp
 L 74xx:74LS04 U?
 U 5 1 66B1B922
-P 2050 4450
+P 1700 4450
 AR Path="/60F98A64/64844A8A/66B1B922" Ref="U?"  Part="6" 
 AR Path="/60F98A64/68A00B2E/66B1B922" Ref="U42"  Part="5" 
-F 0 "U42" H 2050 4767 50  0000 C CNN
-F 1 "74LS04" H 2050 4676 50  0000 C CNN
-F 2 "" H 2050 4450 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 2050 4450 50  0001 C CNN
-	5    2050 4450
+F 0 "U42" H 1700 4767 50  0000 C CNN
+F 1 "74LS04" H 1700 4676 50  0000 C CNN
+F 2 "" H 1700 4450 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 1700 4450 50  0001 C CNN
+	5    1700 4450
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1566,7 +1566,7 @@ Wire Wire Line
 Wire Wire Line
 	2850 5900 3050 5900
 Wire Wire Line
-	2350 4450 2550 4450
+	2000 4450 2550 4450
 Wire Wire Line
 	4000 1300 3850 1300
 Wire Wire Line
@@ -1645,14 +1645,12 @@ Wire Wire Line
 Wire Wire Line
 	3850 3400 3850 3550
 Wire Wire Line
-	1750 4450 1500 4450
-Wire Wire Line
 	2100 1650 2550 1650
 Wire Wire Line
-	750  5150 2550 5150
+	1050 5150 2550 5150
 Wire Wire Line
-	750  5900 2550 5900
-Text HLabel 1500 4450 0    50   Input ~ 0
+	1050 5900 2550 5900
+Text HLabel 1400 4450 0    50   Input ~ 0
 STBY
 Text Notes 2450 1600 2    50   ~ 0
 RESTART
@@ -1803,24 +1801,24 @@ Text Notes 5050 6450 0    50   ~ 0
 Green
 Connection ~ 5000 5900
 Entry Wire Line
-	650  3150 750  3050
+	950  3150 1050 3050
 Entry Wire Line
-	650  3850 750  3750
-Text Label 750  3750 0    50   ~ 0
+	950  3850 1050 3750
+Text Label 1050 3750 0    50   ~ 0
 IND7
-Text Label 750  3050 0    50   ~ 0
+Text Label 1050 3050 0    50   ~ 0
 IND5
 Entry Wire Line
-	650  2450 750  2350
-Text Label 750  2350 0    50   ~ 0
+	950  2450 1050 2350
+Text Label 1050 2350 0    50   ~ 0
 IND2
 Entry Wire Line
-	650  5250 750  5150
+	950  5250 1050 5150
 Entry Wire Line
-	650  6000 750  5900
-Text Label 750  5150 0    50   ~ 0
+	950  6000 1050 5900
+Text Label 1050 5150 0    50   ~ 0
 IND3
-Text Label 750  5900 0    50   ~ 0
+Text Label 1050 5900 0    50   ~ 0
 IND4
 $Comp
 L Device:LED D?
@@ -1835,11 +1833,11 @@ F 3 "~" H 4150 3050 50  0001 C CNN
 	1    4150 3050
 	1    0    0    -1  
 $EndComp
-Text HLabel 650  2000 1    50   Input ~ 0
+Text HLabel 900  2000 0    50   Input ~ 0
 IND[2..7]
 Wire Wire Line
-	750  2350 2550 2350
-Text HLabel 5550 3550 1    50   Input ~ 0
+	1050 2350 2550 2350
+Text HLabel 5550 3600 1    50   Input ~ 0
 RWD[12..12]
 Wire Wire Line
 	5650 3900 6000 3900
@@ -1849,15 +1847,11 @@ Text Label 5650 3900 0    50   ~ 0
 RWD12
 Text Notes 6350 7150 0    100  ~ 0
 DSKY-DSP-IND:  Indicator Logic\nCopyright 2021, William Glasford
-Text Notes 2250 7500 0    80   ~ 0
-Use 4 resistor\nisolated network\nchips.
-Text Notes 4250 7350 0    80   ~ 0
-Use 9 resistor\nnetwork chips.
 NoConn ~ 7000 3100
 Wire Wire Line
-	750  3050 2550 3050
+	1050 3050 2550 3050
 Wire Wire Line
-	750  3750 2550 3750
+	1050 3750 2550 3750
 Text HLabel 1500 1750 0    50   Input ~ 0
 STBY
 $Comp
@@ -1872,10 +1866,10 @@ F 3 "http://www.ti.com/lit/gpn/sn74LS32" H 1800 1650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	750  6650 2550 6650
+	1050 6650 2550 6650
 Entry Wire Line
-	650  6750 750  6650
-Text Label 750  6650 0    50   ~ 0
+	950  6750 1050 6650
+Text Label 1050 6650 0    50   ~ 0
 IND6
 Text Notes 2400 6600 2    50   ~ 0
 Flash V/N
@@ -1893,8 +1887,8 @@ L power:+5V #PWR?
 U 1 1 616BC033
 P 5000 1150
 AR Path="/60F98A64/64844A8A/616BC033" Ref="#PWR?"  Part="1" 
-AR Path="/60F98A64/68A00B2E/616BC033" Ref="#PWR?"  Part="1" 
-F 0 "#PWR?" H 5000 1000 50  0001 C CNN
+AR Path="/60F98A64/68A00B2E/616BC033" Ref="#PWR0104"  Part="1" 
+F 0 "#PWR0104" H 5000 1000 50  0001 C CNN
 F 1 "+5V" H 5015 1323 50  0000 C CNN
 F 2 "" H 5000 1150 50  0001 C CNN
 F 3 "" H 5000 1150 50  0001 C CNN
@@ -1904,10 +1898,14 @@ $EndComp
 Wire Wire Line
 	5000 1300 5000 1150
 Connection ~ 5000 1300
+Text Notes 2400 4400 2    50   ~ 0
+STBY
+Wire Bus Line
+	950  2000 900  2000
 Wire Bus Line
 	5550 3600 5550 4050
 Wire Bus Line
-	650  2000 650  6900
+	950  2000 950  6900
 Wire Bus Line
 	5650 2800 5650 3800
 $EndSCHEMATC
