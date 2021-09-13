@@ -1364,25 +1364,25 @@ Entry Wire Line
 Entry Wire Line
 	5300 4800 5400 4900
 Text HLabel 5450 2850 2    50   Output ~ 0
-BI[1..4]
+ID3[0..3]
 Text HLabel 10450 2950 1    50   Output ~ 0
-BI[5..8]
+ID2[0..3]
 Text Label 5300 4800 2    50   ~ 0
-BI1
+ID30
 Text Label 5300 4150 2    50   ~ 0
-BI2
+ID31
 Text Label 5300 3550 2    50   ~ 0
-BI3
+ID32
 Text Label 5300 3100 2    50   ~ 0
-BI4
+ID33
 Text Label 10350 4900 2    50   ~ 0
-BI5
+ID20
 Text Label 10350 4250 2    50   ~ 0
-BI6
+ID21
 Text Label 10350 3650 2    50   ~ 0
-BI7
+ID22
 Text Label 10350 3200 2    50   ~ 0
-BI8
+ID23
 Text Notes 6450 7150 0    100  ~ 0
 DSKY-DSP-DCC:  Decode High/Low Word\nCopyright 2021, William Glasford
 Wire Wire Line

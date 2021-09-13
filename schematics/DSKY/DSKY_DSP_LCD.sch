@@ -2035,6 +2035,12 @@ DSKY-DSP-LCD:  LCD Decode Logic\nCopyright 2021, William Glasford
 NoConn ~ 1650 4400
 NoConn ~ 3400 3300
 NoConn ~ 1650 6850
+Text HLabel 1650 1000 0    50   Input ~ 0
+MODE1
+Text HLabel 1650 3450 0    50   Input ~ 0
+MODE2
+Text HLabel 1650 5900 0    50   Input ~ 0
+MODE3
 Wire Bus Line
 	950  7050 950  7600
 Wire Bus Line
@@ -2055,10 +2061,4 @@ Wire Bus Line
 	5300 650  5300 6350
 Wire Bus Line
 	2900 600  2900 7650
-Text HLabel 1650 1000 0    50   Input ~ 0
-MODE1
-Text HLabel 1650 3450 0    50   Input ~ 0
-MODE2
-Text HLabel 1650 5900 0    50   Input ~ 0
-MODE3
 $EndSCHEMATC
