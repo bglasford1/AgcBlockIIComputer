@@ -12,7 +12,7 @@ DSKY_DSP : The Display Module
 
     DSKY_DSP_IND : Contains indicator lights logic
 
-    DSKY_DSP_DCD2_3 : Contains decode logic for LCD drivers #2 & #3
+    DSKY_DSP_DCD2_3 : Contains decode logic for LCD Drivers #2 & #3
 
     DSKY_DSP_DCD1 : Contains decode logic for LCD Driver #1
 
