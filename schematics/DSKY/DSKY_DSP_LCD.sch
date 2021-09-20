@@ -291,8 +291,6 @@ Entry Wire Line
 Entry Wire Line
 	2800 6400 2900 6500
 Entry Wire Line
-	2800 6500 2900 6600
-Entry Wire Line
 	2800 6700 2900 6800
 Entry Wire Line
 	2800 6800 2900 6900
@@ -324,8 +322,6 @@ Entry Wire Line
 	2800 4350 2900 4450
 Entry Wire Line
 	2800 4250 2900 4350
-Entry Wire Line
-	2800 4050 2900 4150
 Entry Wire Line
 	2800 3950 2900 4050
 Entry Wire Line
@@ -389,8 +385,6 @@ Wire Wire Line
 Wire Wire Line
 	2450 6400 2800 6400
 Wire Wire Line
-	2450 6500 2800 6500
-Wire Wire Line
 	2450 6700 2800 6700
 Wire Wire Line
 	2450 6800 2800 6800
@@ -420,8 +414,6 @@ Wire Wire Line
 	2450 4350 2800 4350
 Wire Wire Line
 	2450 3950 2800 3950
-Wire Wire Line
-	2450 4050 2800 4050
 Wire Wire Line
 	2450 3750 2800 3750
 Wire Wire Line
@@ -489,8 +481,6 @@ Wire Wire Line
 Wire Wire Line
 	3500 1550 3000 1550
 Wire Wire Line
-	3500 1650 3000 1650
-Wire Wire Line
 	3500 2450 3000 2450
 Wire Wire Line
 	3500 2550 3000 2550
@@ -549,8 +539,6 @@ Wire Wire Line
 Wire Wire Line
 	5950 1550 5400 1550
 Wire Wire Line
-	5950 1650 5400 1650
-Wire Wire Line
 	5950 2450 5400 2450
 Wire Wire Line
 	5950 2550 5400 2550
@@ -564,8 +552,6 @@ Wire Wire Line
 	5950 2950 5400 2950
 Wire Wire Line
 	5950 3050 5400 3050
-Wire Wire Line
-	5950 3150 5400 3150
 Wire Wire Line
 	5950 3900 5400 3900
 Wire Wire Line
@@ -581,8 +567,6 @@ Wire Wire Line
 Wire Wire Line
 	5950 4500 5400 4500
 Wire Wire Line
-	5950 4600 5400 4600
-Wire Wire Line
 	5950 5350 5400 5350
 Wire Wire Line
 	5950 5450 5400 5450
@@ -597,8 +581,6 @@ Wire Wire Line
 Wire Wire Line
 	5950 5950 5400 5950
 Wire Wire Line
-	5950 6050 5400 6050
-Wire Wire Line
 	8650 1150 8000 1150
 Wire Wire Line
 	8650 1250 8000 1250
@@ -608,8 +590,6 @@ Wire Wire Line
 	8650 1450 8000 1450
 Wire Wire Line
 	8650 1550 8000 1550
-Wire Wire Line
-	8650 1650 8000 1650
 Wire Wire Line
 	8650 2450 8000 2450
 Wire Wire Line
@@ -625,8 +605,6 @@ Wire Wire Line
 Wire Wire Line
 	8650 3050 8000 3050
 Wire Wire Line
-	8650 3150 8000 3150
-Wire Wire Line
 	8650 3900 8000 3900
 Wire Wire Line
 	8650 4000 8000 4000
@@ -641,8 +619,6 @@ Wire Wire Line
 Wire Wire Line
 	8650 4500 8000 4500
 Wire Wire Line
-	8650 4600 8000 4600
-Wire Wire Line
 	8650 5350 8000 5350
 Wire Wire Line
 	8650 5450 8000 5450
@@ -656,8 +632,6 @@ Wire Wire Line
 	8650 5850 8000 5850
 Wire Wire Line
 	8650 5950 8000 5950
-Wire Wire Line
-	8650 6050 8000 6050
 Wire Wire Line
 	9850 950  10400 950 
 Wire Wire Line
@@ -681,8 +655,6 @@ Wire Wire Line
 Wire Wire Line
 	4700 1550 5200 1550
 Wire Wire Line
-	4700 1650 5200 1650
-Wire Wire Line
 	4700 2450 5200 2450
 Wire Wire Line
 	4700 2550 5200 2550
@@ -696,8 +668,6 @@ Wire Wire Line
 	4700 2950 5200 2950
 Wire Wire Line
 	4700 3050 5200 3050
-Wire Wire Line
-	4700 3150 5200 3150
 Wire Wire Line
 	4700 3900 5200 3900
 Wire Wire Line
@@ -713,8 +683,6 @@ Wire Wire Line
 Wire Wire Line
 	4700 4500 5200 4500
 Wire Wire Line
-	4700 4600 5200 4600
-Wire Wire Line
 	4700 5350 5200 5350
 Wire Wire Line
 	4700 5450 5200 5450
@@ -729,8 +697,6 @@ Wire Wire Line
 Wire Wire Line
 	4700 5950 5200 5950
 Wire Wire Line
-	4700 6050 5200 6050
-Wire Wire Line
 	7150 1150 7800 1150
 Wire Wire Line
 	7150 1250 7800 1250
@@ -740,8 +706,6 @@ Wire Wire Line
 	7150 1450 7800 1450
 Wire Wire Line
 	7150 1550 7800 1550
-Wire Wire Line
-	7150 1650 7800 1650
 Wire Wire Line
 	7150 2450 7800 2450
 Wire Wire Line
@@ -757,8 +721,6 @@ Wire Wire Line
 Wire Wire Line
 	7150 3050 7800 3050
 Wire Wire Line
-	7150 3150 7800 3150
-Wire Wire Line
 	7150 3900 7800 3900
 Wire Wire Line
 	7150 4000 7800 4000
@@ -772,8 +734,6 @@ Wire Wire Line
 	7150 4400 7800 4400
 Wire Wire Line
 	7150 4500 7800 4500
-Wire Wire Line
-	7150 4600 7800 4600
 Wire Wire Line
 	7150 5350 7800 5350
 Wire Wire Line
@@ -789,8 +749,6 @@ Wire Wire Line
 Wire Wire Line
 	7150 5950 7800 5950
 Wire Wire Line
-	7150 6050 7800 6050
-Wire Wire Line
 	9850 1150 10400 1150
 Wire Wire Line
 	9850 1250 10400 1250
@@ -800,8 +758,6 @@ Wire Wire Line
 	9850 1450 10400 1450
 Wire Wire Line
 	9850 1550 10400 1550
-Wire Wire Line
-	9850 1650 10400 1650
 Wire Wire Line
 	9850 2450 10400 2450
 Wire Wire Line
@@ -817,8 +773,6 @@ Wire Wire Line
 Wire Wire Line
 	9850 3050 10400 3050
 Wire Wire Line
-	9850 3150 10400 3150
-Wire Wire Line
 	9850 3900 10400 3900
 Wire Wire Line
 	9850 4000 10400 4000
@@ -833,8 +787,6 @@ Wire Wire Line
 Wire Wire Line
 	9850 4500 10400 4500
 Wire Wire Line
-	9850 4600 10400 4600
-Wire Wire Line
 	9850 5350 10400 5350
 Wire Wire Line
 	9850 5450 10400 5450
@@ -848,8 +800,6 @@ Wire Wire Line
 	9850 5850 10400 5850
 Wire Wire Line
 	9850 5950 10400 5950
-Wire Wire Line
-	9850 6050 10400 6050
 Wire Wire Line
 	3500 1750 3000 1750
 Wire Wire Line
@@ -949,8 +899,6 @@ Entry Wire Line
 Entry Wire Line
 	2900 2550 3000 2450
 Entry Wire Line
-	2900 1750 3000 1650
-Entry Wire Line
 	2900 1650 3000 1550
 Entry Wire Line
 	2900 1550 3000 1450
@@ -979,8 +927,6 @@ Entry Wire Line
 Entry Wire Line
 	5300 1650 5400 1550
 Entry Wire Line
-	5300 1750 5400 1650
-Entry Wire Line
 	5300 2550 5400 2450
 Entry Wire Line
 	5300 2650 5400 2550
@@ -994,8 +940,6 @@ Entry Wire Line
 	5300 3050 5400 2950
 Entry Wire Line
 	5300 3150 5400 3050
-Entry Wire Line
-	5300 3250 5400 3150
 Entry Wire Line
 	5300 4000 5400 3900
 Entry Wire Line
@@ -1011,8 +955,6 @@ Entry Wire Line
 Entry Wire Line
 	5300 4600 5400 4500
 Entry Wire Line
-	5300 4700 5400 4600
-Entry Wire Line
 	5300 5450 5400 5350
 Entry Wire Line
 	5300 5550 5400 5450
@@ -1026,10 +968,6 @@ Entry Wire Line
 	5300 5950 5400 5850
 Entry Wire Line
 	5300 6050 5400 5950
-Entry Wire Line
-	5300 6150 5400 6050
-Entry Wire Line
-	7900 6150 8000 6050
 Entry Wire Line
 	7900 6050 8000 5950
 Entry Wire Line
@@ -1045,8 +983,6 @@ Entry Wire Line
 Entry Wire Line
 	7900 5450 8000 5350
 Entry Wire Line
-	7900 4700 8000 4600
-Entry Wire Line
 	7900 4600 8000 4500
 Entry Wire Line
 	7900 4500 8000 4400
@@ -1061,8 +997,6 @@ Entry Wire Line
 Entry Wire Line
 	7900 4000 8000 3900
 Entry Wire Line
-	7900 3250 8000 3150
-Entry Wire Line
 	7900 3150 8000 3050
 Entry Wire Line
 	7900 3050 8000 2950
@@ -1076,8 +1010,6 @@ Entry Wire Line
 	7900 2650 8000 2550
 Entry Wire Line
 	7900 2550 8000 2450
-Entry Wire Line
-	7900 1750 8000 1650
 Entry Wire Line
 	7900 1650 8000 1550
 Entry Wire Line
@@ -1107,8 +1039,6 @@ Entry Wire Line
 Entry Wire Line
 	10400 1550 10500 1650
 Entry Wire Line
-	10400 1650 10500 1750
-Entry Wire Line
 	10400 2450 10500 2550
 Entry Wire Line
 	10400 2550 10500 2650
@@ -1122,8 +1052,6 @@ Entry Wire Line
 	10400 2950 10500 3050
 Entry Wire Line
 	10400 3050 10500 3150
-Entry Wire Line
-	10400 3150 10500 3250
 Entry Wire Line
 	10400 3900 10500 4000
 Entry Wire Line
@@ -1139,8 +1067,6 @@ Entry Wire Line
 Entry Wire Line
 	10400 4500 10500 4600
 Entry Wire Line
-	10400 4600 10500 4700
-Entry Wire Line
 	10400 5350 10500 5450
 Entry Wire Line
 	10400 5450 10500 5550
@@ -1154,10 +1080,6 @@ Entry Wire Line
 	10400 5850 10500 5950
 Entry Wire Line
 	10400 5950 10500 6050
-Entry Wire Line
-	10400 6050 10500 6150
-Entry Wire Line
-	7800 6050 7900 6150
 Entry Wire Line
 	7800 5950 7900 6050
 Entry Wire Line
@@ -1187,8 +1109,6 @@ Entry Wire Line
 Entry Wire Line
 	7800 4500 7900 4600
 Entry Wire Line
-	7800 4600 7900 4700
-Entry Wire Line
 	5200 3900 5300 4000
 Entry Wire Line
 	5200 4000 5300 4100
@@ -1202,8 +1122,6 @@ Entry Wire Line
 	5200 4400 5300 4500
 Entry Wire Line
 	5200 4500 5300 4600
-Entry Wire Line
-	5200 4600 5300 4700
 Entry Wire Line
 	5200 5350 5300 5450
 Entry Wire Line
@@ -1219,8 +1137,6 @@ Entry Wire Line
 Entry Wire Line
 	5200 5950 5300 6050
 Entry Wire Line
-	5200 6050 5300 6150
-Entry Wire Line
 	7800 2450 7900 2550
 Entry Wire Line
 	7800 2550 7900 2650
@@ -1234,8 +1150,6 @@ Entry Wire Line
 	7800 2950 7900 3050
 Entry Wire Line
 	7800 3050 7900 3150
-Entry Wire Line
-	7800 3150 7900 3250
 Entry Wire Line
 	5200 2450 5300 2550
 Entry Wire Line
@@ -1251,8 +1165,6 @@ Entry Wire Line
 Entry Wire Line
 	5200 3050 5300 3150
 Entry Wire Line
-	5200 3150 5300 3250
-Entry Wire Line
 	5200 950  5300 1050
 Entry Wire Line
 	5200 1050 5300 1150
@@ -1267,8 +1179,6 @@ Entry Wire Line
 Entry Wire Line
 	5200 1550 5300 1650
 Entry Wire Line
-	5200 1650 5300 1750
-Entry Wire Line
 	7800 950  7900 1050
 Entry Wire Line
 	7800 1050 7900 1150
@@ -1282,8 +1192,6 @@ Entry Wire Line
 	7800 1450 7900 1550
 Entry Wire Line
 	7800 1550 7900 1650
-Entry Wire Line
-	7800 1650 7900 1750
 Wire Wire Line
 	7150 3250 7800 3250
 Entry Wire Line
@@ -1474,8 +1382,6 @@ Text Label 2800 3850 2    50   ~ 0
 F-2
 Text Label 2800 3950 2    50   ~ 0
 G-2
-Text Label 2800 4050 2    50   ~ 0
-DP-2
 Text Label 2800 6100 2    50   ~ 0
 D-3
 Text Label 2800 6200 2    50   ~ 0
@@ -1484,16 +1390,12 @@ Text Label 2800 6300 2    50   ~ 0
 F-3
 Text Label 2800 6400 2    50   ~ 0
 G-3
-Text Label 2800 6500 2    50   ~ 0
-DP-3
 Text Label 5200 1350 2    50   ~ 0
 E-3
 Text Label 5200 1450 2    50   ~ 0
 F-3
 Text Label 5200 1550 2    50   ~ 0
 G-3
-Text Label 5200 1650 2    50   ~ 0
-DP-3
 Text Label 7800 950  2    50   ~ 0
 A-1
 Text Label 7800 1050 2    50   ~ 0
@@ -1508,8 +1410,6 @@ Text Label 7800 1450 2    50   ~ 0
 F-1
 Text Label 7800 1550 2    50   ~ 0
 G-1
-Text Label 7800 1650 2    50   ~ 0
-DP-1
 Text Label 10400 950  2    50   ~ 0
 A-1
 Text Label 10400 1050 2    50   ~ 0
@@ -1524,8 +1424,6 @@ Text Label 10400 1450 2    50   ~ 0
 F-1
 Text Label 10400 1550 2    50   ~ 0
 G-1
-Text Label 10400 1650 2    50   ~ 0
-DP-1
 Text Label 5200 2850 2    50   ~ 0
 E-1
 Text Label 5200 4300 2    50   ~ 0
@@ -1544,18 +1442,6 @@ Text Label 5200 4500 2    50   ~ 0
 G-2
 Text Label 5200 5950 2    50   ~ 0
 G-3
-Text Label 5200 3150 2    50   ~ 0
-DP-1
-Text Label 5200 4600 2    50   ~ 0
-DP-2
-Text Label 5200 6050 2    50   ~ 0
-DP-3
-Text Label 7800 3150 2    50   ~ 0
-DP-3
-Text Label 7800 4600 2    50   ~ 0
-DP-2
-Text Label 7800 6050 2    50   ~ 0
-DP-3
 Text Label 7800 2450 2    50   ~ 0
 A-3
 Text Label 7800 3900 2    50   ~ 0
@@ -1640,12 +1526,6 @@ Text Label 10400 4500 2    50   ~ 0
 G-1
 Text Label 10400 5950 2    50   ~ 0
 G-3
-Text Label 10400 3150 2    50   ~ 0
-DP-3
-Text Label 10400 4600 2    50   ~ 0
-DP-1
-Text Label 10400 6050 2    50   ~ 0
-DP-3
 Text Label 3000 950  0    50   ~ 0
 A-1
 Text Label 3000 1050 0    50   ~ 0
@@ -1660,8 +1540,6 @@ Text Label 3000 1450 0    50   ~ 0
 F-1
 Text Label 3000 1550 0    50   ~ 0
 G-1
-Text Label 3000 1650 0    50   ~ 0
-DP-1
 Text Label 5400 950  0    50   ~ 0
 A-2
 Text Label 5400 1050 0    50   ~ 0
@@ -1676,8 +1554,6 @@ Text Label 5400 1450 0    50   ~ 0
 F-2
 Text Label 5400 1550 0    50   ~ 0
 G-2
-Text Label 5400 1650 0    50   ~ 0
-DP-2
 Text Label 8000 950  0    50   ~ 0
 A-2
 Text Label 8000 1050 0    50   ~ 0
@@ -1692,10 +1568,8 @@ Text Label 8000 1450 0    50   ~ 0
 F-2
 Text Label 8000 1550 0    50   ~ 0
 G-2
-Text Label 8000 1650 0    50   ~ 0
-DP-2
 Text Label 3000 1750 0    50   ~ 0
-EN2-6
+EN1-6
 Text Label 3000 3250 0    50   ~ 0
 EN1-1
 Text Label 3000 4700 0    50   ~ 0
@@ -1717,7 +1591,7 @@ EN2-2
 Text Label 8000 4700 0    50   ~ 0
 EN3-4
 Text Label 8000 6150 0    50   ~ 0
-EN1-6
+EN2-6
 Text Label 3000 2450 0    50   ~ 0
 A-1
 Text Label 3000 3900 0    50   ~ 0
@@ -1808,12 +1682,6 @@ Text Label 5400 4500 0    50   ~ 0
 G-3
 Text Label 5400 5950 0    50   ~ 0
 G-2
-Text Label 5400 3150 0    50   ~ 0
-DP-2
-Text Label 5400 4600 0    50   ~ 0
-DP-3
-Text Label 5400 6050 0    50   ~ 0
-DP-2
 Text Label 8000 2450 0    50   ~ 0
 A-2
 Text Label 8000 3900 0    50   ~ 0
@@ -1856,12 +1724,6 @@ Text Label 8000 4500 0    50   ~ 0
 G-3
 Text Label 8000 5950 0    50   ~ 0
 G-2
-Text Label 8000 3150 0    50   ~ 0
-DP-2
-Text Label 8000 4600 0    50   ~ 0
-DP-3
-Text Label 8000 6050 0    50   ~ 0
-DP-2
 Wire Wire Line
 	1650 1550 1400 1550
 Wire Wire Line
@@ -2033,7 +1895,6 @@ DA1[1..3]
 Text Notes 6350 7200 0    100  ~ 0
 DSKY-DSP-LCD:  LCD Decode Logic\nCopyright 2021, William Glasford
 NoConn ~ 1650 4400
-NoConn ~ 3400 3300
 NoConn ~ 1650 6850
 Text HLabel 1650 1000 0    50   Input ~ 0
 MODE1
@@ -2041,6 +1902,29 @@ Text HLabel 1650 3450 0    50   Input ~ 0
 MODE2
 Text HLabel 1650 5900 0    50   Input ~ 0
 MODE3
+NoConn ~ 9850 3150
+NoConn ~ 8650 3150
+NoConn ~ 8650 4600
+NoConn ~ 9850 4600
+NoConn ~ 9850 6050
+NoConn ~ 8650 6050
+NoConn ~ 7150 6050
+NoConn ~ 5950 6050
+NoConn ~ 5950 4600
+NoConn ~ 7150 4600
+NoConn ~ 7150 3150
+NoConn ~ 5950 3150
+NoConn ~ 4700 3150
+NoConn ~ 4700 4600
+NoConn ~ 4700 6050
+NoConn ~ 2450 6500
+NoConn ~ 2450 4050
+NoConn ~ 9850 1650
+NoConn ~ 8650 1650
+NoConn ~ 7150 1650
+NoConn ~ 5950 1650
+NoConn ~ 4700 1650
+NoConn ~ 3500 1650
 Wire Bus Line
 	950  7050 950  7600
 Wire Bus Line

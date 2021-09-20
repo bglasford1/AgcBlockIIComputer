@@ -695,23 +695,23 @@ F 3 "" H 2150 3900 50  0001 C CNN
 	1    2150 3900
 	1    0    0    -1  
 $EndComp
-Text HLabel 5300 1800 0    50   Input ~ 0
+Text HLabel 5350 1800 0    50   Input ~ 0
 CLK2
 $Comp
 L 74xx:74LS00 U43
 U 1 1 62AB580C
-P 5600 1700
-F 0 "U43" H 5600 2025 50  0000 C CNN
-F 1 "74LS00" H 5600 1934 50  0000 C CNN
-F 2 "" H 5600 1700 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74ls00" H 5600 1700 50  0001 C CNN
-	1    5600 1700
+P 5650 1700
+F 0 "U43" H 5650 2025 50  0000 C CNN
+F 1 "74LS00" H 5650 1934 50  0000 C CNN
+F 2 "" H 5650 1700 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74ls00" H 5650 1700 50  0001 C CNN
+	1    5650 1700
 	1    0    0    -1  
 $EndComp
-Text HLabel 5900 1700 2    50   Output ~ 0
+Text HLabel 5950 1700 2    50   Output ~ 0
 WRITE3
 Wire Wire Line
-	5150 1600 5300 1600
+	5150 1600 5350 1600
 Wire Wire Line
 	5150 2450 5350 2450
 $Comp
@@ -741,8 +741,21 @@ Wire Wire Line
 	5400 4500 5800 4500
 Wire Wire Line
 	5500 4400 5800 4400
+$Comp
+L 74xx:74LS04 U42
+U 3 1 6368531B
+P 5650 3100
+F 0 "U42" H 5700 3400 50  0000 C CNN
+F 1 "74LS04" H 5700 3300 50  0000 C CNN
+F 2 "" H 5650 3100 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 5650 3100 50  0001 C CNN
+	3    5650 3100
+	1    0    0    -1  
+$EndComp
 Wire Wire Line
-	4300 3100 6550 3100
+	5950 3100 6550 3100
+Wire Wire Line
+	4300 3100 5350 3100
 Wire Bus Line
 	5900 4350 5900 4700
 Wire Bus Line

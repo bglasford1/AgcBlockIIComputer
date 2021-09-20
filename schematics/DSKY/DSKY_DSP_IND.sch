@@ -25,10 +25,6 @@ Text Label 5750 3300 0    50   ~ 0
 OW4
 Text Label 5750 3200 0    50   ~ 0
 OW3
-Text Label 5750 3100 0    50   ~ 0
-OW2
-Text Label 5750 3000 0    50   ~ 0
-OW1
 Entry Wire Line
 	5650 3800 5750 3700
 Entry Wire Line
@@ -41,10 +37,6 @@ Entry Wire Line
 	5650 3400 5750 3300
 Entry Wire Line
 	5650 3300 5750 3200
-Entry Wire Line
-	5650 3200 5750 3100
-Entry Wire Line
-	5650 3100 5750 3000
 Wire Wire Line
 	6000 3700 5750 3700
 Wire Wire Line
@@ -57,12 +49,8 @@ Wire Wire Line
 	6000 3300 5750 3300
 Wire Wire Line
 	6000 3200 5750 3200
-Wire Wire Line
-	6000 3100 5750 3100
-Wire Wire Line
-	6000 3000 5750 3000
 Text HLabel 5650 2800 1    50   Input ~ 0
-OW[1..9]
+OW[3..9]
 Wire Wire Line
 	7100 5900 7750 5900
 Wire Wire Line
@@ -743,21 +731,6 @@ F 3 "~" H 8450 2300 50  0001 C CNN
 	1    8450 2300
 	1    0    0    -1  
 $EndComp
-$Comp
-L power:+5V #PWR?
-U 1 1 68A89292
-P 6000 4150
-AR Path="/60F98A64/637944C1/68A89292" Ref="#PWR?"  Part="1" 
-AR Path="/60F98A64/64844A8A/68A89292" Ref="#PWR?"  Part="1" 
-AR Path="/60F98A64/63794472/68A89292" Ref="#PWR?"  Part="1" 
-AR Path="/60F98A64/68A00B2E/68A89292" Ref="#PWR0117"  Part="1" 
-F 0 "#PWR0117" H 6000 4000 50  0001 C CNN
-F 1 "+5V" H 6015 4323 50  0000 C CNN
-F 2 "" H 6000 4150 50  0001 C CNN
-F 3 "" H 6000 4150 50  0001 C CNN
-	1    6000 4150
-	-1   0    0    1   
-$EndComp
 Wire Wire Line
 	6000 4000 6000 4150
 $Comp
@@ -1339,19 +1312,6 @@ F 3 "~" H 4600 5900 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L 74xx:74LS04 U?
-U 5 1 66B1B922
-P 1700 4450
-AR Path="/60F98A64/64844A8A/66B1B922" Ref="U?"  Part="6" 
-AR Path="/60F98A64/68A00B2E/66B1B922" Ref="U42"  Part="5" 
-F 0 "U42" H 1700 4767 50  0000 C CNN
-F 1 "74LS04" H 1700 4676 50  0000 C CNN
-F 2 "" H 1700 4450 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 1700 4450 50  0001 C CNN
-	5    1700 4450
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:GND #PWR?
 U 1 1 66B1B928
 P 3350 1850
@@ -1650,7 +1610,7 @@ Wire Wire Line
 	1050 5150 2550 5150
 Wire Wire Line
 	1050 5900 2550 5900
-Text HLabel 1400 4450 0    50   Input ~ 0
+Text HLabel 2000 4450 0    50   Input ~ 0
 STBY
 Text Notes 2450 1600 2    50   ~ 0
 RESTART
@@ -1837,13 +1797,13 @@ Text HLabel 900  2000 0    50   Input ~ 0
 IND[2..7]
 Wire Wire Line
 	1050 2350 2550 2350
-Text HLabel 5550 3600 1    50   Input ~ 0
+Text HLabel 5350 4950 1    50   Input ~ 0
 RWD[12..12]
 Wire Wire Line
-	5650 3900 6000 3900
+	5450 5250 5800 5250
 Entry Wire Line
-	5550 4000 5650 3900
-Text Label 5650 3900 0    50   ~ 0
+	5350 5350 5450 5250
+Text Label 5450 5250 0    50   ~ 0
 RWD12
 Text Notes 6350 7150 0    100  ~ 0
 DSKY-DSP-IND:  Indicator Logic\nCopyright 2021, William Glasford
@@ -1902,10 +1862,46 @@ Text Notes 2400 4400 2    50   ~ 0
 STBY
 Wire Bus Line
 	950  2000 900  2000
+NoConn ~ 6000 3000
+NoConn ~ 6000 3100
+$Comp
+L power:GND #PWR?
+U 1 1 635E6D82
+P 6000 4150
+AR Path="/60F98A64/637944C1/635E6D82" Ref="#PWR?"  Part="1" 
+AR Path="/60F98A64/64844A8A/635E6D82" Ref="#PWR?"  Part="1" 
+AR Path="/60F98A64/63794472/635E6D82" Ref="#PWR?"  Part="1" 
+AR Path="/60F98A64/68A00B2E/635E6D82" Ref="#PWR0110"  Part="1" 
+F 0 "#PWR0110" H 6000 3900 50  0001 C CNN
+F 1 "GND" H 6005 3977 50  0000 C CNN
+F 2 "" H 6000 4150 50  0001 C CNN
+F 3 "" H 6000 4150 50  0001 C CNN
+	1    6000 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS04 U42
+U 1 1 635EB464
+P 6100 5250
+F 0 "U42" H 6100 5567 50  0000 C CNN
+F 1 "74LS04" H 6100 5476 50  0000 C CNN
+F 2 "" H 6100 5250 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 6100 5250 50  0001 C CNN
+	1    6100 5250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6000 3900 5850 3900
+Wire Wire Line
+	5850 3900 5850 4850
+Wire Wire Line
+	5850 4850 6400 4850
+Wire Wire Line
+	6400 4850 6400 5250
 Wire Bus Line
-	5550 3600 5550 4050
-Wire Bus Line
-	950  2000 950  6900
+	5350 4950 5350 5400
 Wire Bus Line
 	5650 2800 5650 3800
+Wire Bus Line
+	950  2000 950  6900
 $EndSCHEMATC
