@@ -1529,7 +1529,7 @@ KMUX4
 Text Label 5850 1550 0    50   ~ 0
 KMUX5
 Wire Wire Line
-	6100 2150 6100 3000
+	6100 2150 6100 2800
 Wire Wire Line
 	6100 2050 5950 2050
 Wire Wire Line
@@ -1816,10 +1816,8 @@ $EndComp
 NoConn ~ 8650 5200
 Wire Wire Line
 	8650 5000 8850 5000
-Text HLabel 7950 2700 0    50   Input ~ 0
-GENRST
-Wire Wire Line
-	8350 4600 8350 4800
+Text HLabel 8200 5700 0    50   Input ~ 0
+DSKYRST
 Wire Wire Line
 	5850 5600 5850 6750
 Wire Wire Line
@@ -1923,38 +1921,6 @@ Wire Wire Line
 	7850 3650 7850 3850
 Wire Wire Line
 	7850 3850 7650 3850
-Text HLabel 8550 2900 0    50   Input ~ 0
-CLK2
-$Comp
-L 74xx:74LS00 U?
-U 1 1 6780854A
-P 8850 2800
-AR Path="/5F5E4E3B/5F5F8347/6780854A" Ref="U?"  Part="1" 
-AR Path="/60F98A72/6780854A" Ref="U6"  Part="1" 
-AR Path="/66BEE9C8/6780854A" Ref="U?"  Part="1" 
-AR Path="/60F98A72/66CE2F9E/6780854A" Ref="U?"  Part="1" 
-F 0 "U6" H 8850 3125 50  0000 C CNN
-F 1 "74LS00" H 8850 3034 50  0000 C CNN
-F 2 "" H 8850 2800 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74ls00" H 8850 2800 50  0001 C CNN
-	1    8850 2800
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:74LS04 U?
-U 2 1 67808550
-P 8250 2700
-AR Path="/5F5E4E3B/5F5F8347/67808550" Ref="U?"  Part="6" 
-AR Path="/60F98A72/67808550" Ref="U5"  Part="2" 
-AR Path="/66BEE9C8/67808550" Ref="U?"  Part="6" 
-AR Path="/60F98A72/66CE2F9E/67808550" Ref="U?"  Part="6" 
-F 0 "U5" H 8350 2950 50  0000 C CNN
-F 1 "74LS04" H 8350 2850 50  0000 C CNN
-F 2 "" H 8250 2700 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 8250 2700 50  0001 C CNN
-	2    8250 2700
-	1    0    0    -1  
-$EndComp
 Text Notes 1300 600  0    80   ~ 0
 Keyboard Bus
 Text Notes 5500 850  0    80   ~ 0
@@ -2029,9 +1995,7 @@ Wire Wire Line
 Wire Wire Line
 	7700 5100 7700 5600
 Wire Wire Line
-	6100 3000 9150 3000
-Wire Wire Line
-	9150 2800 9150 3000
+	6100 2800 6200 2800
 $Comp
 L 74xx:74LS244 U?
 U 1 1 6780858C
@@ -2100,31 +2064,7 @@ F 3 "http://www.ti.com/lit/gpn/sn74LS32" H 8350 2150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	8800 1900 8800 1850
-$Comp
-L power:GND #PWR?
-U 1 1 678085AB
-P 8800 1900
-AR Path="/60F98A1A/678085AB" Ref="#PWR?"  Part="1" 
-AR Path="/66BEEA04/678085AB" Ref="#PWR?"  Part="1" 
-AR Path="/60F98A72/66CE2FA0/678085AB" Ref="#PWR?"  Part="1" 
-AR Path="/60F98A72/66CE2F9E/678085AB" Ref="#PWR?"  Part="1" 
-AR Path="/60F98A72/678085AB" Ref="#PWR0257"  Part="1" 
-F 0 "#PWR0257" H 8800 1650 50  0001 C CNN
-F 1 "GND" H 8805 1727 50  0000 C CNN
-F 2 "" H 8800 1900 50  0001 C CNN
-F 3 "" H 8800 1900 50  0001 C CNN
-	1    8800 1900
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
 	8650 2150 8950 2150
-Wire Wire Line
-	8800 1650 9050 1650
-Wire Wire Line
-	8800 1750 9050 1750
-Wire Wire Line
-	8800 1850 9050 1850
 Wire Wire Line
 	8950 2150 9050 2150
 Wire Wire Line
@@ -2140,12 +2080,6 @@ CH15 Reg.
 NoConn ~ 10050 1650
 NoConn ~ 10050 1750
 NoConn ~ 10050 1850
-Connection ~ 8800 1750
-Wire Wire Line
-	8800 1750 8800 1650
-Connection ~ 8800 1850
-Wire Wire Line
-	8800 1850 8800 1750
 Wire Wire Line
 	7100 1550 7600 1550
 Wire Wire Line
@@ -2524,9 +2458,7 @@ DSKY-KBD:  Keyboard\nCopyright 2021, William Glasford
 Text Notes 2900 7050 0    80   ~ 0
 Use 2 9-resister\nnetwork chips.
 Wire Wire Line
-	8300 5700 9150 5700
-Wire Wire Line
-	9150 5700 9150 4600
+	8300 5700 8200 5700
 $Comp
 L 74xx:74LS126 U47
 U 4 1 62A3E22F
@@ -2563,8 +2495,6 @@ CLK1
 Wire Wire Line
 	9250 6350 9250 6600
 Wire Wire Line
-	9150 3000 9150 4600
-Wire Wire Line
 	5950 3950 7050 3950
 Connection ~ 5950 3200
 Wire Wire Line
@@ -2577,15 +2507,22 @@ Wire Wire Line
 Connection ~ 8850 4150
 Wire Wire Line
 	8850 4150 8850 5000
-Connection ~ 9150 3000
-Connection ~ 9150 4600
 Wire Wire Line
-	8350 4600 9150 4600
+	8350 4650 8250 4650
 Connection ~ 7700 5600
 Wire Wire Line
 	5850 5600 7700 5600
 Text Notes 7000 6250 0    60   ~ 0
 PRO
+NoConn ~ 9050 1650
+NoConn ~ 9050 1750
+NoConn ~ 9050 1850
+Text HLabel 8250 4650 0    50   Input ~ 0
+DSKYRST
+Text HLabel 6200 2800 2    50   Input ~ 0
+DSKYRST
+Wire Wire Line
+	8350 4650 8350 4800
 Wire Bus Line
 	9950 6000 9950 6400
 Wire Bus Line

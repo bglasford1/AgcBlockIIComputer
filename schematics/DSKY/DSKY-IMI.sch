@@ -32,8 +32,6 @@ Text HLabel 7550 2000 2    50   Output ~ 0
 CLK2
 Text HLabel 8750 2000 2    50   Output ~ 0
 CLK1
-Text HLabel 7550 2100 2    50   Output ~ 0
-GENRST
 Wire Wire Line
 	4200 1750 3950 1750
 Wire Wire Line
@@ -243,6 +241,48 @@ Text HLabel 7550 2600 2    50   Output ~ 0
 PROG
 Text HLabel 7050 2600 0    50   Output ~ 0
 RPRO
+Text HLabel 9350 2950 2    50   Output ~ 0
+DSKYRST
+Text HLabel 8750 3050 0    50   Input ~ 0
+CLK2
+$Comp
+L 74xx:74LS00 U?
+U 1 1 6395652F
+P 9050 2950
+AR Path="/5F5E4E3B/5F5F8347/6395652F" Ref="U?"  Part="1" 
+AR Path="/60F98A72/6395652F" Ref="U?"  Part="1" 
+AR Path="/66BEE9C8/6395652F" Ref="U?"  Part="1" 
+AR Path="/60F98A72/66CE2F9E/6395652F" Ref="U?"  Part="1" 
+AR Path="/60F989FD/6395652F" Ref="U6"  Part="1" 
+F 0 "U6" H 9050 3275 50  0000 C CNN
+F 1 "74LS00" H 9050 3184 50  0000 C CNN
+F 2 "" H 9050 2950 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74ls00" H 9050 2950 50  0001 C CNN
+	1    9050 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS04 U?
+U 2 1 63956535
+P 8450 2850
+AR Path="/5F5E4E3B/5F5F8347/63956535" Ref="U?"  Part="6" 
+AR Path="/60F98A72/63956535" Ref="U?"  Part="2" 
+AR Path="/66BEE9C8/63956535" Ref="U?"  Part="6" 
+AR Path="/60F98A72/66CE2F9E/63956535" Ref="U?"  Part="6" 
+AR Path="/60F989FD/63956535" Ref="U5"  Part="2" 
+F 0 "U5" H 8550 3100 50  0000 C CNN
+F 1 "74LS04" H 8550 3000 50  0000 C CNN
+F 2 "" H 8450 2850 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 8450 2850 50  0001 C CNN
+	2    8450 2850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7550 2100 7950 2100
+Wire Wire Line
+	7950 2100 7950 2850
+Wire Wire Line
+	7950 2850 8150 2850
 Wire Bus Line
 	5100 2250 5100 2800
 Wire Bus Line
