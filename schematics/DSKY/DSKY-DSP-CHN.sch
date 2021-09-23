@@ -39,37 +39,7 @@ F 3 "" H 5150 3050 50  0001 C CNN
 	1    5150 3050
 	1    0    0    -1  
 $EndComp
-$Comp
-L 74xx:74LS00 U?
-U 2 1 67D9AB1B
-P 3150 4700
-AR Path="/60F98A4F/67D9AB1B" Ref="U?"  Part="4" 
-AR Path="/60F98A64/67D1D986/67D9AB1B" Ref="U7"  Part="2" 
-F 0 "U7" H 3150 5025 50  0000 C CNN
-F 1 "74LS00" H 3150 4934 50  0000 C CNN
-F 2 "" H 3150 4700 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74ls00" H 3150 4700 50  0001 C CNN
-	2    3150 4700
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2850 4600 2750 4600
-Text HLabel 2850 4800 0    50   Input ~ 0
-CLK2
-$Comp
-L 74xx:74LS04 U?
-U 3 1 67D9AB30
-P 2450 4600
-AR Path="/60F98A4F/67D9AB30" Ref="U?"  Part="5" 
-AR Path="/60F98A64/67D1D986/67D9AB30" Ref="U5"  Part="3" 
-F 0 "U5" H 2450 4917 50  0000 C CNN
-F 1 "74LS04" H 2450 4826 50  0000 C CNN
-F 2 "" H 2450 4600 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74ls00" H 2450 4600 50  0001 C CNN
-	3    2450 4600
-	1    0    0    -1  
-$EndComp
-Text HLabel 2150 4600 0    50   Input ~ 0
+Text HLabel 4000 4700 0    50   Input ~ 0
 DISP
 Text HLabel 8150 2350 0    50   Input ~ 0
 DSKYRST
@@ -84,8 +54,8 @@ L 74xx:74LS273 U?
 U 1 1 67D9AB75
 P 5150 3850
 AR Path="/60F98A4F/67D9AB75" Ref="U?"  Part="1" 
-AR Path="/60F98A64/67D1D986/67D9AB75" Ref="U20"  Part="1" 
-F 0 "U20" H 5400 4650 50  0000 C CNN
+AR Path="/60F98A64/67D1D986/67D9AB75" Ref="U22"  Part="1" 
+F 0 "U22" H 5400 4650 50  0000 C CNN
 F 1 "74LS273" H 5400 4550 50  0000 C CNN
 F 2 "" H 5150 3850 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74LS273" H 5150 3850 50  0001 C CNN
@@ -93,7 +63,7 @@ F 3 "http://www.ti.com/lit/gpn/sn74LS273" H 5150 3850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4100 4700 3450 4700
+	4100 4700 4000 4700
 Wire Wire Line
 	9450 1450 9150 1450
 Wire Wire Line
@@ -133,8 +103,8 @@ L 74xx:74LS273 U?
 U 1 1 67EF035A
 P 8650 1850
 AR Path="/60F98A4F/67EF035A" Ref="U?"  Part="1" 
-AR Path="/60F98A64/67D1D986/67EF035A" Ref="U22"  Part="1" 
-F 0 "U22" H 8900 2650 50  0000 C CNN
+AR Path="/60F98A64/67D1D986/67EF035A" Ref="U20"  Part="1" 
+F 0 "U20" H 8900 2650 50  0000 C CNN
 F 1 "74LS273" H 8900 2550 50  0000 C CNN
 F 2 "" H 8650 1850 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74LS273" H 8650 1850 50  0001 C CNN
@@ -434,24 +404,7 @@ Text Label 9450 1650 2    50   ~ 0
 IND5
 Text Label 9450 1450 2    50   ~ 0
 IND7
-Wire Wire Line
-	7450 2150 7350 2150
-$Comp
-L 74xx:74LS00 U?
-U 4 1 78C759B0
-P 7050 2150
-AR Path="/60F98A4F/78C759B0" Ref="U?"  Part="4" 
-AR Path="/60F98A64/67D1D986/78C759B0" Ref="U7"  Part="4" 
-F 0 "U7" H 7050 2475 50  0000 C CNN
-F 1 "74LS00" H 7050 2384 50  0000 C CNN
-F 2 "" H 7050 2150 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74ls00" H 7050 2150 50  0001 C CNN
-	4    7050 2150
-	1    0    0    -1  
-$EndComp
-Text HLabel 6750 2250 0    50   Input ~ 0
-CLK2
-Text HLabel 6750 2050 0    50   Input ~ 0
+Text HLabel 8150 2250 0    50   Input ~ 0
 INDC
 NoConn ~ 5650 3350
 NoConn ~ 4650 3350
@@ -471,10 +424,6 @@ Text Label 9450 1550 2    50   ~ 0
 IND6
 NoConn ~ 9150 2050
 NoConn ~ 8150 2050
-Wire Wire Line
-	7450 2250 8150 2250
-Wire Wire Line
-	7450 2150 7450 2250
 Text HLabel 4650 4350 0    50   Input ~ 0
 DSKYRST
 Text HLabel 4550 6450 0    50   Input ~ 0

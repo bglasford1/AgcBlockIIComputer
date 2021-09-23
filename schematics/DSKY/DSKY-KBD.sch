@@ -2278,17 +2278,6 @@ Entry Wire Line
 	2800 1600 2900 1500
 Wire Wire Line
 	3200 1500 2900 1500
-$Comp
-L 74xx:74LS00 U7
-U 1 1 64CA909C
-P 3500 1400
-F 0 "U7" H 3700 1700 50  0000 C CNN
-F 1 "74LS00" H 3700 1600 50  0000 C CNN
-F 2 "" H 3500 1400 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74ls00" H 3500 1400 50  0001 C CNN
-	1    3500 1400
-	1    0    0    -1  
-$EndComp
 Connection ~ 4050 1900
 Wire Wire Line
 	4050 1900 4050 2450
@@ -2535,4 +2524,15 @@ Wire Bus Line
 	5750 900  5750 5650
 Wire Bus Line
 	2800 650  2800 7400
+$Comp
+L 74xx:74LS00 U18
+U 4 1 614FF2D5
+P 3500 1400
+F 0 "U18" H 3700 1700 50  0000 C CNN
+F 1 "74LS00" H 3700 1600 50  0000 C CNN
+F 2 "" H 3500 1400 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74ls00" H 3500 1400 50  0001 C CNN
+	4    3500 1400
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

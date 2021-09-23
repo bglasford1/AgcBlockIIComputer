@@ -47,9 +47,8 @@ F2 "OW[1..15]" O R 2950 3250 50
 F3 "IND[2..7]" O R 2950 3900 50 
 F4 "CH[1..15]" I L 1850 3250 50 
 F5 "DSKYRST" I R 2950 3450 50 
-F6 "CLK2" I R 2950 3550 50 
-F7 "DISP" I R 2950 3650 50 
-F8 "INDC" I R 2950 3750 50 
+F6 "DISP" I R 2950 3550 50 
+F7 "INDC" I R 2950 3650 50 
 $EndSheet
 Text HLabel 3800 4050 0    50   Input ~ 0
 STBY
@@ -88,17 +87,13 @@ Wire Wire Line
 	3100 3550 2950 3550
 Text HLabel 3100 3450 2    50   Input ~ 0
 DSKYRST
-Text HLabel 3100 3550 2    50   Input ~ 0
-CLK2
 Wire Wire Line
 	2950 3450 3100 3450
 Wire Wire Line
 	3100 3650 2950 3650
-Text HLabel 3100 3650 2    50   Input ~ 0
+Text HLabel 3100 3550 2    50   Input ~ 0
 DISP
-Wire Wire Line
-	3100 3750 2950 3750
-Text HLabel 3100 3750 2    50   Input ~ 0
+Text HLabel 3100 3650 2    50   Input ~ 0
 INDC
 Wire Bus Line
 	7200 4500 8450 4500
