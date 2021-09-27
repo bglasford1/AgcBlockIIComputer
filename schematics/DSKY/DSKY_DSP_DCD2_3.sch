@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
-Sheet 6 10
+Sheet 7 11
 Title ""
 Date ""
 Rev ""
@@ -18,7 +18,7 @@ Converts Relay Word to\nBCD In Latch, used to\nselect the LCD to \ndisplay.
 NoConn ~ 3150 4800
 NoConn ~ 3150 4700
 NoConn ~ 3150 4600
-Text HLabel 2150 3800 0    50   Input ~ 0
+Text HLabel 1350 3800 0    50   Input ~ 0
 DISP
 $Comp
 L power:+5V #PWR0186
@@ -756,6 +756,19 @@ Wire Wire Line
 	5950 3100 6550 3100
 Wire Wire Line
 	4300 3100 5350 3100
+$Comp
+L 74xx:74LS04 U5
+U 3 1 61B750FA
+P 1650 3800
+F 0 "U5" H 1650 4117 50  0000 C CNN
+F 1 "74LS04" H 1650 4026 50  0000 C CNN
+F 2 "" H 1650 3800 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 1650 3800 50  0001 C CNN
+	3    1650 3800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1950 3800 2150 3800
 Wire Bus Line
 	5900 4350 5900 4700
 Wire Bus Line

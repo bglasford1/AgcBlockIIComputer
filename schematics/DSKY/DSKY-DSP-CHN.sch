@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
-Sheet 4 10
+Sheet 4 11
 Title ""
 Date ""
 Rev ""
@@ -39,7 +39,7 @@ F 3 "" H 5150 3050 50  0001 C CNN
 	1    5150 3050
 	1    0    0    -1  
 $EndComp
-Text HLabel 4000 4700 0    50   Input ~ 0
+Text HLabel 2800 4600 0    50   Input ~ 0
 DISP
 Text HLabel 8150 2350 0    50   Input ~ 0
 DSKYRST
@@ -63,7 +63,7 @@ F 3 "http://www.ti.com/lit/gpn/sn74LS273" H 5150 3850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4100 4700 4000 4700
+	4100 4700 3400 4700
 Wire Wire Line
 	9450 1450 9150 1450
 Wire Wire Line
@@ -404,7 +404,7 @@ Text Label 9450 1650 2    50   ~ 0
 IND5
 Text Label 9450 1450 2    50   ~ 0
 IND7
-Text HLabel 8150 2250 0    50   Input ~ 0
+Text HLabel 6400 2150 0    50   Input ~ 0
 INDC
 NoConn ~ 5650 3350
 NoConn ~ 4650 3350
@@ -431,6 +431,45 @@ DSKYRST
 Connection ~ 4100 4700
 Wire Wire Line
 	4100 4700 4100 6350
+$Comp
+L 74xx:74LS08 U7
+U 4 1 61B5C630
+P 7300 2250
+F 0 "U7" H 7300 2575 50  0000 C CNN
+F 1 "74LS08" H 7300 2484 50  0000 C CNN
+F 2 "" H 7300 2250 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 7300 2250 50  0001 C CNN
+	4    7300 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS08 U7
+U 2 1 61B5DD51
+P 3100 4700
+F 0 "U7" H 3100 5025 50  0000 C CNN
+F 1 "74LS08" H 3100 4934 50  0000 C CNN
+F 2 "" H 3100 4700 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 3100 4700 50  0001 C CNN
+	2    3100 4700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7600 2250 8150 2250
+Text HLabel 2800 4800 0    50   Input ~ 0
+CLK2
+Text HLabel 7000 2350 0    50   Input ~ 0
+CLK2
+$Comp
+L 74xx:74LS04 U5
+U 4 1 61B646F9
+P 6700 2150
+F 0 "U5" H 6700 2467 50  0000 C CNN
+F 1 "74LS04" H 6700 2376 50  0000 C CNN
+F 2 "" H 6700 2150 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 6700 2150 50  0001 C CNN
+	4    6700 2150
+	1    0    0    -1  
+$EndComp
 Wire Bus Line
 	7650 1150 7650 2100
 Wire Bus Line

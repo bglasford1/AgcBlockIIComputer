@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
-Sheet 10 10
+Sheet 10 11
 Title ""
 Date ""
 Rev ""
@@ -1976,7 +1976,7 @@ approx.\n100 Hz
 Text Notes 7150 4300 0    60   ~ 0
 MONOSTABLE
 Text Notes 7550 3600 0    60   ~ 0
-Monostable is set up for\n1 mSec delay.  This allows\nthe keyboard decoding\nlogic to settle before the\nkey code is latched.
+Monostable is set up for 8 uSec \ndelay.  This allows the keyboard \ndecoding logic to settle before \nthe key code is latched.  Occurs\non the rising edge of the pulse.  
 Wire Wire Line
 	2500 1100 2600 1100
 Wire Wire Line
@@ -2047,33 +2047,17 @@ F 3 "" H 9550 850 50  0001 C CNN
 	1    9550 850 
 	1    0    0    -1  
 $EndComp
-$Comp
-L 74xx:74LS32 U?
-U 3 1 678085A4
-P 8350 2150
-AR Path="/60F98A1A/678085A4" Ref="U?"  Part="2" 
-AR Path="/66BEEA04/678085A4" Ref="U?"  Part="2" 
-AR Path="/60F98A72/66CE2FA0/678085A4" Ref="U?"  Part="2" 
-AR Path="/60F98A72/66CE2F9E/678085A4" Ref="U?"  Part="2" 
-AR Path="/60F98A72/678085A4" Ref="U40"  Part="3" 
-F 0 "U40" H 8350 2475 50  0000 C CNN
-F 1 "74LS32" H 8350 2384 50  0000 C CNN
-F 2 "" H 8350 2150 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS32" H 8350 2150 50  0001 C CNN
-	3    8350 2150
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
-	8650 2150 8950 2150
+	8850 2150 8950 2150
 Wire Wire Line
 	8950 2150 9050 2150
 Wire Wire Line
 	9050 2050 8950 2050
 Wire Wire Line
 	8950 2050 8950 2150
-Text HLabel 8050 2050 0    50   Input ~ 0
+Text HLabel 8250 2050 0    50   Input ~ 0
 KBD1
-Text HLabel 8050 2250 0    50   Input ~ 0
+Text HLabel 8250 2250 0    50   Input ~ 0
 CLK1
 Text Notes 9450 850  2    100  ~ 0
 CH15 Reg.
@@ -2459,28 +2443,10 @@ F 3 "http://www.ti.com/lit/gpn/sn74LS126" H 9250 6100 50  0001 C CNN
 	4    9250 6100
 	1    0    0    -1  
 $EndComp
-$Comp
-L 74xx:74LS32 U?
-U 2 1 62A6291C
-P 8950 6600
-AR Path="/60F98A1A/62A6291C" Ref="U?"  Part="2" 
-AR Path="/66BEEA04/62A6291C" Ref="U?"  Part="2" 
-AR Path="/60F98A72/66CE2FA0/62A6291C" Ref="U?"  Part="2" 
-AR Path="/60F98A72/66CE2F9E/62A6291C" Ref="U?"  Part="2" 
-AR Path="/60F98A72/62A6291C" Ref="U40"  Part="2" 
-F 0 "U40" H 8950 6925 50  0000 C CNN
-F 1 "74LS32" H 8950 6834 50  0000 C CNN
-F 2 "" H 8950 6600 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS32" H 8950 6600 50  0001 C CNN
-	2    8950 6600
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	8600 6100 8950 6100
 Text HLabel 8650 6500 0    50   Input ~ 0
 RPRO
-Text HLabel 8650 6700 0    50   Input ~ 0
-CLK1
 Wire Wire Line
 	9250 6350 9250 6600
 Wire Wire Line
@@ -2512,6 +2478,39 @@ Text HLabel 6200 2800 2    50   Input ~ 0
 DSKYRST
 Wire Wire Line
 	8350 4650 8350 4800
+$Comp
+L 74xx:74LS00 U18
+U 4 1 614FF2D5
+P 3500 1400
+F 0 "U18" H 3700 1700 50  0000 C CNN
+F 1 "74LS00" H 3700 1600 50  0000 C CNN
+F 2 "" H 3500 1400 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74ls00" H 3500 1400 50  0001 C CNN
+	4    3500 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS00 U36
+U 4 1 61A0A316
+P 8550 2150
+F 0 "U36" H 8550 2475 50  0000 C CNN
+F 1 "74LS00" H 8550 2384 50  0000 C CNN
+F 2 "" H 8550 2150 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74ls00" H 8550 2150 50  0001 C CNN
+	4    8550 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS08 U7
+U 1 1 61B1881C
+P 8950 6600
+F 0 "U7" H 8950 6925 50  0000 C CNN
+F 1 "74LS08" H 8950 6834 50  0000 C CNN
+F 2 "" H 8950 6600 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 8950 6600 50  0001 C CNN
+	1    8950 6600
+	1    0    0    -1  
+$EndComp
 Wire Bus Line
 	9950 6000 9950 6400
 Wire Bus Line
@@ -2524,15 +2523,6 @@ Wire Bus Line
 	5750 900  5750 5650
 Wire Bus Line
 	2800 650  2800 7400
-$Comp
-L 74xx:74LS00 U18
-U 4 1 614FF2D5
-P 3500 1400
-F 0 "U18" H 3700 1700 50  0000 C CNN
-F 1 "74LS00" H 3700 1600 50  0000 C CNN
-F 2 "" H 3500 1400 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74ls00" H 3500 1400 50  0001 C CNN
-	4    3500 1400
-	1    0    0    -1  
-$EndComp
+Text HLabel 8650 6700 0    50   Input ~ 0
+CLK1
 $EndSCHEMATC
