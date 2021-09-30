@@ -39,7 +39,7 @@ F 3 "" H 5150 3050 50  0001 C CNN
 	1    5150 3050
 	1    0    0    -1  
 $EndComp
-Text HLabel 2800 4600 0    50   Input ~ 0
+Text HLabel 2200 4600 0    50   Input ~ 0
 DISP
 Text HLabel 8150 2350 0    50   Input ~ 0
 DSKYRST
@@ -478,4 +478,15 @@ Wire Bus Line
 	6150 2900 6150 6350
 Wire Bus Line
 	3500 3100 3500 6300
+$Comp
+L 74xx:74LS04 U5
+U 3 1 6221121E
+P 2500 4600
+F 0 "U5" H 2500 4917 50  0000 C CNN
+F 1 "74LS04" H 2500 4826 50  0000 C CNN
+F 2 "" H 2500 4600 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 2500 4600 50  0001 C CNN
+	3    2500 4600
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

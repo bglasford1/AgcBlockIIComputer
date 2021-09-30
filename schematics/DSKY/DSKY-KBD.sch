@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
-Sheet 10 11
+Sheet 11 11
 Title ""
 Date ""
 Rev ""
@@ -2511,6 +2511,8 @@ F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 8950 6600 50  0001 C CNN
 	1    8950 6600
 	1    0    0    -1  
 $EndComp
+Text HLabel 8650 6700 0    50   Input ~ 0
+CLK1
 Wire Bus Line
 	9950 6000 9950 6400
 Wire Bus Line
@@ -2523,6 +2525,4 @@ Wire Bus Line
 	5750 900  5750 5650
 Wire Bus Line
 	2800 650  2800 7400
-Text HLabel 8650 6700 0    50   Input ~ 0
-CLK1
 $EndSCHEMATC
