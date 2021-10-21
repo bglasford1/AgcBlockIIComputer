@@ -60,10 +60,6 @@ $EndComp
 Wire Wire Line
 	4950 1800 5000 1800
 Wire Wire Line
-	4100 2400 4300 2400
-Wire Wire Line
-	4300 2400 4300 1900
-Wire Wire Line
 	4300 1900 4350 1900
 Wire Wire Line
 	4100 1200 4300 1200
@@ -71,7 +67,6 @@ Wire Wire Line
 	4300 1200 4300 1700
 Wire Wire Line
 	4300 1700 4350 1700
-NoConn ~ 4100 2200
 Wire Wire Line
 	4100 1000 4950 1000
 Wire Wire Line
@@ -100,7 +95,7 @@ Text Label 3000 1700 0    50   ~ 0
 OW11
 Text HLabel 900  2250 0    50   Input ~ 0
 DSKYRST
-Text HLabel 8800 1800 2    50   Output ~ 0
+Text HLabel 8800 2400 2    50   Output ~ 0
 DSPBLANK
 Text Notes 6500 7150 0    100  ~ 0
 DSKY-DSP-SIGN:  Decode Sign Logic\nCopyright 2021, William Glasford
@@ -109,7 +104,6 @@ R1+\nSign
 Text Notes 3600 2050 2    80   ~ 0
 R1-\nSign
 Connection ~ 4300 1200
-Connection ~ 4300 2400
 Connection ~ 3300 1700
 Wire Wire Line
 	3300 1700 3300 2200
@@ -138,10 +132,6 @@ $EndComp
 Wire Wire Line
 	4950 4150 5000 4150
 Wire Wire Line
-	4100 4750 4300 4750
-Wire Wire Line
-	4300 4750 4300 4250
-Wire Wire Line
 	4300 4250 4350 4250
 Wire Wire Line
 	4100 3550 4300 3550
@@ -149,7 +139,6 @@ Wire Wire Line
 	4300 3550 4300 4050
 Wire Wire Line
 	4300 4050 4350 4050
-NoConn ~ 4100 4550
 Wire Wire Line
 	4100 3350 4950 3350
 Wire Wire Line
@@ -188,14 +177,13 @@ Text Label 3000 4050 0    50   ~ 0
 OW11
 Text Label 8600 1200 2    50   ~ 0
 ID14
-Text HLabel 8800 2400 2    50   Output ~ 0
+Text HLabel 8800 1800 2    50   Output ~ 0
 DSPMINUS
 Text Notes 3550 3250 2    80   ~ 0
 R2+\nSign
 Text Notes 3600 4450 2    80   ~ 0
 R2-\nSign
 Connection ~ 4300 3550
-Connection ~ 4300 4750
 Connection ~ 3300 4050
 Wire Wire Line
 	3300 4050 3300 4550
@@ -224,10 +212,6 @@ $EndComp
 Wire Wire Line
 	4950 6550 5000 6550
 Wire Wire Line
-	4100 7150 4300 7150
-Wire Wire Line
-	4300 7150 4300 6650
-Wire Wire Line
 	4300 6650 4350 6650
 Wire Wire Line
 	4100 5950 4300 5950
@@ -235,7 +219,6 @@ Wire Wire Line
 	4300 5950 4300 6450
 Wire Wire Line
 	4300 6450 4350 6450
-NoConn ~ 4100 6950
 Wire Wire Line
 	4100 5750 4950 5750
 Wire Wire Line
@@ -269,7 +252,6 @@ R3+\nSign
 Text Notes 3650 6800 2    80   ~ 0
 R3-\nSign
 Connection ~ 4300 5950
-Connection ~ 4300 7150
 Connection ~ 3300 6450
 Wire Wire Line
 	3300 6450 3300 6950
@@ -277,8 +259,6 @@ Wire Wire Line
 	5800 4650 5800 5950
 Wire Wire Line
 	6000 7150 6000 4850
-Wire Wire Line
-	4300 7150 6000 7150
 Wire Wire Line
 	6500 1700 5600 1700
 Wire Wire Line
@@ -662,8 +642,6 @@ Entry Wire Line
 Text Label 1600 2950 0    50   ~ 0
 RWD6
 Wire Wire Line
-	4300 4750 5700 4750
-Wire Wire Line
 	5700 5200 5550 5200
 Wire Wire Line
 	5700 5050 6650 5050
@@ -687,8 +665,6 @@ Wire Wire Line
 	6100 5150 6650 5150
 Wire Wire Line
 	4300 1200 6550 1200
-Wire Wire Line
-	4300 2400 6550 2400
 Wire Wire Line
 	6550 1800 6500 1800
 Wire Wire Line
@@ -722,32 +698,14 @@ Wire Wire Line
 	7750 1200 7150 1200
 Connection ~ 7750 4250
 Wire Wire Line
-	7650 4750 7850 4750
-Wire Wire Line
-	7850 4750 7850 4350
-Wire Wire Line
-	7850 4350 7650 4350
-Connection ~ 7850 4350
-Wire Wire Line
 	7150 1800 7850 1800
-Wire Wire Line
-	7650 4850 7950 4850
-Wire Wire Line
-	7950 4850 7950 4450
-Wire Wire Line
-	7950 4450 7650 4450
-Connection ~ 7950 4450
 Wire Wire Line
 	7150 2400 7950 2400
 Connection ~ 7750 1200
 Wire Wire Line
 	7750 1200 7750 4250
 Connection ~ 7850 1800
-Wire Wire Line
-	7850 1800 7850 4350
 Connection ~ 7950 2400
-Wire Wire Line
-	7950 2400 7950 4450
 Text Notes 9350 1950 0    50   ~ 0
 These lines are all \nactive low so they \nneed pull up resistors \nwhen there is no input.
 $Comp
@@ -774,10 +732,6 @@ F 3 "" H 8350 2250 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	8250 2250 8350 2250
-Wire Wire Line
-	7950 2250 7950 2400
-Wire Wire Line
-	7950 2400 8800 2400
 $Comp
 L Device:R_US R12
 U 1 1 6224D3C6
@@ -917,16 +871,6 @@ F 3 "" H 8250 1600 50  0001 C CNN
 	1    8250 1600
 	1    0    0    -1  
 $EndComp
-Wire Bus Line
-	2900 6250 2900 6600
-Wire Bus Line
-	2900 3850 2900 4200
-Wire Bus Line
-	8700 1100 8700 1350
-Wire Bus Line
-	2900 1500 2900 1850
-Wire Bus Line
-	1500 900  1500 7900
 $Comp
 L 74xx:74LS02 U17
 U 1 1 624C129D
@@ -993,4 +937,54 @@ F 3 "74xx/74ls86.pdf" H 4650 6550 50  0001 C CNN
 	3    4650 6550
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	4100 4750 5700 4750
+Wire Wire Line
+	4100 2400 6550 2400
+Wire Wire Line
+	4100 7150 6000 7150
+Wire Wire Line
+	4100 6950 4300 6950
+Wire Wire Line
+	4300 6950 4300 6650
+Wire Wire Line
+	4100 4550 4300 4550
+Wire Wire Line
+	4300 4550 4300 4250
+Wire Wire Line
+	4100 2200 4300 2200
+Wire Wire Line
+	4300 2200 4300 1900
+Wire Wire Line
+	7950 2250 7950 2400
+Wire Wire Line
+	7950 2400 8800 2400
+Wire Wire Line
+	7850 4350 7650 4350
+Wire Wire Line
+	7850 1800 7850 4350
+Wire Wire Line
+	7650 4750 7850 4750
+Wire Wire Line
+	7650 4850 7950 4850
+Wire Wire Line
+	7950 4450 7650 4450
+Connection ~ 7850 4350
+Wire Wire Line
+	7850 4750 7850 4350
+Wire Wire Line
+	7950 4850 7950 4450
+Connection ~ 7950 4450
+Wire Bus Line
+	1500 900  1500 7900
+Wire Bus Line
+	2900 6250 2900 6600
+Wire Bus Line
+	2900 3850 2900 4200
+Wire Bus Line
+	8700 1100 8700 1350
+Wire Bus Line
+	2900 1500 2900 1850
+Wire Wire Line
+	7950 2400 7950 4450
 $EndSCHEMATC

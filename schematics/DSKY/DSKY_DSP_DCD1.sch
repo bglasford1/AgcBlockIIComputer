@@ -730,17 +730,6 @@ F 3 "http://www.ti.com/lit/gpn/sn74LS32" H 5500 5050 50  0001 C CNN
 	2    5500 5050
 	1    0    0    -1  
 $EndComp
-$Comp
-L 74xx:74LS00 U43
-U 3 1 62D5D7F0
-P 6100 5150
-F 0 "U43" H 6100 5475 50  0000 C CNN
-F 1 "74LS00" H 6100 5384 50  0000 C CNN
-F 2 "" H 6100 5150 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74ls00" H 6100 5150 50  0001 C CNN
-	3    6100 5150
-	1    0    0    -1  
-$EndComp
 Text HLabel 2050 5100 0    50   Input ~ 0
 ID2[0..3]
 Wire Bus Line
@@ -986,4 +975,15 @@ Wire Bus Line
 	6800 1700 6800 6050
 Wire Bus Line
 	3800 4600 3800 5500
+$Comp
+L 74xx:74LS08 U58
+U 1 1 6180EAE3
+P 6100 5150
+F 0 "U58" H 6100 5475 50  0000 C CNN
+F 1 "74LS08" H 6100 5384 50  0000 C CNN
+F 2 "" H 6100 5150 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 6100 5150 50  0001 C CNN
+	1    6100 5150
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
