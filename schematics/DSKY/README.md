@@ -15,5 +15,7 @@ DSKY_DSP : The Display Module
     DSKY_DSP_DCD2_3 : Contains decode logic for LCD Drivers #2 & #3
 
     DSKY_DSP_DCD1 : Contains decode logic for LCD Driver #1
+    
+    DSKY_DSP_SIGN : Contains decode logic for the sign LCDs.
 
     DSKY_DSP_LCD : Contains LCDs and LCD drivers
