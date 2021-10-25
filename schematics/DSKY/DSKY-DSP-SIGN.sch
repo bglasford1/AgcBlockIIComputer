@@ -95,7 +95,7 @@ Text Label 3000 1700 0    50   ~ 0
 OW11
 Text HLabel 900  2250 0    50   Input ~ 0
 DSKYRST
-Text HLabel 8800 2400 2    50   Output ~ 0
+Text HLabel 8800 1800 2    50   Output ~ 0
 DSPBLANK
 Text Notes 6500 7150 0    100  ~ 0
 DSKY-DSP-SIGN:  Decode Sign Logic\nCopyright 2021, William Glasford
@@ -177,7 +177,7 @@ Text Label 3000 4050 0    50   ~ 0
 OW11
 Text Label 8600 1200 2    50   ~ 0
 ID14
-Text HLabel 8800 1800 2    50   Output ~ 0
+Text HLabel 8800 2400 2    50   Output ~ 0
 DSPMINUS
 Text Notes 3550 3250 2    80   ~ 0
 R2+\nSign
@@ -975,8 +975,36 @@ Wire Wire Line
 Wire Wire Line
 	7950 4850 7950 4450
 Connection ~ 7950 4450
-Wire Bus Line
-	1500 900  1500 7900
+Wire Wire Line
+	7950 2400 7950 4450
+Wire Wire Line
+	2500 6950 2500 6600
+Wire Wire Line
+	2500 6600 2550 6600
+Connection ~ 2500 6950
+Wire Wire Line
+	2500 5750 2500 5400
+Wire Wire Line
+	2500 5400 2550 5400
+Connection ~ 2500 5750
+Wire Wire Line
+	2500 4550 2500 4200
+Wire Wire Line
+	2500 4200 2550 4200
+Connection ~ 2500 4550
+Wire Wire Line
+	2500 3350 2500 3050
+Wire Wire Line
+	2500 3050 2550 3050
+Connection ~ 2500 3350
+Text HLabel 2550 3050 2    50   Output ~ 0
+NRWD5
+Text HLabel 2550 4200 2    50   Output ~ 0
+NRWD4
+Text HLabel 2550 5400 2    50   Output ~ 0
+NRWD2
+Text HLabel 2550 6600 2    50   Output ~ 0
+NRWD1
 Wire Bus Line
 	2900 6250 2900 6600
 Wire Bus Line
@@ -985,6 +1013,6 @@ Wire Bus Line
 	8700 1100 8700 1350
 Wire Bus Line
 	2900 1500 2900 1850
-Wire Wire Line
-	7950 2400 7950 4450
+Wire Bus Line
+	1500 900  1500 7900
 $EndSCHEMATC

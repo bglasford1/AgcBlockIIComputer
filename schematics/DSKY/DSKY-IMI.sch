@@ -13,24 +13,9 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-$Comp
-L power:GND #PWR0102
-U 1 1 5F61EFB4
-P 7500 2050
-AR Path="/5F5E4E3B/5F5F82D4/5F61EFB4" Ref="#PWR0102"  Part="1" 
-AR Path="/60F989FD/5F61EFB4" Ref="#PWR0102"  Part="1" 
-F 0 "#PWR0102" H 7500 1800 50  0001 C CNN
-F 1 "GND" H 7505 1877 50  0000 C CNN
-F 2 "" H 7500 2050 50  0001 C CNN
-F 3 "" H 7500 2050 50  0001 C CNN
-	1    7500 2050
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8150 1950 8100 1950
-Text HLabel 8150 2350 2    50   Output ~ 0
+Text HLabel 7600 1950 2    50   Output ~ 0
 CLK2
-Text HLabel 8150 1950 2    50   Output ~ 0
+Text HLabel 6400 1850 2    50   Output ~ 0
 CLK1
 Wire Wire Line
 	3400 1750 3150 1750
@@ -58,7 +43,7 @@ Wire Wire Line
 	3900 2350 4200 2350
 Wire Wire Line
 	3900 2250 4200 2250
-Text HLabel 6400 2150 2    50   Output ~ 0
+Text HLabel 7700 3750 2    50   Output ~ 0
 STBY
 Text HLabel 3900 2150 2    50   Input ~ 0
 KB_STR
@@ -179,31 +164,15 @@ Text Notes 4100 1350 2    80   ~ 0
 Channel Bus
 Text Notes 6350 1500 2    80   ~ 0
 To CTL
-Text HLabel 6400 2250 2    50   Output ~ 0
+Text HLabel 7700 4400 2    50   Output ~ 0
 KBD1
 Text HLabel 6400 2350 2    50   Output ~ 0
 DISP
 Text HLabel 6400 2450 2    50   Output ~ 0
 INDC
 NoConn ~ 5900 2350
-NoConn ~ 5900 2450
-Wire Wire Line
-	6400 1850 7500 1850
 Wire Bus Line
 	4300 2800 3050 2800
-$Comp
-L 74xx:74LS32 U201
-U 4 1 5F6065A8
-P 7800 1950
-AR Path="/5F5E4E3B/5F5F82D4/5F6065A8" Ref="U201"  Part="1" 
-AR Path="/60F989FD/5F6065A8" Ref="U40"  Part="4" 
-F 0 "U40" H 7800 2275 50  0000 C CNN
-F 1 "74LS32" H 7800 2184 50  0000 C CNN
-F 2 "" H 7800 1950 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS32" H 7800 1950 50  0001 C CNN
-	4    7800 1950
-	1    0    0    -1  
-$EndComp
 Text Notes 6400 7150 0    100  ~ 0
 DSKY-IMI:  Interface\nCopyright 2021, William Glasford
 $Comp
@@ -241,86 +210,120 @@ Text HLabel 6400 2550 2    50   Output ~ 0
 PROG
 Text HLabel 5900 2550 0    50   Output ~ 0
 RPRO
-Text HLabel 8200 3300 2    50   Output ~ 0
+Text HLabel 8650 3050 2    50   Output ~ 0
 DSKYRST
 $Comp
 L 74xx:74LS00 U?
 U 1 1 6395652F
-P 7900 3300
+P 8350 3050
 AR Path="/5F5E4E3B/5F5F8347/6395652F" Ref="U?"  Part="1" 
 AR Path="/60F98A72/6395652F" Ref="U?"  Part="1" 
 AR Path="/66BEE9C8/6395652F" Ref="U?"  Part="1" 
 AR Path="/60F98A72/66CE2F9E/6395652F" Ref="U?"  Part="1" 
 AR Path="/60F989FD/6395652F" Ref="U6"  Part="1" 
-F 0 "U6" H 7900 3625 50  0000 C CNN
-F 1 "74LS00" H 7900 3534 50  0000 C CNN
-F 2 "" H 7900 3300 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74ls00" H 7900 3300 50  0001 C CNN
-	1    7900 3300
+F 0 "U6" H 8350 3375 50  0000 C CNN
+F 1 "74LS00" H 8350 3284 50  0000 C CNN
+F 2 "" H 8350 3050 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74ls00" H 8350 3050 50  0001 C CNN
+	1    8350 3050
 	1    0    0    -1  
 $EndComp
 $Comp
 L 74xx:74LS04 U?
 U 2 1 63956535
-P 7300 3400
+P 7750 3150
 AR Path="/5F5E4E3B/5F5F8347/63956535" Ref="U?"  Part="6" 
 AR Path="/60F98A72/63956535" Ref="U?"  Part="2" 
 AR Path="/66BEE9C8/63956535" Ref="U?"  Part="6" 
 AR Path="/60F98A72/66CE2F9E/63956535" Ref="U?"  Part="6" 
 AR Path="/60F989FD/63956535" Ref="U5"  Part="2" 
-F 0 "U5" H 7400 3150 50  0000 C CNN
-F 1 "74LS04" H 7400 3250 50  0000 C CNN
-F 2 "" H 7300 3400 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 7300 3400 50  0001 C CNN
-	2    7300 3400
+F 0 "U5" H 7850 2900 50  0000 C CNN
+F 1 "74LS04" H 7850 3000 50  0000 C CNN
+F 2 "" H 7750 3150 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 7750 3150 50  0001 C CNN
+	2    7750 3150
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6400 2050 6800 2050
+	6400 2050 7250 2050
 Wire Wire Line
-	6800 2050 6800 3400
+	7250 2050 7250 3150
 Wire Wire Line
-	6800 3400 7000 3400
+	7250 3150 7450 3150
 $Comp
 L 74xx:74LS04 U42
 U 5 1 6247150B
-P 7900 2750
-F 0 "U42" H 7900 3067 50  0000 C CNN
-F 1 "74LS04" H 7900 2976 50  0000 C CNN
-F 2 "" H 7900 2750 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 7900 2750 50  0001 C CNN
-	5    7900 2750
+P 8350 2500
+F 0 "U42" H 8350 2817 50  0000 C CNN
+F 1 "74LS04" H 8350 2726 50  0000 C CNN
+F 2 "" H 8350 2500 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 8350 2500 50  0001 C CNN
+	5    8350 2500
 	1    0    0    -1  
 $EndComp
 $Comp
 L 74xx:74LS04 U46
 U 6 1 62471E0E
-P 7300 2750
-F 0 "U46" H 7300 3067 50  0000 C CNN
-F 1 "74LS04" H 7300 2976 50  0000 C CNN
-F 2 "" H 7300 2750 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 7300 2750 50  0001 C CNN
-	6    7300 2750
+P 7750 2500
+F 0 "U46" H 7750 2817 50  0000 C CNN
+F 1 "74LS04" H 7750 2726 50  0000 C CNN
+F 2 "" H 7750 2500 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 7750 2500 50  0001 C CNN
+	6    7750 2500
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6400 1950 7000 1950
+	6400 1950 7450 1950
 Wire Wire Line
-	7000 1950 7000 2350
+	7600 1950 7450 1950
 Wire Wire Line
-	8150 2350 7000 2350
-Connection ~ 7000 2350
-Wire Wire Line
-	7000 2350 7000 2750
-Wire Wire Line
-	7000 2750 7000 3200
-Wire Wire Line
-	7000 3200 7600 3200
-Connection ~ 7000 2750
-Text HLabel 8200 2750 2    50   Output ~ 0
+	7450 2950 8050 2950
+Text HLabel 8650 2500 2    50   Output ~ 0
 SGN_CLK2
+Wire Wire Line
+	7450 1950 7450 2500
+Connection ~ 7450 1950
+Connection ~ 7450 2500
+Wire Wire Line
+	7450 2500 7450 2950
+Text Notes 3350 3700 0    70   ~ 0
+Note: PROG, RPRO & PARALM are Active High,\nthe rest are Active Low with the clock signals\nand KB_STR being pulses.
+$Comp
+L 74xx:74LS04 U19
+U 3 1 61EE72FE
+P 7400 3750
+F 0 "U19" H 7400 4067 50  0000 C CNN
+F 1 "74LS04" H 7400 3976 50  0000 C CNN
+F 2 "" H 7400 3750 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 7400 3750 50  0001 C CNN
+	3    7400 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6400 2150 7100 2150
+Wire Wire Line
+	7100 2150 7100 3750
+$Comp
+L 74xx:74LS04 U46
+U 3 1 61F122AA
+P 7400 4400
+F 0 "U46" H 7400 4717 50  0000 C CNN
+F 1 "74LS04" H 7400 4626 50  0000 C CNN
+F 2 "" H 7400 4400 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 7400 4400 50  0001 C CNN
+	3    7400 4400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6400 2250 6950 2250
+Wire Wire Line
+	6950 2250 6950 4400
+Wire Wire Line
+	6950 4400 7100 4400
 Wire Bus Line
 	4300 2250 4300 2800
 Wire Bus Line
 	3050 1450 3050 2800
+Text HLabel 5900 2450 0    50   Output ~ 0
+CLK3
 $EndSCHEMATC
