@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
-Sheet 2 11
+Sheet 2 12
 Title ""
 Date ""
 Rev ""
@@ -65,8 +65,7 @@ F3 "OW[3..9]" I L 3950 3600 50
 F4 "STBY" I L 3950 4050 50 
 F5 "PARALM" I L 3950 4150 50 
 F6 "IND[2..7]" I L 3950 3900 50 
-F7 "PROG" O L 3950 4250 50 
-F8 "DSKYRST" I L 3950 4350 50 
+F7 "DSKYRST" I L 3950 4250 50 
 $EndSheet
 Wire Bus Line
 	1650 3250 1850 3250
@@ -121,8 +120,6 @@ Text Notes 6350 7150 0    100  ~ 0
 DSKY-DSP:  Display \nCopyright 2021, William Glasford
 Wire Wire Line
 	3950 4250 3800 4250
-Text HLabel 3800 4250 0    50   Output ~ 0
-PROG
 Wire Wire Line
 	7200 2750 8450 2750
 Wire Wire Line
@@ -207,10 +204,8 @@ F15 "COMB-A" O R 7200 3400 50
 F16 "COMB-B" O R 7200 3500 50 
 F17 "COMB-C" O R 7200 3600 50 
 $EndSheet
-Text HLabel 3800 4350 0    50   Input ~ 0
+Text HLabel 3800 4250 0    50   Input ~ 0
 DSKYRST
-Wire Wire Line
-	3800 4350 3950 4350
 Wire Wire Line
 	1850 3550 1600 3550
 Text HLabel 1600 3550 0    50   Input ~ 0

@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
-Sheet 5 11
+Sheet 5 12
 Title ""
 Date ""
 Rev ""
@@ -1816,13 +1816,6 @@ Text Label 1050 6650 0    50   ~ 0
 IND6
 Text Notes 2400 6600 2    50   ~ 0
 Flash V/N
-Wire Wire Line
-	7100 5900 7100 6150
-Wire Wire Line
-	7100 6150 7350 6150
-Connection ~ 7100 5900
-Text HLabel 7350 6150 2    50   Output ~ 0
-PROG
 NoConn ~ 7000 3000
 Connection ~ 10200 1950
 $Comp
