@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
-Sheet 11 12
+Sheet 3 15
 Title ""
 Date ""
 Rev ""
@@ -2055,9 +2055,9 @@ Wire Wire Line
 	9050 2050 8950 2050
 Wire Wire Line
 	8950 2050 8950 2150
-Text HLabel 8250 2050 0    50   Input ~ 0
+Text HLabel 7650 2650 0    50   Input ~ 0
 KBD1
-Text HLabel 8250 2250 0    50   Input ~ 0
+Text HLabel 8250 2050 0    50   Input ~ 0
 CLK1
 Text Notes 9450 850  2    100  ~ 0
 CH15 Reg.
@@ -2129,7 +2129,7 @@ KM5
 Wire Bus Line
 	2800 7400 1600 7400
 Connection ~ 8950 2150
-Text Notes 7200 2550 0    80   ~ 0
+Text Notes 7250 2200 0    80   ~ 0
 TODO: \nadd 5 \nLEDs
 Wire Bus Line
 	10300 650  10450 650 
@@ -2428,8 +2428,6 @@ Text Notes 10300 5900 2    100  ~ 0
 CH32 Reg.
 Text Notes 6550 7200 0    100  ~ 0
 DSKY-KBD:  Keyboard\nCopyright 2021, William Glasford
-Text Notes 2900 7050 0    80   ~ 0
-Use 2 9-resister\nnetwork chips.
 Wire Wire Line
 	8300 5700 8200 5700
 $Comp
@@ -2513,6 +2511,21 @@ F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 8950 6600 50  0001 C CNN
 $EndComp
 Text HLabel 8650 6700 0    50   Input ~ 0
 CLK1
+$Comp
+L 74xx:74LS04 U?
+U 2 1 63C2FDE6
+P 7950 2650
+AR Path="/60F989FD/63C2FDE6" Ref="U?"  Part="3" 
+AR Path="/60F98A72/63C2FDE6" Ref="U19"  Part="2" 
+F 0 "U19" H 7950 2967 50  0000 C CNN
+F 1 "74LS04" H 7950 2876 50  0000 C CNN
+F 2 "" H 7950 2650 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 7950 2650 50  0001 C CNN
+	2    7950 2650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8250 2250 8250 2650
 Wire Bus Line
 	9950 6000 9950 6400
 Wire Bus Line

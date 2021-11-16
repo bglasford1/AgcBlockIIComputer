@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
-Sheet 4 12
+Sheet 6 15
 Title ""
 Date ""
 Rev ""
@@ -470,14 +470,6 @@ F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 6700 2150 50  0001 C CNN
 	4    6700 2150
 	1    0    0    -1  
 $EndComp
-Wire Bus Line
-	7650 1150 7650 2100
-Wire Bus Line
-	9550 1150 9550 2100
-Wire Bus Line
-	6150 2900 6150 6350
-Wire Bus Line
-	3500 3100 3500 6300
 $Comp
 L 74xx:74LS04 U5
 U 3 1 6221121E
@@ -489,4 +481,12 @@ F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 2500 4600 50  0001 C CNN
 	3    2500 4600
 	1    0    0    -1  
 $EndComp
+Wire Bus Line
+	7650 1150 7650 2100
+Wire Bus Line
+	9550 1150 9550 2100
+Wire Bus Line
+	6150 2900 6150 6350
+Wire Bus Line
+	3500 3100 3500 6300
 $EndSCHEMATC
