@@ -35,5 +35,5 @@ however Eclipse is just as good.
 # Schematics:
 
 The schematics are created using KiCad, a free modern schematic tool that in Ronald's words is "what all the cool kids are using".  Each 
-physical board is developed as a unique project.  
+physical board is developed as a unique project with the exception of the DSKY which is divided between 3 boards.  
 
