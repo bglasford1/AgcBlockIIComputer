@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A 8500 11000 portrait
 encoding utf-8
-Sheet 10 15
+Sheet 9 15
 Title ""
 Date ""
 Rev ""
@@ -764,7 +764,7 @@ Wire Wire Line
 	2750 8550 2600 8550
 Connection ~ 2750 8550
 Text HLabel 2600 8550 0    50   Input ~ 0
-DSKYRST
+SGNRST
 Wire Bus Line
 	750  1050 750  1300
 Wire Bus Line

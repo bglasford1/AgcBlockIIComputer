@@ -13,7 +13,7 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Text HLabel 7450 2700 2    50   Output ~ 0
+Text HLabel 8500 2700 2    50   Output ~ 0
 CLK2
 Text HLabel 6250 2600 2    50   Output ~ 0
 CLK1
@@ -205,65 +205,103 @@ NoConn ~ 5750 2900
 NoConn ~ 5750 3000
 Text HLabel 5750 3300 0    50   Output ~ 0
 RPRO
-Text HLabel 8500 3050 2    50   Output ~ 0
+Text HLabel 8500 3200 2    50   Output ~ 0
 DSKYRST
 $Comp
 L 74xx:74LS00 U?
 U 1 1 6395652F
-P 8200 3050
+P 8200 3200
 AR Path="/5F5E4E3B/5F5F8347/6395652F" Ref="U?"  Part="1" 
 AR Path="/60F98A72/6395652F" Ref="U?"  Part="1" 
 AR Path="/66BEE9C8/6395652F" Ref="U?"  Part="1" 
 AR Path="/60F98A72/66CE2F9E/6395652F" Ref="U?"  Part="1" 
 AR Path="/60F989FD/6395652F" Ref="U6"  Part="1" 
-F 0 "U6" H 8200 3375 50  0000 C CNN
-F 1 "74LS00" H 8200 3284 50  0000 C CNN
-F 2 "" H 8200 3050 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74ls00" H 8200 3050 50  0001 C CNN
-	1    8200 3050
+F 0 "U6" H 8200 3525 50  0000 C CNN
+F 1 "74LS00" H 8200 3434 50  0000 C CNN
+F 2 "" H 8200 3200 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74ls00" H 8200 3200 50  0001 C CNN
+	1    8200 3200
 	1    0    0    -1  
 $EndComp
 $Comp
 L 74xx:74LS04 U?
 U 2 1 63956535
-P 7600 3150
+P 7250 3300
 AR Path="/5F5E4E3B/5F5F8347/63956535" Ref="U?"  Part="6" 
 AR Path="/60F98A72/63956535" Ref="U?"  Part="2" 
 AR Path="/66BEE9C8/63956535" Ref="U?"  Part="6" 
 AR Path="/60F98A72/66CE2F9E/63956535" Ref="U?"  Part="6" 
 AR Path="/60F989FD/63956535" Ref="U5"  Part="2" 
-F 0 "U5" H 7700 2900 50  0000 C CNN
-F 1 "74LS04" H 7700 3000 50  0000 C CNN
-F 2 "" H 7600 3150 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 7600 3150 50  0001 C CNN
-	2    7600 3150
+F 0 "U5" H 7300 3550 50  0000 C CNN
+F 1 "74LS04" H 7300 3450 50  0000 C CNN
+F 2 "" H 7250 3300 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 7250 3300 50  0001 C CNN
+	2    7250 3300
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6250 2800 7100 2800
+	6250 2800 6750 2800
 Wire Wire Line
-	7100 2800 7100 3150
+	6750 2800 6750 3300
 Wire Wire Line
-	7100 3150 7300 3150
+	6750 3300 6950 3300
 Wire Wire Line
-	6250 2700 7300 2700
+	8500 2700 7700 2700
 Wire Wire Line
-	7450 2700 7300 2700
-Wire Wire Line
-	7300 2950 7900 2950
+	7700 3100 7700 3650
 Text Notes 3350 4900 0    70   ~ 0
 Note: PROG, RPRO & PARALM are Active High,\nthe rest are Active Low with the clock signals\nand KB_STR being pulses.
 Wire Bus Line
 	2900 3550 4150 3550
-Connection ~ 7300 2700
 NoConn ~ 6250 3300
-Wire Wire Line
-	7300 2700 7300 2950
 NoConn ~ 5750 3100
+Text HLabel 5750 3200 0    50   Output ~ 0
+CLK3
+$Comp
+L 74xx:74LS00 U36
+U 3 1 6B3C3F3A
+P 8200 3750
+F 0 "U36" H 8200 4075 50  0000 C CNN
+F 1 "74LS00" H 8200 3984 50  0000 C CNN
+F 2 "" H 8200 3750 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74ls00" H 8200 3750 50  0001 C CNN
+	3    8200 3750
+	1    0    0    -1  
+$EndComp
+Text HLabel 8500 3750 2    50   Output ~ 0
+SGNRST
+$Comp
+L 74xx:74LS04 U79
+U 3 1 6B3C632F
+P 7250 3850
+F 0 "U79" H 7300 4100 50  0000 C CNN
+F 1 "74LS04" H 7300 4000 50  0000 C CNN
+F 2 "" H 7250 3850 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 7250 3850 50  0001 C CNN
+	3    7250 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6750 3850 6950 3850
+Wire Wire Line
+	6750 3300 6750 3850
+Connection ~ 6750 3300
+Wire Wire Line
+	7550 3850 7900 3850
+Wire Wire Line
+	7550 3300 7900 3300
+Wire Wire Line
+	7900 3100 7700 3100
+Wire Wire Line
+	7700 3650 7900 3650
+Connection ~ 7700 2700
+Wire Wire Line
+	6250 2700 7700 2700
+Wire Wire Line
+	7700 2700 7700 3100
+Connection ~ 7700 3100
 Wire Bus Line
 	4150 3000 4150 3550
 Wire Bus Line
 	2900 2200 2900 3550
-Text HLabel 5750 3200 0    50   Output ~ 0
-CLK3
 $EndSCHEMATC

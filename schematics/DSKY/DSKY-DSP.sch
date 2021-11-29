@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
-Sheet 5 15
+Sheet 4 15
 Title ""
 Date ""
 Rev ""
@@ -123,7 +123,7 @@ F6 "ND-EN" O R 7350 4800 50
 F7 "OW[11..11]" I L 6250 5200 50 
 F8 "DE[2..3]" O L 6250 4750 50 
 F9 "IND[6..6]" I L 6250 5350 50 
-F10 "DSKYRST" I L 6250 5500 50 
+F10 "SGNRST" I L 6250 5500 50 
 $EndSheet
 $Sheet
 S 6250 2150 1100 1800
@@ -264,5 +264,5 @@ $EndSheet
 Wire Wire Line
 	6250 5500 6100 5500
 Text HLabel 6100 5500 0    50   Input ~ 0
-DSKYRST
+SGNRST
 $EndSCHEMATC

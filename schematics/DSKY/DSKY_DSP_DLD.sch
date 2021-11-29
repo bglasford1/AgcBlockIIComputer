@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
-Sheet 15 15
+Sheet 14 15
 Title ""
 Date ""
 Rev ""
@@ -836,12 +836,12 @@ Wire Wire Line
 	3300 3000 3650 3000
 Text HLabel 2300 2300 0    50   Input ~ 0
 CLK3
+Text Notes 4950 4000 0    50   ~ 0
+Cycle Display
 Wire Bus Line
 	2000 1450 2000 2100
 Wire Bus Line
 	9600 1950 9600 2700
 Wire Bus Line
 	3750 1500 3750 3150
-Text Notes 4950 4000 0    50   ~ 0
-Cycle Display
 $EndSCHEMATC

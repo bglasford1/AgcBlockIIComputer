@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A 8500 11000 portrait
 encoding utf-8
-Sheet 12 15
+Sheet 11 15
 Title ""
 Date ""
 Rev ""
@@ -1388,9 +1388,9 @@ Wire Wire Line
 Wire Wire Line
 	1450 8250 1250 8250
 Wire Bus Line
-	700  2550 7000 2550
-Wire Bus Line
 	700  4500 7200 4500
+Wire Bus Line
+	700  2550 7200 2550
 Wire Bus Line
 	700  6500 7200 6500
 Wire Bus Line
