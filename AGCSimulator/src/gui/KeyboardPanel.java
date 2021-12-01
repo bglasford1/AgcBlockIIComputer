@@ -9,7 +9,8 @@
 
   Purpose:	This class displays the DSKY keyboard.
 
-  Mods:		  07/15/21 Initial Release.
+  Mods:		  07/15/21  Initial Release.
+            11/30/21  Fixed Proceed Key.
 */
 
 package gui;
@@ -44,7 +45,7 @@ public class KeyboardPanel extends JPanel implements ActionListener
   private static final String ENTER_STRING = "ENTER";
   private static final String RESET_STRING = "Reset";
   private static final String KEY_RELEASE_STRING = "KeyRel";
-  private static final String PROG_STRING = "PROG";
+  private static final String PRO_STRING = "PRO";
 
   private JButton zeroButton = new JButton(ZERO_STRING);
   private JButton oneButton = new JButton(ONE_STRING);
@@ -64,7 +65,7 @@ public class KeyboardPanel extends JPanel implements ActionListener
   private JButton enterButton = new JButton(ENTER_STRING);
   private JButton resetButton = new JButton(RESET_STRING);
   private JButton keyReleaseButton = new JButton(KEY_RELEASE_STRING);
-  private JButton progButton = new JButton(PROG_STRING);
+  private JButton proButton = new JButton(PRO_STRING);
   private JLabel blankLabel1 = new JLabel("");
   private JLabel blankLabel2 = new JLabel("");
 
@@ -113,8 +114,8 @@ public class KeyboardPanel extends JPanel implements ActionListener
     sixButton.setActionCommand(SIX_STRING);
     sixButton.addActionListener(this);
 
-    progButton.setActionCommand(PROG_STRING);
-    progButton.addActionListener(this);
+    proButton.setActionCommand(PRO_STRING);
+    proButton.addActionListener(this);
 
     resetButton.setActionCommand(RESET_STRING);
     resetButton.addActionListener(this);
@@ -146,7 +147,7 @@ public class KeyboardPanel extends JPanel implements ActionListener
     this.add(fourButton);
     this.add(fiveButton);
     this.add(sixButton);
-    this.add(progButton);
+    this.add(proButton);
     this.add(resetButton);
     this.add(blankLabel1);
     this.add(zeroButton);
@@ -232,7 +233,7 @@ public class KeyboardPanel extends JPanel implements ActionListener
     {
       agcControl.getKbd().keyPress(KeyInType.KEYIN_KEY_RELEASE);
     }
-    else if (e.getActionCommand().equalsIgnoreCase(PROG_STRING))
+    else if (e.getActionCommand().equalsIgnoreCase(PRO_STRING))
     {
       agcControl.getKbd().proPress();
     }

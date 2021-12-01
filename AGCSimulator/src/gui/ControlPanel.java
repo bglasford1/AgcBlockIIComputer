@@ -10,7 +10,8 @@
   Purpose:	This class displays the control panel which consists of the
             switches that control the simulation.
 
-  Mods:		  07/15/21 Initial Release.
+  Mods:		  07/15/21  Initial Release.
+            11/30/21  Implemented Standby.
 */
 
 package gui;
@@ -23,7 +24,7 @@ import java.awt.event.ActionListener;
 
 public class ControlPanel extends JPanel implements ActionListener
 {
-  private AGCControl agcControl;
+  private final AGCControl agcControl;
 
   private static final String MANUAL_CLK_STRING = "CLK: STEP";
   private static final String FAST_CLK_STRING = "CLK: RUN";
@@ -41,20 +42,22 @@ public class ControlPanel extends JPanel implements ActionListener
   private static final String F17_STRING = "F17";
   private static final String RESET_STRING = "RESET";
   private static final String INCREMENT_COUNTER_STRING = "INC CTR";
+  private static final String STANDBY_STRING = "STANDBY";
 
-  private JButton scalerButton = new JButton(SCALER_STRING);
-  private JButton standbyAllowedButton = new JButton(STANDBY_ALLOWED_STRING);
-  private JButton runStepClockButton = new JButton(MANUAL_CLK_STRING);
-  private JButton runStepInstButton = new JButton(STEP_INST_STRING);
-  private JButton clearParityAlarmButton = new JButton(CLEAR_PARITY_ALARM_STRING);
-  private JButton stepClockButton = new JButton(STEP_CLOCK_STRING);
-  private JButton instructionSequenceButton = new JButton(SEQUENCE_STRING);
-  private JButton interruptButton = new JButton(INTERRUPT_STRING);
-  private JButton f13Button = new JButton(F13_STRING);
-  private JButton f17Button = new JButton(F17_STRING);
-  private JButton stepInstructionButton = new JButton(STEP_INSTRUCTION_STRING);
-  private JButton resetButton = new JButton(RESET_STRING);
-  private JButton incCounterButton = new JButton(INCREMENT_COUNTER_STRING);
+  private final JButton scalerButton = new JButton(SCALER_STRING);
+  private final JButton standbyAllowedButton = new JButton(STANDBY_ALLOWED_STRING);
+  private final JButton runStepClockButton = new JButton(MANUAL_CLK_STRING);
+  private final JButton runStepInstButton = new JButton(STEP_INST_STRING);
+  private final JButton clearParityAlarmButton = new JButton(CLEAR_PARITY_ALARM_STRING);
+  private final JButton stepClockButton = new JButton(STEP_CLOCK_STRING);
+  private final JButton instructionSequenceButton = new JButton(SEQUENCE_STRING);
+  private final JButton interruptButton = new JButton(INTERRUPT_STRING);
+  private final JButton f13Button = new JButton(F13_STRING);
+  private final JButton f17Button = new JButton(F17_STRING);
+  private final JButton stepInstructionButton = new JButton(STEP_INSTRUCTION_STRING);
+  private final JButton resetButton = new JButton(RESET_STRING);
+  private final JButton incCounterButton = new JButton(INCREMENT_COUNTER_STRING);
+  private final JButton standbyButton = new JButton(STANDBY_STRING);
 
   ControlPanel(AGCControl agcControl)
   {
@@ -113,6 +116,9 @@ public class ControlPanel extends JPanel implements ActionListener
     clearParityAlarmButton.setActionCommand(CLEAR_PARITY_ALARM_STRING);
     clearParityAlarmButton.addActionListener(this);
 
+    standbyButton.setActionCommand(STANDBY_STRING);
+    standbyButton.addActionListener(this);
+
     this.add(runStepClockButton);
     this.add(stepClockButton);
     this.add(resetButton);
@@ -126,6 +132,7 @@ public class ControlPanel extends JPanel implements ActionListener
     this.add(incCounterButton);
     this.add(f13Button);
     this.add(f17Button);
+    this.add(standbyButton);
   }
 
   @Override
@@ -270,6 +277,14 @@ public class ControlPanel extends JPanel implements ActionListener
     else if (e.getActionCommand().equalsIgnoreCase(INCREMENT_COUNTER_STRING))
     {
       agcControl.incrCntr();
+    }
+
+    // <STANDBY> (n/a) Go to Standby mode.
+    else if (e.getActionCommand().equalsIgnoreCase(STANDBY_STRING))
+    {
+      // Set Standby mode.
+      agcControl.getMon().SA = true;
+      agcControl.updateDisplay();
     }
   }
 }

@@ -10,7 +10,8 @@
   Purpose:	This class displays the main simulation window which includes
             the main menu.
 
-  Mods:		  07/15/21 Initial Release.
+  Mods:		  07/15/21  Initial Release.
+            11/30/21  Implemented Standby.
 */
 
 package gui;
@@ -239,7 +240,7 @@ public class MainFrame extends JFrame implements ActionListener
     simStatesPanel.setRunText(Boolean.toString(parent.getMon().RUN));
     simStatesPanel.setStepText(Boolean.toString(parent.getMon().STEP));
     simStatesPanel.setInstText(Boolean.toString(parent.getMon().INST));
-    simStatesPanel.setProgText(Boolean.toString(parent.getMon().PROG));
+    simStatesPanel.setProgText(Boolean.toString(parent.getMon().SA));
     simStatesPanel.setPurstText(Boolean.toString(parent.getMon().PURST));
     simStatesPanel.setFclkText(Boolean.toString(parent.getMon().FCLK));
     simStatesPanel.setDebugText(Boolean.toString(parent.getMon().breakpointEnabled));
