@@ -10,7 +10,8 @@
   Purpose:	This class implements the Monitor module.  This contains switches
             that control the debugging of the hardware.
 
-  Mods:		  07/15/21 Initial Release.
+  Mods:		  07/15/21  Initial Release.
+            11/30/21  Implemented Standby.
 */
 
 package modules;
@@ -22,7 +23,7 @@ public class MON
   public boolean STEP = false;    // single step switch
   public boolean INST = false;    // instruction/sequence step select switch
   public boolean FCLK = false;    // clock mode
-  public boolean PROG = false;    // "standby allowed" SW; 0=NO (full power), 1=YES (low power)
+  public boolean SA = false;    // "standby allowed" SW; 0=NO (full power), 1=YES (low power)
   public boolean SCL_ENAB = true; // "scaler enabled" SW; 0=NO (scaler halted), 1=YES (scaler running)
   public boolean ruptBreakpointEnabled = false;    // Used to set an interrupt breakpoint.
   public boolean counterBreakpointEnabled = false; // Used to set a counter breakpoint.

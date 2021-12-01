@@ -10,7 +10,8 @@
   Purpose:	This class implements the DSKY Keyboard module as well as
             channels 15, 16 and 32.
 
-  Mods:		  07/15/21 Initial Release.
+  Mods:		  07/15/21  Initial Release.
+            11/30/21  Fixed Proceed Key.
 */
 
 package modules;
@@ -118,8 +119,8 @@ public class KBD
     parent.getChannelDataBus().write(channel15.read());
   }
 
-  // Read channel 32 and place data on channel data bus.
-  void execRP_CH32()
+  // Read channel 32 and place the proceed key data on channel data bus.
+  void execRP_RPRO()
   {
     parent.getChannelDataBus().write(channel32.read());
   }

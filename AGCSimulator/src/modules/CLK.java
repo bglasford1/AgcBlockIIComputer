@@ -12,7 +12,8 @@
             In the hardware implementation the read control pulses occur before
             the write control pulses.
 
-  Mods:		  07/15/21 Initial Release.
+  Mods:		  07/15/21  Initial Release.
+            11/30/21  Fixed Proceed Key.
 */
 
 package modules;
@@ -131,7 +132,7 @@ public class CLK
         parent.getIos().execRP_CH31();
         break;
       case RC32:
-        parent.getKbd().execRP_CH32();
+        parent.getKbd().execRP_RPRO();
         break;
       case RC33:
         parent.getIos().execRP_CH33();

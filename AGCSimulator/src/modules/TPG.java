@@ -13,7 +13,8 @@
             and WAIT have been added.  For startup processing the STBY and
             PWRON states have been added.
 
-  Mods:		  07/15/21 Initial Release.
+  Mods:		  07/15/21  Initial Release.
+            11/30/21  Implemented Standby.
 */
 
 package modules;
@@ -122,7 +123,8 @@ public class TPG
                                       parent.getAdr().readRegisterFB(),
                                       parent.getAdr().readRegisterEB());
 
-        if (parent.getSeq().readRegisterSNI() == 1 && parent.getMon().PROG)
+        // Note: this capability to go to Standby was never used in flight, therefore can never be set.
+        if (parent.getSeq().readRegisterSNI() == 1 && parent.getMon().SA)
         {
           mystate = TpType.STBY;
         }
