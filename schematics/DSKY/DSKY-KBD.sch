@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
-Sheet 3 15
+Sheet 13 13
 Title ""
 Date ""
 Rev ""
@@ -2428,6 +2428,8 @@ Text Notes 10300 5900 2    100  ~ 0
 CH32 Reg.
 Text Notes 6550 7200 0    100  ~ 0
 DSKY-KBD:  Keyboard\nCopyright 2021, William Glasford
+Text Notes 2900 7050 0    80   ~ 0
+Use 2 9-resister\nnetwork chips.
 Wire Wire Line
 	8300 5700 8200 5700
 $Comp
@@ -2488,14 +2490,14 @@ F 3 "http://www.ti.com/lit/gpn/sn74ls00" H 3500 1400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L 74xx:74LS00 U36
-U 4 1 61A0A316
+L 74xx:74LS00 U18
+U 1 1 61A0A316
 P 8550 2150
-F 0 "U36" H 8550 2475 50  0000 C CNN
+F 0 "U18" H 8550 2475 50  0000 C CNN
 F 1 "74LS00" H 8550 2384 50  0000 C CNN
 F 2 "" H 8550 2150 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74ls00" H 8550 2150 50  0001 C CNN
-	4    8550 2150
+	1    8550 2150
 	1    0    0    -1  
 $EndComp
 $Comp
