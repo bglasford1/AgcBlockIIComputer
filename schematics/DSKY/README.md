@@ -10,20 +10,16 @@ DSKY_DSP : The Display module
 
     DSKY_DSP_CHN : Contains I/O channel registers
 
-    DSKY_DSP_DCC : Contains display code converters
+    DSKY_DSP_DCD : Contains display code converters
 
     DSKY_DSP_IND : Contains indicator lights logic
 
-    DSKY_DSP_DLD : Contains display latch decode logic
+    DSKY_DSP_CTL : Contains display control logic
 
-    DSKY_DSP_DST : Contains display storage
+    DSKY_DSP_REG : Contains display registers
     
-    DSKY_DSP_SGN : Contains decode logic for the sign LEDs
+    DSKY_DSP_SIGN : Contains decode logic for the sign LEDs
 
-    DSKY_DSP_LDA : Contains LED drivers for Bank A
-    
-    DSKY_DSP_LDB : Contains LED drivers for Bank B
-    
-    DSKY_DSP_LDD : Contains LED digit drivers
+    DSKY_DSP_DRV : Contains LED drivers
     
     DSKY_DSP_LCD : Contains the 7-segment LEDs
