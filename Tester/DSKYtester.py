@@ -1,4 +1,4 @@
-jimport RPi.GPIO as GPIO
+import RPi.GPIO as GPIO
 import time
 import sys
 
@@ -113,10 +113,10 @@ def resetPins():
     GPIO.output(DISP, 1)
     GPIO.output(INDC, 1)
     GPIO.output(KBD1, 1)
-    GPIO.output(RPRO, 0)
+    GPIO.output(RPRO, 0) # Active High
     GPIO.output(STBY, 1)
     GPIO.output(RESET, 1)
-    GPIO.output(PALM, 1)
+    GPIO.output(PALM, 0) # Active High
 
 def setRLYWD(bit15, bit14, bit13, bit12):
     GPIO.output(CH12, bit12)
@@ -155,40 +155,62 @@ def setDisplayBitsLow(bit5, bit4, bit3, bit2, bit1):
     GPIO.output(CH5, bit5)
 
 # This sets either the high (1) or low (0) digit with the number provided.
-def setDisplayDigits(number):
+def setDisplayDigits(number, loc):
     if (number == 0):
-        setDisplayBitsHigh(1, 0, 1, 0, 1) # 10101
-        setDisplayBitsLow(1, 0, 1, 0, 1)
+        if (loc == 0):
+            setDisplayBitsHigh(1, 0, 1, 0, 1) # 10101
+        else:
+            setDisplayBitsLow(1, 0, 1, 0, 1)
     elif (number == 1):
-        setDisplayBitsHigh(0, 0, 0, 1, 1) # 00011
-        setDisplayBitsLow(0, 0, 0, 1, 1)
+        if (loc = 0):
+           setDisplayBitsHigh(0, 0, 0, 1, 1) # 00011
+       else:
+            setDisplayBitsLow(0, 0, 0, 1, 1)
     elif (number == 2):
-        setDisplayBitsHigh(1, 1, 0, 0, 1) # 11001
-        setDisplayBitsLow(1, 1, 0, 0, 1)
+        if (loc = 0):
+            setDisplayBitsHigh(1, 1, 0, 0, 1) # 11001
+       else:
+             setDisplayBitsLow(1, 1, 0, 0, 1)
     elif (number == 3):
-        setDisplayBitsHigh(1, 1, 0, 1, 1) # 11011
-        setDisplayBitsLow(1, 1, 0, 1, 1)
+        if (loc = 0):
+            setDisplayBitsHigh(1, 1, 0, 1, 1) # 11011
+       else:
+            setDisplayBitsLow(1, 1, 0, 1, 1)
     elif (number == 4):
-        setDisplayBitsHigh(0, 1, 1, 1, 1) # 01111
-        setDisplayBitsLow(0, 1, 1, 1, 1)
+         if (loc = 0):
+           setDisplayBitsHigh(0, 1, 1, 1, 1) # 01111
+       else:
+            setDisplayBitsLow(0, 1, 1, 1, 1)
     elif (number == 5):
-        setDisplayBitsHigh(1, 1, 1, 1, 0) # 11110
-        setDisplayBitsLow(1, 1, 1, 1, 0)
+        if (loc = 0):
+            setDisplayBitsHigh(1, 1, 1, 1, 0) # 11110
+       else:
+            setDisplayBitsLow(1, 1, 1, 1, 0)
     elif (number == 6):
-        setDisplayBitsHigh(1, 1, 1, 0, 0) # 11100
-        setDisplayBitsLow(1, 1, 1, 0, 0)
+        if (loc = 0):
+            setDisplayBitsHigh(1, 1, 1, 0, 0) # 11100
+       else:
+            setDisplayBitsLow(1, 1, 1, 0, 0)
     elif (number == 7):
-        setDisplayBitsHigh(1, 0, 0, 1, 1) # 10011
-        setDisplayBitsLow(1, 0, 0, 1, 1)
+        if (loc = 0):
+            setDisplayBitsHigh(1, 0, 0, 1, 1) # 10011
+       else:
+            setDisplayBitsLow(1, 0, 0, 1, 1)
     elif (number == 8):
-        setDisplayBitsHigh(1, 1, 1, 0, 1) # 11101
-        setDisplayBitsLow(1, 1, 1, 0, 1)
+        if (loc = 0):
+            setDisplayBitsHigh(1, 1, 1, 0, 1) # 11101
+       else:
+            setDisplayBitsLow(1, 1, 1, 0, 1)
     elif (number == 9):
-        setDisplayBitsHigh(1, 1, 1, 1, 1) # 11111
-        setDisplayBitsLow(1, 1, 1, 1, 1)
+       if (loc = 0):
+            setDisplayBitsHigh(1, 1, 1, 1, 1) # 11111
+       else:
+            setDisplayBitsLow(1, 1, 1, 1, 1)
     elif (number == -1):
-        setDisplayBitsHigh(0, 0, 0, 0, 0) # 00000
-        setDisplayBitsLow(0, 0, 0, 0, 0)
+        if (loc = 0):
+            setDisplayBitsHigh(0, 0, 0, 0, 0) # 00000
+       else:
+            setDisplayBitsLow(0, 0, 0, 0, 0)
 
 def displayAllDigits():
     # Loop through the relay words.
@@ -280,37 +302,48 @@ while True:
        print ("Running Display Test:")
 
        # Loop through the digits; 0-9, sending commands.
-       setDisplayDigits(0)
+       setDisplayDigits(0, 0)
+       setDisplayDigits(0, 1)
        displayAllDigits()
        time.sleep(1)
-       setDisplayDigits(1)
+       setDisplayDigits(1, 0)
+       setDisplayDigits(1, 1)
        displayAllDigits()
        time.sleep(1)
-       setDisplayDigits(2)
+       setDisplayDigits(2, 0)
+       setDisplayDigits(2, 1)
        displayAllDigits()
        time.sleep(1)
-       setDisplayDigits(3)
+       setDisplayDigits(3, 0)
+       setDisplayDigits(3, 1)
        displayAllDigits()
        time.sleep(1)
-       setDisplayDigits(4)
+       setDisplayDigits(4, 0)
+       setDisplayDigits(4, 1)
        displayAllDigits()
        time.sleep(1)
-       setDisplayDigits(5)
+       setDisplayDigits(5, 0)
+       setDisplayDigits(5, 1)
        displayAllDigits()
        time.sleep(1)
-       setDisplayDigits(6)
+       setDisplayDigits(6, 0)
+       setDisplayDigits(6, 1)
        displayAllDigits()
        time.sleep(1)
-       setDisplayDigits(7)
+       setDisplayDigits(7, 0)
+       setDisplayDigits(7, 1)
        displayAllDigits()
        time.sleep(1)
-       setDisplayDigits(8)
+       setDisplayDigits(8, 0)
+       setDisplayDigits(8, 1)
        displayAllDigits()
        time.sleep(1)
-       setDisplayDigits(9)
+       setDisplayDigits(9, 0)
+       setDisplayDigits(9, 1)
        displayAllDigits()
        time.sleep(1)
-       setDisplayDigits(-1)
+       setDisplayDigits(-1, 0)
+       setDisplayDigits(-1, 1)
        displayAllDigits()
 
        # Send the commands to set sign bits to "-"
@@ -449,6 +482,7 @@ while True:
        # Loop, accepting characters and displaying them
        while (True):
            if (GPIO.input(KBSTR) == 1):
+               print ("A key was pressed")
                GPIO.output(KBD1, 0)
                GPIO.output(CLK1, 1)
 
@@ -513,6 +547,8 @@ while True:
                bit5 = GPIO.input(CH5)
                keyPress = decodeKeyPress(bit1, bit2, bit3, bit4, bit5)
        
+               configureGPIOforOutput()
+
                # If VERB, then next two characters go in verb digits
                if (keyPress == 21):
                    receivingVerb = True
@@ -626,6 +662,9 @@ while True:
 
                GPIO.output(CLK1, 0)
                GPIO.output(KBD1, 1)
+
+               configureGPIOforInput()
+
 
        # Set back to all pins in output mode
        configureGPIOforOutput()
