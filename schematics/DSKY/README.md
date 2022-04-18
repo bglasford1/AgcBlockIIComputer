@@ -9,6 +9,8 @@ DSKY_TEST : Simple test module
 DSKY_DSP : The Display module
 
     DSKY_DSP_CHN : Contains I/O channel registers
+    
+    DSKY_DSP_REGCTL : Converts channel bits 12-15 into discrete signals 
 
     DSKY_DSP_DCD : Contains display code converters
 
@@ -20,6 +22,6 @@ DSKY_DSP : The Display module
     
     DSKY_DSP_SIGN : Contains decode logic for the sign LEDs
 
-    DSKY_DSP_DRV : Contains LED drivers
+    DSKY_DSP_DRV : Contains the LED driver chips
     
     DSKY_DSP_LCD : Contains the 7-segment LEDs
