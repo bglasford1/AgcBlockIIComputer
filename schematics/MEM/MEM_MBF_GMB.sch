@@ -880,14 +880,10 @@ Wire Wire Line
 	7400 2300 7250 2300
 Wire Wire Line
 	7250 2300 7250 1450
-Text HLabel 10200 4600 2    50   Output ~ 0
+Text HLabel 10100 4800 2    50   Output ~ 0
 EQU6
-Text HLabel 10200 5300 2    50   Output ~ 0
+Text HLabel 10100 5500 2    50   Output ~ 0
 EQU4
-Text Notes 10150 4850 0    60   ~ 0
-ACTIVE\nHIGH
-Text Notes 10150 5550 0    60   ~ 0
-ACTIVE\nHIGH
 $Comp
 L 74xx:74LS04 U?
 U 4 1 61240DEA
@@ -1130,10 +1126,8 @@ Wire Wire Line
 	8700 5150 8800 5150
 Wire Wire Line
 	8700 4450 8700 5150
-Text HLabel 10200 6100 2    50   Output ~ 0
+Text HLabel 10100 6300 2    50   Output ~ 0
 EQU3
-Text Notes 10150 6350 0    60   ~ 0
-ACTIVE\nHIGH
 $Comp
 L 74xx:74LS20 U118
 U 2 1 6A2F4977
@@ -1526,7 +1520,7 @@ F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 9200 2500 50  0001 C CNN
 	4    9200 2500
 	1    0    0    -1  
 $EndComp
-Text HLabel 9700 2500 2    50   Output ~ 0
+Text HLabel 10200 2250 2    50   Output ~ 0
 GMZ
 Text HLabel 3000 4200 2    50   Output ~ 0
 M[1..16]
@@ -1589,8 +1583,6 @@ Wire Wire Line
 	3450 2950 5150 2950
 Wire Wire Line
 	5150 2950 5150 2650
-Text Notes 9650 2800 0    60   ~ 0
-ACTIVE\nHIGH
 $Comp
 L 74xx:74LS04 U108
 U 1 1 6A801D9E
@@ -1772,50 +1764,53 @@ Entry Wire Line
 	2850 4600 2950 4700
 Wire Wire Line
 	2500 4600 2850 4600
-Wire Wire Line
-	10000 4600 10100 4600
-Wire Wire Line
-	10000 5300 10100 5300
-Wire Wire Line
-	10000 6100 10100 6100
-Text GLabel 10200 4450 2    50   Output ~ 0
+Text GLabel 10100 4600 2    50   Output ~ 0
 BP60
-Text GLabel 10200 5150 2    50   Output ~ 0
+Text GLabel 10100 5300 2    50   Output ~ 0
 BP59
-Text GLabel 10200 5950 2    50   Output ~ 0
+Text GLabel 10100 6100 2    50   Output ~ 0
 BP58
-Text GLabel 9700 2300 2    50   Output ~ 0
+Text GLabel 9700 2500 2    50   Output ~ 0
 BP64
 Wire Wire Line
-	9500 2500 9600 2500
+	9600 2250 9500 2250
 Wire Wire Line
-	9700 2300 9600 2300
+	9500 2250 9500 2500
 Wire Wire Line
-	9600 2300 9600 2500
-Connection ~ 9600 2500
+	10100 4600 10000 4600
 Wire Wire Line
-	9600 2500 9700 2500
+	10100 5300 10000 5300
 Wire Wire Line
-	10200 4450 10100 4450
+	10100 6100 10000 6100
 Wire Wire Line
-	10100 4450 10100 4600
-Connection ~ 10100 4600
+	9400 4600 9400 4800
 Wire Wire Line
-	10100 4600 10200 4600
+	9400 4800 10100 4800
+Connection ~ 9400 4600
 Wire Wire Line
-	10200 5150 10100 5150
+	9400 5300 9400 5500
 Wire Wire Line
-	10100 5150 10100 5300
-Connection ~ 10100 5300
+	9400 5500 10100 5500
+Connection ~ 9400 5300
 Wire Wire Line
-	10100 5300 10200 5300
+	9400 6100 9400 6300
 Wire Wire Line
-	10200 5950 10100 5950
+	9400 6300 10100 6300
+Connection ~ 9400 6100
+$Comp
+L 74xx:74LS04 U124
+U 6 1 624E5561
+P 9900 2250
+F 0 "U124" H 9900 2567 50  0000 C CNN
+F 1 "74LS04" H 9900 2476 50  0000 C CNN
+F 2 "" H 9900 2250 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 9900 2250 50  0001 C CNN
+	6    9900 2250
+	1    0    0    -1  
+$EndComp
+Connection ~ 9500 2500
 Wire Wire Line
-	10100 5950 10100 6100
-Connection ~ 10100 6100
-Wire Wire Line
-	10100 6100 10200 6100
+	9500 2500 9700 2500
 Wire Bus Line
 	3100 4550 3100 7800
 Wire Bus Line

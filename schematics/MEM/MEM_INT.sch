@@ -124,17 +124,6 @@ F 3 "http://www.ti.com/lit/gpn/sn74LS273" H 7150 3050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L 74xx:74LS27 U90
-U 3 1 6E05108A
-P 7300 4500
-F 0 "U90" H 7300 4825 50  0000 C CNN
-F 1 "74LS27" H 7300 4734 50  0000 C CNN
-F 2 "" H 7300 4500 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS27" H 7300 4500 50  0001 C CNN
-	3    7300 4500
-	-1   0    0    -1  
-$EndComp
-$Comp
 L power:GND #PWR0163
 U 1 1 6E069A9D
 P 7150 3850
@@ -479,11 +468,11 @@ NoConn ~ 7650 3050
 NoConn ~ 7650 2950
 NoConn ~ 7650 2850
 Wire Wire Line
-	7600 4400 7950 4400
+	7600 4900 7950 4900
 Wire Wire Line
-	7600 4500 7950 4500
+	7600 5000 7950 5000
 Wire Wire Line
-	7600 4600 7950 4600
+	7600 5100 7950 5100
 Entry Wire Line
 	8050 1400 8150 1300
 Entry Wire Line
@@ -503,11 +492,11 @@ Entry Wire Line
 Entry Wire Line
 	7950 2750 8050 2850
 Entry Wire Line
-	7950 4400 8050 4500
+	7950 4900 8050 5000
 Entry Wire Line
-	7950 4500 8050 4600
+	7950 5000 8050 5100
 Entry Wire Line
-	7950 4600 8050 4700
+	7950 5100 8050 5200
 Text Label 8150 1300 0    50   ~ 0
 SR1
 Text Label 8150 1400 0    50   ~ 0
@@ -526,11 +515,11 @@ Text Label 7950 2650 2    50   ~ 0
 SR2
 Text Label 7950 2750 2    50   ~ 0
 SR3
-Text Label 7950 4400 2    50   ~ 0
+Text Label 7950 4900 2    50   ~ 0
 SR1
-Text Label 7950 4500 2    50   ~ 0
+Text Label 7950 5000 2    50   ~ 0
 SR2
-Text Label 7950 4600 2    50   ~ 0
+Text Label 7950 5100 2    50   ~ 0
 SR3
 Wire Wire Line
 	6650 2550 6200 2550
@@ -539,9 +528,9 @@ Wire Wire Line
 Wire Wire Line
 	6650 2750 6200 2750
 Wire Wire Line
-	7000 4500 6350 4500
+	7000 5000 6350 5000
 Wire Wire Line
-	6350 4500 6350 5750
+	6350 4500 6350 5000
 Wire Wire Line
 	6350 5750 6400 5750
 Text HLabel 7200 5850 2    50   Output ~ 0
@@ -1065,45 +1054,16 @@ $EndComp
 $Comp
 L 74xx:74LS27 U90
 U 2 1 61CABA53
-P 7300 1500
-F 0 "U90" H 7300 1825 50  0000 C CNN
-F 1 "74LS27" H 7300 1734 50  0000 C CNN
-F 2 "" H 7300 1500 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS27" H 7300 1500 50  0001 C CNN
-	2    7300 1500
+P 7300 5000
+F 0 "U90" H 7300 5325 50  0000 C CNN
+F 1 "74LS27" H 7300 5234 50  0000 C CNN
+F 2 "" H 7300 5000 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS27" H 7300 5000 50  0001 C CNN
+	2    7300 5000
 	-1   0    0    -1  
 $EndComp
-Wire Wire Line
-	7600 1400 7950 1400
-Wire Wire Line
-	7600 1500 7950 1500
-Wire Wire Line
-	7600 1600 7950 1600
-Entry Wire Line
-	7950 1400 8050 1500
-Entry Wire Line
-	7950 1500 8050 1600
-Entry Wire Line
-	7950 1600 8050 1700
-Text Label 7950 1400 2    50   ~ 0
-SR1
-Text Label 7950 1500 2    50   ~ 0
-SR2
-Text Label 7950 1600 2    50   ~ 0
-SR3
-Text HLabel 6400 1500 0    50   Output ~ 0
+Text HLabel 6950 4500 2    50   Output ~ 0
 ISRUPT
-$Comp
-L 74xx:74LS04 U124
-U 2 1 61CCA1A0
-P 6700 1500
-F 0 "U124" H 6700 1817 50  0000 C CNN
-F 1 "74LS04" H 6700 1726 50  0000 C CNN
-F 2 "" H 6700 1500 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 6700 1500 50  0001 C CNN
-	2    6700 1500
-	-1   0    0    -1  
-$EndComp
 Text Notes 6350 7250 0    100  ~ 0
 MEM-INT:  Interrupt Logic\nCopyright 2021, William Glasford
 $Comp
@@ -1198,6 +1158,20 @@ Wire Wire Line
 Connection ~ 3500 4650
 Text GLabel 4200 4450 2    50   Input ~ 0
 BP77
+Connection ~ 6350 5000
+Wire Wire Line
+	6350 5000 6350 5750
+$Comp
+L 74xx:74LS04 U124
+U 2 1 61CCA1A0
+P 6650 4500
+F 0 "U124" H 6650 4817 50  0000 C CNN
+F 1 "74LS04" H 6650 4726 50  0000 C CNN
+F 2 "" H 6650 4500 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 6650 4500 50  0001 C CNN
+	2    6650 4500
+	1    0    0    -1  
+$EndComp
 Wire Bus Line
 	4800 1850 4800 5300
 Wire Bus Line
