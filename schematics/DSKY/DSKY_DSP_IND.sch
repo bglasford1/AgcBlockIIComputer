@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
-Sheet 5 13
+Sheet 5 14
 Title ""
 Date ""
 Rev ""
@@ -1660,14 +1660,6 @@ Text HLabel 900  2000 0    50   Input ~ 0
 IND[2..7]
 Wire Wire Line
 	1050 2350 2550 2350
-Text HLabel 5350 4950 1    50   Input ~ 0
-RWD[12..12]
-Wire Wire Line
-	5450 5250 5800 5250
-Entry Wire Line
-	5350 5350 5450 5250
-Text Label 5450 5250 0    50   ~ 0
-RWD12
 Text Notes 6350 7150 0    100  ~ 0
 DSKY-DSP-IND:  Indicator Logic\nCopyright 2021, William Glasford
 NoConn ~ 7000 3100
@@ -1713,25 +1705,6 @@ Wire Bus Line
 NoConn ~ 6000 3000
 NoConn ~ 6000 3100
 $Comp
-L 74xx:74LS04 U19
-U 1 1 635EB464
-P 6100 5250
-F 0 "U19" H 6100 5567 50  0000 C CNN
-F 1 "74LS04" H 6100 5476 50  0000 C CNN
-F 2 "" H 6100 5250 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 6100 5250 50  0001 C CNN
-	1    6100 5250
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6000 3900 5850 3900
-Wire Wire Line
-	5850 3900 5850 4850
-Wire Wire Line
-	5850 4850 6400 4850
-Wire Wire Line
-	6400 4850 6400 5250
-$Comp
 L 74xx:74LS273 U37
 U 1 1 638DD418
 P 6500 3500
@@ -1742,10 +1715,6 @@ F 3 "http://www.ti.com/lit/gpn/sn74LS273" H 6500 3500 50  0001 C CNN
 	1    6500 3500
 	1    0    0    -1  
 $EndComp
-Text HLabel 5700 4000 0    50   Input ~ 0
-DSKYRST
-Wire Wire Line
-	6000 4000 5700 4000
 $Comp
 L 74xx:74LS04 U19
 U 3 1 6E8434D9
@@ -1757,8 +1726,18 @@ F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 1200 1550 50  0001 C CNN
 	3    1200 1550
 	1    0    0    -1  
 $EndComp
+Text HLabel 6000 4000 0    50   Input ~ 0
+DSKYRST
+Text Label 5500 3900 0    50   ~ 0
+nRWD12
+Entry Wire Line
+	5400 4000 5500 3900
+Text HLabel 5400 3600 1    50   Input ~ 0
+nRWD[12..12]
+Wire Wire Line
+	5500 3900 6000 3900
 Wire Bus Line
-	5350 4950 5350 5400
+	5400 3600 5400 4050
 Wire Bus Line
 	5650 2800 5650 3800
 Wire Bus Line

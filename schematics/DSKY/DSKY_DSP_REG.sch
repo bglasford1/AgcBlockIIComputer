@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A 8500 11000 portrait
 encoding utf-8
-Sheet 9 13
+Sheet 9 14
 Title ""
 Date ""
 Rev ""
@@ -15,17 +15,6 @@ Comment4 ""
 $EndDescr
 Text Notes 4650 9650 0    100  ~ 0
 DSKY-DSP-REG:  Display Registers\nCopyright 2021, William Glasford
-$Comp
-L 74xx:74LS374 U56
-U 1 1 65CA45F9
-P 1550 1600
-F 0 "U56" H 1800 2400 50  0000 C CNN
-F 1 "74LS374" H 1800 2300 50  0000 C CNN
-F 2 "" H 1550 1600 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS374" H 1550 1600 50  0001 C CNN
-	1    1550 1600
-	1    0    0    -1  
-$EndComp
 $Comp
 L 74xx:74LS374 U59
 U 1 1 65CA5D19
@@ -416,7 +405,7 @@ Wire Bus Line
 Text HLabel 800  8300 1    50   Input ~ 0
 BCD[1..8]
 Text HLabel 1550 2800 0    50   Input ~ 0
-DE[1..11]
+DE[0..15]
 Wire Bus Line
 	2400 650  2550 650 
 Text HLabel 2550 650  2    50   Output ~ 0
@@ -427,8 +416,6 @@ Wire Bus Line
 	1550 2800 1650 2800
 Wire Bus Line
 	1650 2800 1650 2900
-Text HLabel 2200 2750 0    50   Input ~ 0
-RWD[1..11]
 Entry Wire Line
 	4300 1200 4400 1100
 Entry Wire Line
@@ -720,10 +707,6 @@ Wire Wire Line
 Wire Wire Line
 	800  1800 1050 1800
 Wire Bus Line
-	2300 2750 2200 2750
-Wire Bus Line
-	2300 2650 2300 2750
-Wire Bus Line
 	2400 550  2400 650 
 Connection ~ 2400 650 
 Wire Wire Line
@@ -828,10 +811,7 @@ Entry Wire Line
 	2850 2800 2950 2900
 Entry Wire Line
 	1050 2800 1150 2900
-Connection ~ 2300 2650
 Connection ~ 1650 2900
-Wire Wire Line
-	1050 2100 1050 2800
 Entry Wire Line
 	2850 5200 2950 5300
 Wire Wire Line
@@ -871,33 +851,33 @@ R3D2\n\n\nR3D3
 Text Notes 7100 4150 2    70   ~ 0
 R3D4\n\n\nR3D5
 Text Label 850  2550 1    50   ~ 0
-RWD11
+nRWD11
 Text Label 2650 2550 1    50   ~ 0
-RWD8
+nRWD8
 Text Label 850  4950 1    50   ~ 0
-RWD10
+nRWD10
 Text Label 850  7300 1    50   ~ 0
-RWD9
+nRWD9
 Text Label 2650 4950 1    50   ~ 0
-RWD7
+nRWD7
 Text Label 2650 7300 1    50   ~ 0
-RWD6
+nRWD6
 Text Label 4450 2550 1    50   ~ 0
-RWD5
+nRWD5
 Text Label 4450 4950 1    50   ~ 0
-RWD4
+nRWD4
 Text Label 4450 7300 1    50   ~ 0
-RWD3
+nRWD3
 Text Label 6250 2550 1    50   ~ 0
-RWD2
+nRWD2
 Text Label 6250 4950 1    50   ~ 0
-RWD1
+nRWD1
 Text Label 4650 2800 2    50   ~ 0
-DE5
+DE2
 Text Label 4650 5200 2    50   ~ 0
-DE4
-Text Label 4650 7550 2    50   ~ 0
 DE3
+Text Label 4650 7550 2    50   ~ 0
+DE4
 Wire Bus Line
 	600  2900 600  5300
 Connection ~ 600  5300
@@ -914,17 +894,17 @@ Wire Bus Line
 Connection ~ 4300 7800
 Connection ~ 2500 7750
 Text Label 6450 2800 2    50   ~ 0
-DE2
+DE5
 Text Label 6450 5200 2    50   ~ 0
-DE1
-Text Label 2850 2800 2    50   ~ 0
-DE8
-Text Label 2850 5200 2    50   ~ 0
-DE7
-Text Label 2850 7550 2    50   ~ 0
 DE6
+Text Label 2850 2800 2    50   ~ 0
+DE15
+Text Label 2850 5200 2    50   ~ 0
+DE0
+Text Label 2850 7550 2    50   ~ 0
+DE1
 Text Label 1050 2800 2    50   ~ 0
-DE11
+DE12
 Text Label 900  8400 0    50   ~ 0
 BCD1
 Text Label 900  8500 0    50   ~ 0
@@ -1902,13 +1882,35 @@ Wire Wire Line
 Entry Wire Line
 	1050 7550 1150 7650
 Text Label 1050 7550 2    50   ~ 0
-DE9
+DE14
 Wire Wire Line
 	1050 4500 1050 5200
 Entry Wire Line
 	1050 5200 1150 5300
 Text Label 1050 5200 2    50   ~ 0
-DE10
+DE13
+Wire Wire Line
+	1050 2100 1050 2800
+Wire Bus Line
+	2300 2650 2300 2550
+Wire Bus Line
+	2300 2550 2200 2550
+Text HLabel 2200 2550 0    50   Input ~ 0
+nRWD[1..11]
+$Comp
+L 74xx:74LS374 U56
+U 1 1 65CA45F9
+P 1550 1600
+F 0 "U56" H 1800 2400 50  0000 C CNN
+F 1 "74LS374" H 1800 2300 50  0000 C CNN
+F 2 "" H 1550 1600 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS374" H 1550 1600 50  0001 C CNN
+	1    1550 1600
+	1    0    0    -1  
+$EndComp
+Connection ~ 2300 2650
+Text Notes 6350 6200 0    50   ~ 0
+Note: The DE pulses are \nreversed because the\ndata needs to go to the\ndriver chips in reverse.
 Wire Bus Line
 	600  2900 1650 2900
 Wire Bus Line

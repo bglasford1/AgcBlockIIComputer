@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
-Sheet 12 13
+Sheet 12 14
 Title ""
 Date ""
 Rev ""
@@ -251,8 +251,8 @@ Wire Wire Line
 	7450 2700 7300 2700
 Wire Wire Line
 	7300 2950 7900 2950
-Text Notes 3350 4900 0    70   ~ 0
-Note: PROG, RPRO & PARALM are Active High,\nthe rest are Active Low with the clock signals\nand KB_STR being pulses.
+Text Notes 3950 4650 0    70   ~ 0
+Note: RPRO & PARALM are Active High,\nthe rest are Active Low with the clock \nsignals and KB_STR being pulses.
 Wire Bus Line
 	2900 3550 4150 3550
 Connection ~ 7300 2700
