@@ -69,10 +69,10 @@
  *                2017-06-17 MAS Added --early-sbank, for simulating early (pre-1967)
  *                               YUL superbank behavior. Also lightly refactored
  *                               superbank data storage.
- *                   2017-08-31 RSB Added stuff associated with --debug.
- *                   2018-10-12 RSB Added stuff associated with --simulation.
+ *             	  2017-08-31 RSB Added stuff associated with --debug.
+ *             	  2018-10-12 RSB Added stuff associated with --simulation.
  *                2021-01-24 RSB reconstructionComments.
- *                   2021-04-20 RSB Added stuff associated with --ebcdic.
+ *             	  2021-04-20 RSB Added stuff associated with --ebcdic.
  *                2021-05-24 RSB Workaround for bad cygwin pow() function.
  *                2021-05-24 RSB ... and apparently, for MINGW as well.
  *                2021-05-24 RSB My workarounds were bogus.  I've rolled them back.
@@ -101,7 +101,7 @@
 
 // The following constant should be commented out in production code.
 // It is defined only to allow yaYUL to continue to be buildable while
-// work on implementing block 1 (which would otherwise make a build
+// work on implementing block 1 (which would otherwise make a build 
 // fail) is in progress.
 #define TBD 0
 
@@ -279,7 +279,7 @@ typedef struct
 // Constants for the symbol type. A "register" is one of the basic
 // AGC registers such as A (accumulator) or Z (program counter) which
 // are found at the beginning of erasable memory. A "label" is a program
-// label to which control may be transfered (say, from a branch
+// label to which control may be transfered (say, from a branch 
 // instruction like BZF). A "variable" is a names memory address which
 // stores some data (from ERASE or DEC/2DEC or OCT for example). A
 // "constant" is a compiler constant defined by EQUALS or "=". These
@@ -420,7 +420,7 @@ typedef struct
   char AliasOperator[MAX_LABEL_LENGTH + 1];
   char AliasOperand[MAX_LABEL_LENGTH + 1];
   // The following have really been introduced for the "special downlink
-  // opcodes", which are just like some existing opcodes except that
+  // opcodes", which are just like some existing opcodes except that 
   // an extra value may be added and the total may be complemented.
   int Adder;                         // Extra value to add to binary (1st word).
   int XMask;                            // Value to XOR after adding.
@@ -619,8 +619,7 @@ extern int debugLine;
 extern char *debugLineString;
 void debugPrint(char *msg);
 
-// WTG: This is not required and causes a link error.  
-// extern int reconstructionComments;
+extern int reconstructionComments;
 extern int inReconstructionComment;
 
 #endif // INCLUDED_YAYUL_H
