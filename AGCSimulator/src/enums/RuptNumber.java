@@ -1,5 +1,5 @@
 /*
-  Copyright 2021, William Glasford
+  Copyright 2021-2022, William Glasford
 
   This file is part of the AGC Simulator.  You can redistribute it
   and/or modify it under the terms of the GNU General Public License as
@@ -12,14 +12,12 @@
             not implemented in this simulation due to missing hardware or
             simply to reduce the complexity.
 
-  Mods:		  07/15/21 Initial Release.
+  Mods:		  07/15/21  Initial Release.
+            05/14/22  Cleaned up code.
 */
 
 package enums;
 
-/**
- * This enumeration defines the interrupts.
- */
 public enum RuptNumber
 {
   NO_RUPT,  // No interrupt pending

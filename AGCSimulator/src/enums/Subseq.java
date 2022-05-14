@@ -1,5 +1,5 @@
 /*
-  Copyright 2021, William Glasford
+  Copyright 2021-2022, William Glasford
 
   This file is part of the AGC Simulator.  You can redistribute it
   and/or modify it under the terms of the GNU General Public License as
@@ -10,7 +10,9 @@
   Purpose:	This enumeration class defines the sub-sequences.  Each
             sub-sequence has an assigned memory type which tells the
             software how to decode the address.
-  Mods:		  07/15/21 Initial Release.
+
+  Mods:		  07/15/21  Initial Release.
+            05/14/22  Cleaned up comments.
 */
 
 package enums;

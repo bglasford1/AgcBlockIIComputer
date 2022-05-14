@@ -1,5 +1,5 @@
 /*
-  Copyright 2021, William Glasford
+  Copyright 2021-2022, William Glasford
 
   This file is part of the AGC Simulator.  You can redistribute it
   and/or modify it under the terms of the GNU General Public License as
@@ -9,13 +9,13 @@
 
   Purpose:	This enumeration class defines the keys on the DSKY and their
             numeric values.
+
+  Mods:		  07/15/21  Initial Release.
+            05/14/22  Cleaned up comments.
 */
 
 package enums;
 
-/**
- * This enumeration defines the input keys and their octal values.
- */
 public enum KeyInType
 {
   KEYIN_NONE (0),            // no key depressed**
