@@ -1,5 +1,5 @@
 /*
-  Copyright 2021, William Glasford
+  Copyright 2021-2022, William Glasford
 
   This file is part of the AGC Simulator.  You can redistribute it
   and/or modify it under the terms of the GNU General Public License as
@@ -12,7 +12,8 @@
             of machine code instructions into sub-sequences.  This file ultimately
             reduces the chip count and complexity of the hardware implementation.
 
-  Mods:		  07/15/21 Initial Release.
+  Mods:		  07/15/21  Initial Release.
+            05/14/22  Cleaned up code.
 */
 
 import enums.Subseq;
@@ -37,7 +38,7 @@ import java.util.Map;
  */
 public class SubseqDecoderGen
 {
-  private Map<Integer, Subseq> valueMap = new HashMap<>();
+  private final Map<Integer, Subseq> valueMap = new HashMap<>();
 
   private void initialize()
   {

@@ -1,5 +1,5 @@
 /*
-  Copyright 2021, William Glasford
+  Copyright 2021-2022, William Glasford
 
   This file is part of the AGC Simulator.  You can redistribute it
   and/or modify it under the terms of the GNU General Public License as
@@ -16,7 +16,8 @@
             The original NASA definition has also been modified slightly
             for simulation purposes of this implementation.
 
-  Mods:		  07/15/21 Initial Release.
+  Mods:		  07/15/21  Initial Release.
+            05/14/22  Cleaned up code.
 */
 
 import enums.CpType;
@@ -34,7 +35,7 @@ public class ControlPulseMatrixGen
   private static final int MAXPULSES = 15;
   private static final int MAX_IPULSES = 5; // no more than 5 instruction-generated pulses active at any time
 
-  private static CpType[] glbl_cp = new CpType[MAXPULSES]; // current set of asserted control pulses (MAXPULSES)
+  private static final CpType[] glbl_cp = new CpType[MAXPULSES]; // current set of asserted control pulses (MAXPULSES)
 
   private enum BrType
   {
@@ -45,7 +46,7 @@ public class ControlPulseMatrixGen
     NO_BR  // NO BRANCH
   }
 
-  private class ControlSubStep
+  private static class ControlSubStep
   {
     BrType br;       // normally no branch (NO_BR)
     CpType[] pulses; // contains 0 - MAXPULSES control pulses
@@ -62,9 +63,9 @@ public class ControlPulseMatrixGen
     }
   }
 
-  private class ControlStep
+  private static class ControlStep
   {
-    private ControlSubStep[] substeps = new ControlSubStep[4];
+    private final ControlSubStep[] substeps = new ControlSubStep[4];
 
     ControlStep(CpType p1, CpType p2, CpType p3, CpType p4, CpType p5)
     {
@@ -96,10 +97,10 @@ public class ControlPulseMatrixGen
     }
   }
 
-  private class Subsequence
+  private static class Subsequence
   {
     // An array indexed by TP consisting of 12 control steps.
-    private ControlStep[] controlSteps = new ControlStep[15];
+    private final ControlStep[] controlSteps = new ControlStep[15];
 
     ControlStep getControlStep(int tp)
     {
@@ -121,63 +122,63 @@ public class ControlPulseMatrixGen
     }
   }
 
-  private Subsequence NO_SUBSEQ = new Subsequence();
-  private Subsequence SUB_STD2  = new Subsequence();
-  private Subsequence SUB_TC0   = new Subsequence();
-  private Subsequence SUB_TCF0  = new Subsequence();
-  private Subsequence SUB_CCS0  = new Subsequence();
-  private Subsequence SUB_BZF0  = new Subsequence();
-  private Subsequence SUB_BZMF0 = new Subsequence();
-  private Subsequence SUB_CA0   = new Subsequence();
-  private Subsequence SUB_CS0   = new Subsequence();
-  private Subsequence SUB_DCA0  = new Subsequence();
-  private Subsequence SUB_DCA1  = new Subsequence();
-  private Subsequence SUB_DCS0  = new Subsequence();
-  private Subsequence SUB_DCS1  = new Subsequence();
-  private Subsequence SUB_TS0   = new Subsequence();
-  private Subsequence SUB_XCH0  = new Subsequence();
-  private Subsequence SUB_LXCH0 = new Subsequence();
-  private Subsequence SUB_QXCH0 = new Subsequence();
-  private Subsequence SUB_DXCH0 = new Subsequence();
-  private Subsequence SUB_DXCH1 = new Subsequence();
-  private Subsequence SUB_NDX0  = new Subsequence();
-  private Subsequence SUB_NDX1  = new Subsequence();
-  private Subsequence SUB_NDXX0 = new Subsequence();
-  private Subsequence SUB_NDXX1 = new Subsequence();
-  private Subsequence SUB_AD0   = new Subsequence();
-  private Subsequence SUB_SU0   = new Subsequence();
-  private Subsequence SUB_MP0   = new Subsequence();
-  private Subsequence SUB_MP1   = new Subsequence();
-  private Subsequence SUB_MP3   = new Subsequence();
-  private Subsequence SUB_DV0   = new Subsequence();
-  private Subsequence SUB_DV1   = new Subsequence();
-  private Subsequence SUB_DV3   = new Subsequence();
-  private Subsequence SUB_DV7   = new Subsequence();
-  private Subsequence SUB_DV6   = new Subsequence();
-  private Subsequence SUB_DV4   = new Subsequence();
-  private Subsequence SUB_ADS0  = new Subsequence();
-  private Subsequence SUB_DAS0  = new Subsequence();
-  private Subsequence SUB_DAS1  = new Subsequence();
-  private Subsequence SUB_INCR0 = new Subsequence();
-  private Subsequence SUB_AUG0  = new Subsequence();
-  private Subsequence SUB_DIM0  = new Subsequence();
-  private Subsequence SUB_MSU0  = new Subsequence();
-  private Subsequence SUB_MSK0  = new Subsequence();
-  private Subsequence SUB_READ0  = new Subsequence();
-  private Subsequence SUB_WRITE0  = new Subsequence();
-  private Subsequence SUB_RAND0  = new Subsequence();
-  private Subsequence SUB_WAND0  = new Subsequence();
-  private Subsequence SUB_ROR0  = new Subsequence();
-  private Subsequence SUB_WOR0  = new Subsequence();
-  private Subsequence SUB_RXOR0  = new Subsequence();
-  private Subsequence SUB_RSM3  = new Subsequence();
-  private Subsequence SUB_RUPT0 = new Subsequence();
-  private Subsequence SUB_RUPT1 = new Subsequence();
-  private Subsequence SUB_GOJ1  = new Subsequence();
-  private Subsequence SUB_PINC  = new Subsequence();
+  private final Subsequence NO_SUBSEQ = new Subsequence();
+  private final Subsequence SUB_STD2  = new Subsequence();
+  private final Subsequence SUB_TC0   = new Subsequence();
+  private final Subsequence SUB_TCF0  = new Subsequence();
+  private final Subsequence SUB_CCS0  = new Subsequence();
+  private final Subsequence SUB_BZF0  = new Subsequence();
+  private final Subsequence SUB_BZMF0 = new Subsequence();
+  private final Subsequence SUB_CA0   = new Subsequence();
+  private final Subsequence SUB_CS0   = new Subsequence();
+  private final Subsequence SUB_DCA0  = new Subsequence();
+  private final Subsequence SUB_DCA1  = new Subsequence();
+  private final Subsequence SUB_DCS0  = new Subsequence();
+  private final Subsequence SUB_DCS1  = new Subsequence();
+  private final Subsequence SUB_TS0   = new Subsequence();
+  private final Subsequence SUB_XCH0  = new Subsequence();
+  private final Subsequence SUB_LXCH0 = new Subsequence();
+  private final Subsequence SUB_QXCH0 = new Subsequence();
+  private final Subsequence SUB_DXCH0 = new Subsequence();
+  private final Subsequence SUB_DXCH1 = new Subsequence();
+  private final Subsequence SUB_NDX0  = new Subsequence();
+  private final Subsequence SUB_NDX1  = new Subsequence();
+  private final Subsequence SUB_NDXX0 = new Subsequence();
+  private final Subsequence SUB_NDXX1 = new Subsequence();
+  private final Subsequence SUB_AD0   = new Subsequence();
+  private final Subsequence SUB_SU0   = new Subsequence();
+  private final Subsequence SUB_MP0   = new Subsequence();
+  private final Subsequence SUB_MP1   = new Subsequence();
+  private final Subsequence SUB_MP3   = new Subsequence();
+  private final Subsequence SUB_DV0   = new Subsequence();
+  private final Subsequence SUB_DV1   = new Subsequence();
+  private final Subsequence SUB_DV3   = new Subsequence();
+  private final Subsequence SUB_DV7   = new Subsequence();
+  private final Subsequence SUB_DV6   = new Subsequence();
+  private final Subsequence SUB_DV4   = new Subsequence();
+  private final Subsequence SUB_ADS0  = new Subsequence();
+  private final Subsequence SUB_DAS0  = new Subsequence();
+  private final Subsequence SUB_DAS1  = new Subsequence();
+  private final Subsequence SUB_INCR0 = new Subsequence();
+  private final Subsequence SUB_AUG0  = new Subsequence();
+  private final Subsequence SUB_DIM0  = new Subsequence();
+  private final Subsequence SUB_MSU0  = new Subsequence();
+  private final Subsequence SUB_MSK0  = new Subsequence();
+  private final Subsequence SUB_READ0  = new Subsequence();
+  private final Subsequence SUB_WRITE0  = new Subsequence();
+  private final Subsequence SUB_RAND0  = new Subsequence();
+  private final Subsequence SUB_WAND0  = new Subsequence();
+  private final Subsequence SUB_ROR0  = new Subsequence();
+  private final Subsequence SUB_WOR0  = new Subsequence();
+  private final Subsequence SUB_RXOR0  = new Subsequence();
+  private final Subsequence SUB_RSM3  = new Subsequence();
+  private final Subsequence SUB_RUPT0 = new Subsequence();
+  private final Subsequence SUB_RUPT1 = new Subsequence();
+  private final Subsequence SUB_GOJ1  = new Subsequence();
+  private final Subsequence SUB_PINC  = new Subsequence();
 
-  private ControlStep stepInactive = new ControlStep(CpType.NO_PULSE, CpType.NO_PULSE, CpType.NO_PULSE, CpType.NO_PULSE,
-                                                     CpType.NO_PULSE);
+  private final ControlStep stepInactive = new ControlStep(CpType.NO_PULSE, CpType.NO_PULSE, CpType.NO_PULSE,
+                                                           CpType.NO_PULSE, CpType.NO_PULSE);
 
   private void initialize()
   {
@@ -1039,7 +1040,7 @@ public class ControlPulseMatrixGen
     };
 
   // This matrix converts the subsequence to the control pulse steps defined above.
-  private Subsequence subsp[] =
+  private final Subsequence subsp[] =
     {
       NO_SUBSEQ,  SUB_STD2,  SUB_TC0,   SUB_CCS0,  SUB_TCF0,  SUB_BZF0,  SUB_BZMF0, SUB_CA0,
       SUB_CS0,    SUB_DCA0,  SUB_DCA1,  SUB_DCS0,  SUB_DCS1,  SUB_TS0,   SUB_XCH0,
