@@ -1,5 +1,5 @@
 /*
-  Copyright 2021, William Glasford
+  Copyright 2021-2022, William Glasford
 
   This file is part of the AGC Simulator.  You can redistribute it
   and/or modify it under the terms of the GNU General Public License as
@@ -10,7 +10,8 @@
   Purpose:	This class implements the Eraseable & Fixed Memory module.
             Data is read from and written to both erasable and fixed memory banks.
 
-  Mods:		  07/15/21 Initial Release.
+  Mods:		  07/15/21  Initial Release.
+            05/14/22  Cleaned up code.
 */
 
 package modules;
@@ -29,10 +30,10 @@ public class EFM
   public  static final int NUMBER_OF_F_BANKS = 35; // number of 1024 word fixed memory banks
   private static final int FMEM_SIZE = FIXED_BANK_SIZE * (NUMBER_OF_F_BANKS + 1);
 
-  private Register[] register_EMEM = new Register[EMEM_SIZE]; // erasable memory
-  private Register[] register_FMEM = new Register[FMEM_SIZE + 2]; // fixed memory (lowest 2048 words ignored)
+  private final Register[] register_EMEM = new Register[EMEM_SIZE]; // erasable memory
+  private final Register[] register_FMEM = new Register[FMEM_SIZE + 2]; // fixed memory (lowest 2048 words ignored)
 
-  private BusLineDesignation convSBWG[] =
+  private final BusLineDesignation convSBWG[] =
     { BusLineDesignation.SGM,
       BusLineDesignation.SGM,
       BusLineDesignation.B14,
@@ -51,7 +52,7 @@ public class EFM
       BusLineDesignation.B1
     };
 
-  private AGCControl parent;
+  private final AGCControl parent;
 
   // Called upon class instantiation.  The memory arrays are created.
   public EFM(AGCControl parent)

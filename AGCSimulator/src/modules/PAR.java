@@ -1,5 +1,5 @@
 /*
-  Copyright 2021, William Glasford
+  Copyright 2021-2022, William Glasford
 
   This file is part of the AGC Simulator.  You can redistribute it
   and/or modify it under the terms of the GNU General Public License as
@@ -11,7 +11,8 @@
             Parity is only placed on erasable memory words.  The generation
             and testing of parity is driven by internal control pulses.
 
-  Mods:		  07/15/21 Initial Release.
+  Mods:		  07/15/21  Initial Release.
+            05/14/22  Cleaned up code.
 */
 
 package modules;
@@ -21,10 +22,10 @@ import gui.AGCControl;
 
 public class PAR
 {
-  private Register registerP    = new Register(16); // Parity register
-  private Register registerPalm = new Register(1);  // Parity alarm flip flop
+  private final Register registerP    = new Register(16); // Parity register
+  private final Register registerPalm = new Register(1);  // Parity alarm flip flop
 
-  private AGCControl parent;
+  private final AGCControl parent;
 
   public PAR(AGCControl parent)
   {

@@ -1,5 +1,5 @@
 /*
-  Copyright 2021, William Glasford
+  Copyright 2021-2022, William Glasford
 
   This file is part of the AGC Simulator.  You can redistribute it
   and/or modify it under the terms of the GNU General Public License as
@@ -19,7 +19,8 @@
             typically changed in TP8 before the WE memory write occurs during
             TP10.  During TP11 the tempS register value is moved to the S register.
 
-  Mods:		  07/15/21 Initial Release.
+  Mods:		  07/15/21  Initial Release.
+            05/14/22  Cleaned up code.
 */
 
 package modules;
@@ -29,15 +30,15 @@ import gui.AGCControl;
 
 public class ADR
 {
-  private Register registerS      = new Register(12); // Address register (bits 1-12 of next instruction)
-  private Register registerEB     = new Register(3);  // Erasable Bank register
-  private Register registerFB     = new Register(16); // Fixed Bank register F FFF FF0 000 000 000
-  private Register registerBB     = new Register(16); // Both Banks register: F FFF FF0 000 000 EEE
-  private Register registerTempS  = new Register(12); // S changes in TP8 before the WE in TP10 occurs.
-  private Register channel7       = new Register(7);  // Fixed memory extension bit: only bit 7 is used
+  private final Register registerS      = new Register(12); // Address register (bits 1-12 of next instruction)
+  private final Register registerEB     = new Register(3);  // Erasable Bank register
+  private final Register registerFB     = new Register(16); // Fixed Bank register F FFF FF0 000 000 000
+  private final Register registerBB     = new Register(16); // Both Banks register: F FFF FF0 000 000 EEE
+  private final Register registerTempS  = new Register(12); // S changes in TP8 before the WE in TP10 occurs.
+  private final Register channel7       = new Register(7);  // Fixed memory extension bit: only bit 7 is used
   private boolean regSUpdatePending = false;
 
-  private AGCControl parent;
+  private final AGCControl parent;
 
   public ADR(AGCControl parent)
   {

@@ -1,5 +1,5 @@
 /*
-  Copyright 2021, William Glasford
+  Copyright 2021-2022, William Glasford
 
   This file is part of the AGC Simulator.  You can redistribute it
   and/or modify it under the terms of the GNU General Public License as
@@ -12,6 +12,7 @@
 
   Mods:		  07/15/21  Initial Release.
             11/30/21  Fixed Proceed Key.
+            05/14/22  Cleaned up code.
 */
 
 package modules;
@@ -44,7 +45,7 @@ public class KBD
   // Enter		   34
   // Clear		   36
   // Noun		     37
-  private Register channel15 = new Register(5);  // Main DSKY keyboard input
+  private final Register channel15 = new Register(5);  // Main DSKY keyboard input
 
   // Bit 1 = Not Used
   // Bit 2 = Not Used
@@ -53,7 +54,7 @@ public class KBD
   // Bit 5 = Optics Mark Reject Signal
   // Bit 6 = Descent+ : Crew Desiring Slowing Rate of Descent
   // Bit 7 = Descent- : Crew Desiring Speeding Up of Rate of Descent
-  private Register channel16 = new Register(5);  // Navigation DSKY keyboard input
+  private final Register channel16 = new Register(5);  // Navigation DSKY keyboard input
 
   // Orientation Minimum Impulse:
   // Bit 1 = Thrusters 2 & 4 Disabled by Crew
@@ -71,9 +72,9 @@ public class KBD
   // Bit 13 = Spare
   // Bit 14 = Proceed Button Pressed (Standby button)
   // Bit 15 = Spare
-  private Register channel32 = new Register(15);
+  private final Register channel32 = new Register(15);
 
-  private AGCControl parent;
+  private final AGCControl parent;
 
   public KBD(AGCControl parent)
   {

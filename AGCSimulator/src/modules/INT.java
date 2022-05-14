@@ -1,5 +1,5 @@
 /*
-  Copyright 2021, William Glasford
+  Copyright 2021-2022, William Glasford
 
   This file is part of the AGC Simulator.  You can redistribute it
   and/or modify it under the terms of the GNU General Public License as
@@ -23,7 +23,8 @@
                   04044  RADAR RUPT (not implemented)
                   04050  HAND Control RUPT (not implemented)
 
-  Mods:		  07/15/21 Initial Release.
+  Mods:		  07/15/21  Initial Release.
+            05/14/22  Cleaned up code.
 */
 
 package modules;
@@ -34,14 +35,14 @@ import gui.AGCControl;
 
 public class INT
 {
-  private Register registerRpCell  = new Register(5); // Latches the selected priority interrupt vector (1-5)
-  private Register registerINHINT  = new Register(1); // Inhibits interrupts on INHINT, reenables on RELINT
+  private final Register registerRpCell  = new Register(5); // Latches the selected priority interrupt vector (1-5)
+  private final Register registerINHINT  = new Register(1); // Inhibits interrupts on INHINT, reenables on RELINT
 
   // NOTE: the priority cells (rupt[]) are indexed 0-5, but stored in the
   //       RpCell register as 1-5; (0 in RpCell means no interrupt)
-  private int[] rupt = new int[6];
+  private final int[] rupt = new int[6];
 
-  private AGCControl parent;
+  private final AGCControl parent;
 
   public INT(AGCControl parent)
   {

@@ -1,5 +1,5 @@
 /*
-  Copyright 2021, William Glasford
+  Copyright 2021-2022, William Glasford
 
   This file is part of the AGC Simulator.  You can redistribute it
   and/or modify it under the terms of the GNU General Public License as
@@ -12,6 +12,7 @@
 
   Mods:		  07/15/21  Initial Release.
             11/30/21  Implemented Standby.
+            05/14/22  Cleaned up comments.
 */
 
 package modules;
@@ -22,12 +23,12 @@ public class MON
   public boolean RUN = false;     // run/step switch
   public boolean STEP = false;    // single step switch
   public boolean INST = false;    // instruction/sequence step select switch
-  public boolean FCLK = false;    // clock mode
-  public boolean SA = false;    // "standby allowed" SW; 0=NO (full power), 1=YES (low power)
+  public boolean FCLK = false;    // clock mode: 0 = clock is manual or slow, 1 = free running clock
+  public boolean SA = false;      // "standby allowed" SW; 0=NO (full power), 1=YES (low power)
   public boolean SCL_ENAB = true; // "scaler enabled" SW; 0=NO (scaler halted), 1=YES (scaler running)
   public boolean ruptBreakpointEnabled = false;    // Used to set an interrupt breakpoint.
   public boolean counterBreakpointEnabled = false; // Used to set a counter breakpoint.
   public boolean breakpointEnabled = false;        // Whether or not a debug breakpoint is set.
   public int breakpointAddress = 0;                // The address of the breakpoint.
-  public boolean displayDetails = false; // DO NOT IMPLIMENT in H/W
+  public boolean displayDetails = false;           // DO NOT IMPLIMENT in H/W
 }

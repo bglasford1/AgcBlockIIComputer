@@ -1,5 +1,5 @@
 /*
-  Copyright 2021, William Glasford
+  Copyright 2021-2022, William Glasford
 
   This file is part of the AGC Simulator.  You can redistribute it
   and/or modify it under the terms of the GNU General Public License as
@@ -23,7 +23,8 @@
                   026  TIME3
                   027  TIME4
 
-  Mods:		  07/15/21 Initial Release.
+  Mods:		  07/15/21  Initial Release.
+            05/14/22  Cleaned up code.
 */
 
 package modules;
@@ -36,11 +37,11 @@ import gui.AGCControl;
 public class CTR
 {
   // Latches the selected priority counter cell (0-3 (decimal))
-  private Register registerUpCell = new Register(4);
+  private final Register registerUpCell = new Register(4);
 
-  private int[] pcUp = new int[4];
+  private final int[] pcUp = new int[4];
 
-  private AGCControl parent;
+  private final AGCControl parent;
 
   public CTR(AGCControl parent)
   {

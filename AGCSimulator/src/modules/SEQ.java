@@ -1,5 +1,5 @@
 /*
-  Copyright 2021, William Glasford
+  Copyright 2021-2022, William Glasford
 
   This file is part of the AGC Simulator.  You can redistribute it
   and/or modify it under the terms of the GNU General Public License as
@@ -14,7 +14,8 @@
             control pulses that check various register states.  This controls
             which control pulses of a sub-sequence get executed next.
 
-  Mods:		  07/15/21 Initial Release.
+  Mods:		  07/15/21  Initial Release.
+            05/14/22  Cleaned up code.
 */
 
 package modules;
@@ -28,18 +29,18 @@ public class SEQ
 {
   public static final int MAXPULSES = 15;
 
-  private Register registerSNI    = new Register(1);    // Select next intruction flag
-  private Register registerEXT    = new Register(1);    // Extend register. (bit 16)
-  private Register registerSQ     = new Register(6);    // Instruction register (bits 10-15 of next instruction)
-  private Register registerStage  = new Register(3);    // Stage counter
-  private Register registerPreStage = new Register(3);  // Pre-Stage counter that hold the next stage count.
-  private Register registerBR1    = new Register(1);    // Branch register1
-  private Register registerBR2    = new Register(1);    // Branch register2
-  private Register registerSubseq = new Register(6);    // Made up ordinal of subsequence being executed.
+  private final Register registerSNI    = new Register(1);    // Select next intruction flag
+  private final Register registerEXT    = new Register(1);    // Extend register. (bit 16)
+  private final Register registerSQ     = new Register(6);    // Instruction register (bits 10-15 of next instruction)
+  private final Register registerStage  = new Register(3);    // Stage counter
+  private final Register registerPreStage = new Register(3);  // Pre-Stage counter that hold the next stage count.
+  private final Register registerBR1    = new Register(1);    // Branch register1
+  private final Register registerBR2    = new Register(1);    // Branch register2
+  private final Register registerSubseq = new Register(6);    // Made up ordinal of subsequence being executed.
 
-  private CpType[] controlPulses = new CpType[MAXPULSES];    // current set of asserted control pulses (MAXPULSES)
+  private final CpType[] controlPulses = new CpType[MAXPULSES];    // current set of asserted control pulses (MAXPULSES)
 
-  private AGCControl parent;
+  private final AGCControl parent;
 
   public SEQ(AGCControl parent)
   {

@@ -1,5 +1,5 @@
 /*
-  Copyright 2021, William Glasford
+  Copyright 2021-2022, William Glasford
 
   This file is part of the AGC Simulator.  You can redistribute it
   and/or modify it under the terms of the GNU General Public License as
@@ -12,7 +12,8 @@
             read and write channel commands which can AND/OR/XOR the A
             register data with the channel data.
 
-  Mods:		  07/15/21 Initial Release.
+  Mods:		  07/15/21  Initial Release.
+            05/14/22  Cleaned up code.
 */
 
 package modules;
@@ -24,10 +25,10 @@ import gui.AGCControl;
 
 public class CRG
 {
-  private Register registerA = new Register(16); // Accumulator
-  private Register registerL = new Register(16); // Lower accumulator
-  private Register registerQ = new Register(16); // Return address
-  private Register registerZ = new Register(16); // Program counter
+  private final Register registerA = new Register(16); // Accumulator
+  private final Register registerL = new Register(16); // Lower accumulator
+  private final Register registerQ = new Register(16); // Return address
+  private final Register registerZ = new Register(16); // Program counter
 
   // Defines how to load data.
   // BX = don't care, leave alone
@@ -35,7 +36,7 @@ public class CRG
   // SG = sign bit (1's compliment)
   // SGM = sign bit in memory
   // B1 to B14 = value in bit position n
-  private BusLineDesignation conv_WALS_A[] =
+  private final BusLineDesignation conv_WALS_A[] =
     { BusLineDesignation.SG,
       BusLineDesignation.SG,
       BusLineDesignation.SG,
@@ -54,7 +55,7 @@ public class CRG
       BusLineDesignation.B3
     };
 
-  private AGCControl parent;
+  private final AGCControl parent;
 
   public CRG(AGCControl parent)
   {

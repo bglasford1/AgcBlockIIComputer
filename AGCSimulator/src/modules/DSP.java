@@ -1,5 +1,5 @@
 /*
-  Copyright 2021, William Glasford
+  Copyright 2021-2022, William Glasford
 
   This file is part of the AGC Simulator.  You can redistribute it
   and/or modify it under the terms of the GNU General Public License as
@@ -10,7 +10,8 @@
   Purpose:	This class implements the DSKY Display module.  Channels 10, 11
             and 13 are implemented here.
 
-  Mods:		  07/15/21 Initial Release.
+  Mods:		  07/15/21  Initial Release.
+            05/14/22  Cleaned up code.
 */
 
 package modules;
@@ -25,7 +26,7 @@ public class DSP
   // Bits 6-10  = the left hand digit value (DSPH)
   // Bit 11     = the verb and noun digits should be flashing (DSPC)
   // Bits 12-15 = the relay word (RLYWD)
-  private Register channel10 = new Register(15);
+  private final Register channel10 = new Register(15);
 
   // DSKY indicator lights:
   // Bit 1 = ISS Warning
@@ -41,12 +42,12 @@ public class DSP
   // Bit 13 = Engine On
   // Bit 14 = Engine Off
   // Bit 15 = Spare
-  private Register channel11 = new Register(15);
+  private final Register channel11 = new Register(15);
 
   // Various Hardware Outputs:  Only the Enable Standby & Test Lights are implemented
   // Bit 10 = Test Alarms & DSKY Lights
   // Bit 11 = Enable Standby
-  private Register channel13 = new Register(15);
+  private final Register channel13 = new Register(15);
 
   // Negative logic: a 1 in the bit turns off the light.
   // Bit 1 = PRIO DISP indicator
@@ -57,7 +58,7 @@ public class DSP
   // Bit 6 = GIMBAL LOCK indicator
   // Bit 8 = TRACKER indicator
   // Bit 9 = PROG indicator
-  private Register indicators = new Register(15); // This is sent using the 1100 = 014 Relay Word
+  private final Register indicators = new Register(15); // This is sent using the 1100 = 014 Relay Word
 
   private boolean dskyChanged = false; // true when DSKY display changes
 
@@ -109,7 +110,7 @@ public class DSP
   // Flag controls 1 Hz flash of verb and noun display
   public boolean flash = false; // 0=flash off, 1=flash on
 
-  private AGCControl parent;
+  private final AGCControl parent;
 
   public DSP(AGCControl parent)
   {

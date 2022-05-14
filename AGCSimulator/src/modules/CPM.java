@@ -1,5 +1,5 @@
 /*
-  Copyright 2021, William Glasford
+  Copyright 2021-2022, William Glasford
 
   This file is part of the AGC Simulator.  You can redistribute it
   and/or modify it under the terms of the GNU General Public License as
@@ -14,7 +14,8 @@
             Decoder EPROM and sub-sequence decoding occurs here, however in the H/W
             implementation this code is in the SEQ module.
 
-  Mods:		  07/15/21 Initial Release.
+  Mods:		  07/15/21  Initial Release.
+            05/14/22  Cleaned up code.
 */
 
 package modules;
@@ -30,7 +31,7 @@ public class CPM
   private static final int EPROM_SIZE = 0x10000; // # of cells in a 16-bit address range
   private static final int SUBSEQ_EPROM_SIZE = 0x800; // # of cells in a 10-bit address range
 
-  private Register registerCLREXT = new Register(1); // Flip-flop that remembers if extend bit should be cleared.
+  private final Register registerCLREXT = new Register(1); // Flip-flop that remembers if extend bit should be cleared.
 
   public enum eprom
   {
@@ -46,23 +47,23 @@ public class CPM
     EPROM65_72
   }
 
-  private int[] subseqEprom = new int[SUBSEQ_EPROM_SIZE];
+  private final int[] subseqEprom = new int[SUBSEQ_EPROM_SIZE];
 
-  private int[] EPROM1_8 = new int[EPROM_SIZE];
-  private int[] EPROM9_16 = new int[EPROM_SIZE];
-  private int[] EPROM17_24 = new int[EPROM_SIZE];
-  private int[] EPROM25_32 = new int[EPROM_SIZE];
-  private int[] EPROM33_40 = new int[EPROM_SIZE];
-  private int[] EPROM41_48 = new int[EPROM_SIZE];
-  private int[] EPROM49_56 = new int[EPROM_SIZE];
-  private int[] EPROM57_64 = new int[EPROM_SIZE];
-  private int[] EPROM65_72 = new int[EPROM_SIZE];
+  private final int[] EPROM1_8 = new int[EPROM_SIZE];
+  private final int[] EPROM9_16 = new int[EPROM_SIZE];
+  private final int[] EPROM17_24 = new int[EPROM_SIZE];
+  private final int[] EPROM25_32 = new int[EPROM_SIZE];
+  private final int[] EPROM33_40 = new int[EPROM_SIZE];
+  private final int[] EPROM41_48 = new int[EPROM_SIZE];
+  private final int[] EPROM49_56 = new int[EPROM_SIZE];
+  private final int[] EPROM57_64 = new int[EPROM_SIZE];
+  private final int[] EPROM65_72 = new int[EPROM_SIZE];
 
   // This is debug code not implemented in the H/W.
   private static boolean waitPrinted = false;
   private static boolean srlsePrinted = false;
 
-  private AGCControl parent;
+  private final AGCControl parent;
 
   public CPM(AGCControl parent)
   {

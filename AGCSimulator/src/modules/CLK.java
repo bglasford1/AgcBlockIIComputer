@@ -1,5 +1,5 @@
 /*
-  Copyright 2021, William Glasford
+  Copyright 2021-2022, William Glasford
 
   This file is part of the AGC Simulator.  You can redistribute it
   and/or modify it under the terms of the GNU General Public License as
@@ -14,6 +14,7 @@
 
   Mods:		  07/15/21  Initial Release.
             11/30/21  Fixed Proceed Key.
+            05/14/22  Cleaned up code.
 */
 
 package modules;
@@ -23,7 +24,7 @@ import gui.AGCControl;
 
 public class CLK
 {
-  private AGCControl parent;
+  private final AGCControl parent;
 
   public CLK(AGCControl parent)
   {

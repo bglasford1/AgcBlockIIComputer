@@ -1,5 +1,5 @@
 /*
-  Copyright 2021, William Glasford
+  Copyright 2021-2022, William Glasford
 
   This file is part of the AGC Simulator.  You can redistribute it
   and/or modify it under the terms of the GNU General Public License as
@@ -10,7 +10,8 @@
   Purpose:	This class implements the I/O channels that are not associated
             with other modules.
 
-  Mods:		  07/15/21 Initial Release.
+  Mods:		  07/15/21  Initial Release.
+            05/14/22  Cleaned up code.
 */
 
 package modules;
@@ -29,7 +30,7 @@ public class IOS
   // Bit 6 = Jet A2D
   // Bit 7 = Jet A1U
   // Bit 8 = Jet B1D
-  private Register channel5  = new Register(8);
+  private final Register channel5  = new Register(8);
 
   // Jet controls:
   // Bit 1 = Jet B3A
@@ -40,7 +41,7 @@ public class IOS
   // Bit 6 = Jet A3R
   // Bit 7 = Jet A4R
   // Bit 8 = Jet B1L
-  private Register channel6  = new Register(8);
+  private final Register channel6  = new Register(8);
 
   // IMU, CDU and Optics Control:
   // Bit 1 = Zero Optics CDUs
@@ -58,7 +59,7 @@ public class IOS
   // Bit 13 = LR Position 2 Command
   // Bit 14 = Enable RR Lock-On; Auto Angle Tracking
   // Bit 15 = ISS Turn-on Delay Complete
-  private Register channel12 = new Register(15);
+  private final Register channel12 = new Register(15);
 
   // Gyro Control:
   // Bit 1 = Not Used
@@ -76,7 +77,7 @@ public class IOS
   // Bit 13 = Drive CDU Z
   // Bit 14 = Drive CDU Y
   // Bit 15 = Drive CDU X
-  private Register channel14 = new Register(15);
+  private final Register channel14 = new Register(15);
 
   // Various Hardware Inputs:
   // Bit 1 = Abort with Descent Stage
@@ -94,7 +95,7 @@ public class IOS
   // Bit 13 = IMU Fail (Malfunction of IMU Stabilization Loops)
   // Bit 14 = ISS Turn-On Requested
   // Bit 15 = Temperature of Stable Member in Limits
-  private Register channel30 = new Register(15);
+  private final Register channel30 = new Register(15);
 
   // Orientation Rotation and Translation:
   // Bit 1 = + Pitch and Elevation Rotation (These are commanded by RHC)
@@ -112,7 +113,7 @@ public class IOS
   // Bit 13 = Attitude Hold Mode on SCS Mode Control Switch
   // Bit 14 = Auto Stabilization of Attitude on SCS Mode Switch
   // Bit 15 = Attitude Control out of Detent (RHC not in neutral)
-  private Register channel31 = new Register(15);
+  private final Register channel31 = new Register(15);
 
   // Various Warnings and Alarms:
   // Bit 1 = Spare
@@ -130,7 +131,7 @@ public class IOS
   // Bit 13 = PIPA Fail
   // Bit 14 = AGC Warning of Repeated Alarms: Restart, Counter Fail, Voltage Fail & Scalar Double
   // Bit 15 = AGC Oscillator Alarm
-  private Register channel33 = new Register(15);
+  private final Register channel33 = new Register(15);
 
   // Failure Outputs:
   // Bit 1 = Parity Fail (E or F memory)
@@ -148,9 +149,9 @@ public class IOS
   // Bit 13 = Spare
   // Bit 14 = Spare
   // Bit 15 = Spare
-  private Register channel77 = new Register(15);
+  private final Register channel77 = new Register(15);
 
-  private AGCControl parent;
+  private final AGCControl parent;
 
   public IOS(AGCControl parent)
   {

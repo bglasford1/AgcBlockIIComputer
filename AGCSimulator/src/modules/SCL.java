@@ -1,5 +1,5 @@
 /*
-  Copyright 2021, William Glasford
+  Copyright 2021-2022, William Glasford
 
   This file is part of the AGC Simulator.  You can redistribute it
   and/or modify it under the terms of the GNU General Public License as
@@ -14,7 +14,8 @@
                   F13 - 12.5 Hz : Used to advance the timing pulse state machine.
                   F17 - 0.78 Hz : Used to advance the timing pulse state machine.
 
-  Mods:		  07/15/21 Initial Release.
+  Mods:		  07/15/21  Initial Release.
+            05/14/22  Cleaned up code.
 */
 
 package modules;
@@ -25,12 +26,12 @@ import gui.AGCControl;
 
 public class SCL
 {
-  private Register registerSCL = new Register(17); // Scalar register
-  private Register registerF17 = new Register(2);  // F17 register
-  private Register registerF13 = new Register(2);  // F13 register
-  private Register registerF10 = new Register(2);  // F10 register
+  private final Register registerSCL = new Register(17); // Scalar register
+  private final Register registerF17 = new Register(2);  // F17 register
+  private final Register registerF13 = new Register(2);  // F13 register
+  private final Register registerF10 = new Register(2);  // F10 register
 
-  private AGCControl parent;
+  private final AGCControl parent;
 
   public SCL(AGCControl parent)
   {

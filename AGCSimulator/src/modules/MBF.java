@@ -1,5 +1,5 @@
 /*
-  Copyright 2021, William Glasford
+  Copyright 2021-2022, William Glasford
 
   This file is part of the AGC Simulator.  You can redistribute it
   and/or modify it under the terms of the GNU General Public License as
@@ -18,7 +18,8 @@
                    022  CYL  (rotate left)
                    023  EDOP (shift right 7 bits)
 
-  Mods:		  07/15/21 Initial Release.
+  Mods:		  07/15/21  Initial Release.
+            05/14/22  Cleaned up code.
 */
 
 package modules;
@@ -30,7 +31,7 @@ import gui.AGCControl;
 
 public class MBF
 {
-  private Register registerG = new Register(16);
+  private final Register registerG = new Register(16);
 
   // Defines how to load data.
   // BX = don't care, leave alone
@@ -38,7 +39,7 @@ public class MBF
   // SG = sign bit (1's compliment)
   // SGM = sign bit in memory
   // B1 to B14 = value in bit position n
-  private BusLineDesignation conv_L2GD[] =
+  private final BusLineDesignation conv_L2GD[] =
     { BusLineDesignation.SG,
       BusLineDesignation.B14,
       BusLineDesignation.B13,
@@ -57,7 +58,7 @@ public class MBF
       BusLineDesignation.D0
     };
 
-  private BusLineDesignation conv_G2LS[] =
+  private final BusLineDesignation conv_G2LS[] =
     { BusLineDesignation.SG,
       BusLineDesignation.B1,
       BusLineDesignation.D0, // To be filled in by WALS

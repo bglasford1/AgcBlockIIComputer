@@ -1,5 +1,5 @@
 /*
-  Copyright 2021, William Glasford
+  Copyright 2021-2022, William Glasford
 
   This file is part of the AGC Simulator.  You can redistribute it
   and/or modify it under the terms of the GNU General Public License as
@@ -16,7 +16,8 @@
             math.  Adding to the complication is the ability for the control
             pulses to set a no end around carry state.
 
-  Mods:		  07/15/21 Initial Release.
+  Mods:		  07/15/21  Initial Release.
+            05/14/22  Cleaned up code.
 */
 
 package modules;
@@ -29,12 +30,12 @@ import gui.AGCControl;
 
 public class ALU
 {
-  private Register registerB  = new Register(16); // B register (next instruction)
-  private Register registerCI = new Register(1);  // Carry-in flip flop
-  private Register registerX  = new Register(16); // X register
-  private Register registerY  = new Register(16); // Y register
-  private Register registerU  = new Register(16);   // ALU sum
-  private Register registerNEAC = new Register(1); // No end around carry flip flop
+  private final Register registerB  = new Register(16); // B register (next instruction)
+  private final Register registerCI = new Register(1);  // Carry-in flip flop
+  private final Register registerX  = new Register(16); // X register
+  private final Register registerY  = new Register(16); // Y register
+  private final Register registerU  = new Register(16);   // ALU sum
+  private final Register registerNEAC = new Register(1); // No end around carry flip flop
 
   // Defines how to load buses with data.
   // BX = don't care, leave alone
@@ -42,7 +43,7 @@ public class ALU
   // SG = sign bit (1's compliment)
   // SGM = sign bit in memory
   // B1 to B14 = value in bit position x
-  private BusLineDesignation conv_U[] =
+  private final BusLineDesignation conv_U[] =
     { BusLineDesignation.SGM,
       BusLineDesignation.SGM,
       BusLineDesignation.B14,
@@ -61,7 +62,7 @@ public class ALU
       BusLineDesignation.B1
     };
 
-  private BusLineDesignation conv_WYD[] =
+  private final BusLineDesignation conv_WYD[] =
     { BusLineDesignation.SG,
       BusLineDesignation.B14,
       BusLineDesignation.B13,
@@ -80,7 +81,7 @@ public class ALU
       BusLineDesignation.D0
     };
 
-  private AGCControl parent;
+  private final AGCControl parent;
 
   public ALU(AGCControl parent)
   {
