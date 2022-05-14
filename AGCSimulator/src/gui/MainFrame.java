@@ -1,5 +1,5 @@
 /*
-  Copyright 2021, William Glasford
+  Copyright 2021-2022, William Glasford
 
   This file is part of the AGC Simulator.  You can redistribute it
   and/or modify it under the terms of the GNU General Public License as
@@ -12,6 +12,7 @@
 
   Mods:		  07/15/21  Initial Release.
             11/30/21  Implemented Standby.
+            05/14/22  Cleaned up code.
 */
 
 package gui;
@@ -23,17 +24,17 @@ import java.awt.event.ActionListener;
 
 public class MainFrame extends JFrame implements ActionListener
 {
-  private AGCControl parent;
+  private final AGCControl parent;
 
-  private ProcessingPanel processingPanel;
-  private InstructionPanel instructionPanel;
-  private MemoryPanel memoryPanel;
-  private IndicatorsPanel indicatorsPanel;
-  private DisplayPanel displayPanel;
-  private MemoryRegistersPanel memoryRegistersPanel;
-  private ChannelPanel channelPanel;
-  private ControlPulsePanel controlPulsePanel;
-  private SimStatesPanel simStatesPanel;
+  private final ProcessingPanel processingPanel;
+  private final InstructionPanel instructionPanel;
+  private final MemoryPanel memoryPanel;
+  private final IndicatorsPanel indicatorsPanel;
+  private final DisplayPanel displayPanel;
+  private final MemoryRegistersPanel memoryRegistersPanel;
+  private final ChannelPanel channelPanel;
+  private final ControlPulsePanel controlPulsePanel;
+  private final SimStatesPanel simStatesPanel;
   private HelpWindow helpWindow = null;
   private SourceCodeWindow sourceCodeWindow = null;
 
@@ -55,7 +56,7 @@ public class MainFrame extends JFrame implements ActionListener
   private static final String HELP_MENU = "Help";
   private static final String SHOW_HELP = "Help";
 
-  private JCheckBox displayDetailsItem = new JCheckBox(DISPLAY_DETAILS);
+  private final JCheckBox displayDetailsItem = new JCheckBox(DISPLAY_DETAILS);
 
   MainFrame(AGCControl parent)
   {

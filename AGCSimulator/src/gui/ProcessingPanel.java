@@ -1,5 +1,5 @@
 /*
-  Copyright 2021, William Glasford
+  Copyright 2021-2022, William Glasford
 
   This file is part of the AGC Simulator.  You can redistribute it
   and/or modify it under the terms of the GNU General Public License as
@@ -10,7 +10,8 @@
   Purpose:	This class displays the register values related to ALU, CTR and
             INT processing.
 
-  Mods:		  07/15/21 Initial Release.
+  Mods:		  07/15/21  Initial Release.
+            05/14/22  Cleaned up code.
 */
 
 package gui;
@@ -21,13 +22,13 @@ import java.awt.*;
 
 public class ProcessingPanel extends JPanel
 {
-  private JTextField xRegText = new JTextField();
-  private JTextField yRegText = new JTextField();
-  private JTextField rpcellRegText = new JTextField();
-  private JTextField inhRegText = new JTextField();
-  private JTextField upcellRegText = new JTextField();
-  private JTextField uRegText = new JTextField();
-  private JTextField ciRegText = new JTextField();
+  private final JTextField xRegText = new JTextField();
+  private final JTextField yRegText = new JTextField();
+  private final JTextField rpcellRegText = new JTextField();
+  private final JTextField inhRegText = new JTextField();
+  private final JTextField upcellRegText = new JTextField();
+  private final JTextField uRegText = new JTextField();
+  private final JTextField ciRegText = new JTextField();
 
   private static final JLabel upcellRegLabel = new JLabel("UpCELL:", SwingConstants.RIGHT);
   private static final JLabel xRegLabel = new JLabel("X:", SwingConstants.RIGHT);

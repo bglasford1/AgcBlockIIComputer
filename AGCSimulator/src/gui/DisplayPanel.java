@@ -1,5 +1,5 @@
 /*
-  Copyright 2021, William Glasford
+  Copyright 2021-2022, William Glasford
 
   This file is part of the AGC Simulator.  You can redistribute it
   and/or modify it under the terms of the GNU General Public License as
@@ -10,7 +10,8 @@
   Purpose:	This class displays the DSKY output values, i.e. the 7-segment
             displays.
 
-  Mods:		  07/15/21 Initial Release.
+  Mods:		  07/15/21  Initial Release.
+            05/14/22  Cleaned up code.
 */
 
 package gui;
@@ -21,32 +22,32 @@ import java.awt.*;
 
 public class DisplayPanel extends JPanel
 {
-  private JTextField MD1 = new JTextField();
-  private JTextField MD2 = new JTextField();
-  private JTextField ND1 = new JTextField();
-  private JTextField ND2 = new JTextField();
-  private JTextField VD1 = new JTextField();
-  private JTextField VD2 = new JTextField();
-  private JTextField R1S = new JTextField();
-  private JTextField R1D1 = new JTextField();
-  private JTextField R1D2 = new JTextField();
-  private JTextField R1D3 = new JTextField();
-  private JTextField R1D4 = new JTextField();
-  private JTextField R1D5 = new JTextField();
-  private JTextField R2S = new JTextField();
-  private JTextField R2D1 = new JTextField();
-  private JTextField R2D2 = new JTextField();
-  private JTextField R2D3 = new JTextField();
-  private JTextField R2D4 = new JTextField();
-  private JTextField R2D5 = new JTextField();
-  private JTextField R3S = new JTextField();
-  private JTextField R3D1 = new JTextField();
-  private JTextField R3D2 = new JTextField();
-  private JTextField R3D3 = new JTextField();
-  private JTextField R3D4 = new JTextField();
-  private JTextField R3D5 = new JTextField();
-  private JButton activeButton = new JButton("ACT");
-  private JButton flashButton = new JButton("FLA");
+  private final JTextField MD1 = new JTextField();
+  private final JTextField MD2 = new JTextField();
+  private final JTextField ND1 = new JTextField();
+  private final JTextField ND2 = new JTextField();
+  private final JTextField VD1 = new JTextField();
+  private final JTextField VD2 = new JTextField();
+  private final JTextField R1S = new JTextField();
+  private final JTextField R1D1 = new JTextField();
+  private final JTextField R1D2 = new JTextField();
+  private final JTextField R1D3 = new JTextField();
+  private final JTextField R1D4 = new JTextField();
+  private final JTextField R1D5 = new JTextField();
+  private final JTextField R2S = new JTextField();
+  private final JTextField R2D1 = new JTextField();
+  private final JTextField R2D2 = new JTextField();
+  private final JTextField R2D3 = new JTextField();
+  private final JTextField R2D4 = new JTextField();
+  private final JTextField R2D5 = new JTextField();
+  private final JTextField R3S = new JTextField();
+  private final JTextField R3D1 = new JTextField();
+  private final JTextField R3D2 = new JTextField();
+  private final JTextField R3D3 = new JTextField();
+  private final JTextField R3D4 = new JTextField();
+  private final JTextField R3D5 = new JTextField();
+  private final JButton activeButton = new JButton("ACT");
+  private final JButton flashButton = new JButton("FLA");
 
   private static final JLabel modeLabel = new JLabel("P:", SwingConstants.RIGHT);
   private static final JLabel nounLabel = new JLabel("N:", SwingConstants.RIGHT);
@@ -55,9 +56,9 @@ public class DisplayPanel extends JPanel
   private static final JLabel r2Label = new JLabel("R2:", SwingConstants.RIGHT);
   private static final JLabel r3Label = new JLabel("R3:", SwingConstants.RIGHT);
 
-  private JLabel blankLabel1 = new JLabel("");
-  private JLabel blankLabel2 = new JLabel("");
-  private JLabel blankLabel3 = new JLabel("");
+  private final JLabel blankLabel1 = new JLabel("");
+  private final JLabel blankLabel2 = new JLabel("");
+  private final JLabel blankLabel3 = new JLabel("");
 
   DisplayPanel()
   {

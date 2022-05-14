@@ -1,5 +1,5 @@
 /*
-  Copyright 2021, William Glasford
+  Copyright 2021-2022, William Glasford
 
   This file is part of the AGC Simulator.  You can redistribute it
   and/or modify it under the terms of the GNU General Public License as
@@ -10,7 +10,8 @@
   Purpose:	This class displays the registers related to the instruction
             that is being executed.
 
-  Mods:		  07/15/21 Initial Release.
+  Mods:		  07/15/21  Initial Release.
+            05/14/22  Cleaned up code.
 */
 
 package gui;
@@ -21,16 +22,16 @@ import java.awt.*;
 
 public class InstructionPanel extends JPanel
 {
-  private JTextField bRegText = new JTextField();
-  private JTextField tpText = new JTextField();
-  private JTextField subseqText = new JTextField();
-  private JTextField stageRegText = new JTextField();
-  private JTextField preStageRegText = new JTextField();
-  private JTextField br1RegText = new JTextField();
-  private JTextField br2RegText = new JTextField();
-  private JTextField sniRegText = new JTextField();
-  private JTextField extText = new JTextField();
-  private JTextField sqText = new JTextField();
+  private final JTextField bRegText = new JTextField();
+  private final JTextField tpText = new JTextField();
+  private final JTextField subseqText = new JTextField();
+  private final JTextField stageRegText = new JTextField();
+  private final JTextField preStageRegText = new JTextField();
+  private final JTextField br1RegText = new JTextField();
+  private final JTextField br2RegText = new JTextField();
+  private final JTextField sniRegText = new JTextField();
+  private final JTextField extText = new JTextField();
+  private final JTextField sqText = new JTextField();
 
   private static final JLabel bRegLabel = new JLabel("B:", SwingConstants.RIGHT);
   private static final JLabel tpLabel = new JLabel("TP:", SwingConstants.RIGHT);

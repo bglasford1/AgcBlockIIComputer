@@ -1,5 +1,5 @@
 /*
-  Copyright 2021, William Glasford
+  Copyright 2021-2022, William Glasford
 
   This file is part of the AGC Simulator.  You can redistribute it
   and/or modify it under the terms of the GNU General Public License as
@@ -11,6 +11,7 @@
 
   Mods:		  07/15/21  Initial Release.
             11/30/21  Fixed Proceed Key.
+            05/14/22  Cleaned up code.
 */
 
 package gui;
@@ -25,7 +26,7 @@ import java.awt.event.ActionListener;
 
 public class KeyboardPanel extends JPanel implements ActionListener
 {
-  private AGCControl agcControl;
+  private final AGCControl agcControl;
 
   private static final String ZERO_STRING = "0";
   private static final String ONE_STRING = "1";
@@ -47,27 +48,27 @@ public class KeyboardPanel extends JPanel implements ActionListener
   private static final String KEY_RELEASE_STRING = "KeyRel";
   private static final String PRO_STRING = "PRO";
 
-  private JButton zeroButton = new JButton(ZERO_STRING);
-  private JButton oneButton = new JButton(ONE_STRING);
-  private JButton twoButton = new JButton(TWO_STRING);
-  private JButton threeButton = new JButton(THREE_STRING);
-  private JButton fourButton = new JButton(FOUR_STRING);
-  private JButton fiveButton = new JButton(FIVE_STRING);
-  private JButton sixButton = new JButton(SIX_STRING);
-  private JButton sevenButton = new JButton(SEVEN_STRING);
-  private JButton eightButton = new JButton(EIGHT_STRING);
-  private JButton nineButton = new JButton(NINE_STRING);
-  private JButton plusButton = new JButton(PLUS_STRING);
-  private JButton minusButton = new JButton(MINUS_STRING);
-  private JButton clearButton = new JButton(CLEAR_STRING);
-  private JButton verbButton = new JButton(VERB_STRING);
-  private JButton nounButton = new JButton(NOUN_STRING);
-  private JButton enterButton = new JButton(ENTER_STRING);
-  private JButton resetButton = new JButton(RESET_STRING);
-  private JButton keyReleaseButton = new JButton(KEY_RELEASE_STRING);
-  private JButton proButton = new JButton(PRO_STRING);
-  private JLabel blankLabel1 = new JLabel("");
-  private JLabel blankLabel2 = new JLabel("");
+  private final JButton zeroButton = new JButton(ZERO_STRING);
+  private final JButton oneButton = new JButton(ONE_STRING);
+  private final JButton twoButton = new JButton(TWO_STRING);
+  private final JButton threeButton = new JButton(THREE_STRING);
+  private final JButton fourButton = new JButton(FOUR_STRING);
+  private final JButton fiveButton = new JButton(FIVE_STRING);
+  private final JButton sixButton = new JButton(SIX_STRING);
+  private final JButton sevenButton = new JButton(SEVEN_STRING);
+  private final JButton eightButton = new JButton(EIGHT_STRING);
+  private final JButton nineButton = new JButton(NINE_STRING);
+  private final JButton plusButton = new JButton(PLUS_STRING);
+  private final JButton minusButton = new JButton(MINUS_STRING);
+  private final JButton clearButton = new JButton(CLEAR_STRING);
+  private final JButton verbButton = new JButton(VERB_STRING);
+  private final JButton nounButton = new JButton(NOUN_STRING);
+  private final JButton enterButton = new JButton(ENTER_STRING);
+  private final JButton resetButton = new JButton(RESET_STRING);
+  private final JButton keyReleaseButton = new JButton(KEY_RELEASE_STRING);
+  private final JButton proButton = new JButton(PRO_STRING);
+  private final JLabel blankLabel1 = new JLabel("");
+  private final JLabel blankLabel2 = new JLabel("");
 
   KeyboardPanel(AGCControl agcControl)
   {

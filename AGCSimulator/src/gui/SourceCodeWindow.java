@@ -1,5 +1,5 @@
 /*
-  Copyright 2021, William Glasford
+  Copyright 2021-2022, William Glasford
 
   This file is part of the AGC Simulator.  You can redistribute it
   and/or modify it under the terms of the GNU General Public License as
@@ -9,7 +9,8 @@
 
   Purpose:	This class displays the source code window.
 
-  Mods:		  07/15/21 Initial Release.
+  Mods:		  07/15/21  Initial Release.
+            05/14/22  Cleaned up code.
 */
 
 package gui;
@@ -23,7 +24,7 @@ class SourceCodeWindow extends JFrame implements ActionListener
 {
   private final JTextArea document = new JTextArea();
   private static final String UPDATE = "Update";
-  private AGCControl agcControl;
+  private final AGCControl agcControl;
 
   SourceCodeWindow(String[] lines, AGCControl agcControl) throws HeadlessException
   {

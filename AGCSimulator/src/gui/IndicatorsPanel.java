@@ -1,5 +1,5 @@
 /*
-  Copyright 2021, William Glasford
+  Copyright 2021-2022, William Glasford
 
   This file is part of the AGC Simulator.  You can redistribute it
   and/or modify it under the terms of the GNU General Public License as
@@ -9,7 +9,8 @@
 
   Purpose:	This class displays the DSKY indicator values.
 
-  Mods:		  07/15/21 Initial Release.
+  Mods:		  07/15/21  Initial Release.
+            05/14/22  Cleaned up code.
 */
 
 package gui;
@@ -36,20 +37,20 @@ public class IndicatorsPanel extends JPanel implements ActionListener
   private static final String ALT_LABEL = "ALT";
   private static final String VEL_LABEL = "VEL";
 
-  private JButton uplinkActyButton = new JButton();
-  private JButton tempButton = new JButton();
-  private JButton noAttButton = new JButton();
-  private JButton gimbalLockButton = new JButton();
-  private JButton stbyButton = new JButton();
-  private JButton progButton = new JButton();
-  private JButton keyRelButton = new JButton();
-  private JButton restartButton = new JButton();
-  private JButton operErrButton = new JButton();
-  private JButton trackerButton = new JButton();
-  private JButton altButton = new JButton();
-  private JButton velButton = new JButton();
-  private JButton unused1Button = new JButton();
-  private JButton unused2Button = new JButton();
+  private final JButton uplinkActyButton = new JButton();
+  private final JButton tempButton = new JButton();
+  private final JButton noAttButton = new JButton();
+  private final JButton gimbalLockButton = new JButton();
+  private final JButton stbyButton = new JButton();
+  private final JButton progButton = new JButton();
+  private final JButton keyRelButton = new JButton();
+  private final JButton restartButton = new JButton();
+  private final JButton operErrButton = new JButton();
+  private final JButton trackerButton = new JButton();
+  private final JButton altButton = new JButton();
+  private final JButton velButton = new JButton();
+  private final JButton unused1Button = new JButton();
+  private final JButton unused2Button = new JButton();
 
   IndicatorsPanel()
   {

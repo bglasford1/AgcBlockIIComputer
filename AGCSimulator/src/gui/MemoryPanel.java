@@ -1,5 +1,5 @@
 /*
-  Copyright 2021, William Glasford
+  Copyright 2021-2022, William Glasford
 
   This file is part of the AGC Simulator.  You can redistribute it
   and/or modify it under the terms of the GNU General Public License as
@@ -10,7 +10,8 @@
   Purpose:	This class displays the register values related to memory
             processing.
 
-  Mods:		  07/15/21 Initial Release.
+  Mods:		  07/15/21  Initial Release.
+            05/14/22  Cleaned up code.
 */
 
 package gui;
@@ -30,14 +31,14 @@ public class MemoryPanel extends JPanel
   private static final JLabel writeBusLabel = new JLabel("W.Bus:", SwingConstants.RIGHT);
   private static final JLabel sRegLabel = new JLabel("S:", SwingConstants.RIGHT);
 
-  private JTextField f10RegText = new JTextField();
-  private JTextField f13RegText = new JTextField();
-  private JTextField f17RegText = new JTextField();
-  private JTextField gRegText = new JTextField();
-  private JTextField pRegText = new JTextField();
-  private JTextField sclRegText = new JTextField();
-  private JTextField writeBusText = new JTextField();
-  private JTextField sRegText = new JTextField();
+  private final JTextField f10RegText = new JTextField();
+  private final JTextField f13RegText = new JTextField();
+  private final JTextField f17RegText = new JTextField();
+  private final JTextField gRegText = new JTextField();
+  private final JTextField pRegText = new JTextField();
+  private final JTextField sclRegText = new JTextField();
+  private final JTextField writeBusText = new JTextField();
+  private final JTextField sRegText = new JTextField();
 
   MemoryPanel()
   {

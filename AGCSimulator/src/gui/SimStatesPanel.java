@@ -1,5 +1,5 @@
 /*
-  Copyright 2021, William Glasford
+  Copyright 2021-2022, William Glasford
 
   This file is part of the AGC Simulator.  You can redistribute it
   and/or modify it under the terms of the GNU General Public License as
@@ -9,7 +9,8 @@
 
   Purpose:	This class displays the various state values of the simulation.
 
-  Mods:		  07/15/21 Initial Release.
+  Mods:		  07/15/21  Initial Release.
+            05/14/22  Cleaned up code.
 */
 
 package gui;
@@ -31,16 +32,16 @@ public class SimStatesPanel extends JPanel
   private static final JLabel CTR_LABEL = new JLabel("RUPT-C:", SwingConstants.RIGHT);
   private static final JLabel ADDR_LABEL = new JLabel("Addr:", SwingConstants.RIGHT);
 
-  private JTextField runText = new JTextField();
-  private JTextField stepText = new JTextField();
-  private JTextField instText = new JTextField();
-  private JTextField progText = new JTextField();
-  private JTextField purstText = new JTextField();
-  private JTextField fclkText = new JTextField();
-  private JTextField debugText = new JTextField();
-  private JTextField ruptText = new JTextField();
-  private JTextField ctrText = new JTextField();
-  private JTextField addrText = new JTextField();
+  private final JTextField runText = new JTextField();
+  private final JTextField stepText = new JTextField();
+  private final JTextField instText = new JTextField();
+  private final JTextField progText = new JTextField();
+  private final JTextField purstText = new JTextField();
+  private final JTextField fclkText = new JTextField();
+  private final JTextField debugText = new JTextField();
+  private final JTextField ruptText = new JTextField();
+  private final JTextField ctrText = new JTextField();
+  private final JTextField addrText = new JTextField();
 
   SimStatesPanel()
   {

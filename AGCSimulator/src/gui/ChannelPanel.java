@@ -1,5 +1,5 @@
 /*
-  Copyright 2021, William Glasford
+  Copyright 2021-2022, William Glasford
 
   This file is part of the AGC Simulator.  You can redistribute it
   and/or modify it under the terms of the GNU General Public License as
@@ -9,7 +9,8 @@
 
   Purpose:	This class displays the channel values.
 
-  Mods:		  07/15/21 Initial Release.
+  Mods:		  07/15/21  Initial Release.
+            05/14/22  Cleaned up code.
 */
 
 package gui;
@@ -20,18 +21,18 @@ import java.awt.*;
 
 public class ChannelPanel extends JPanel
 {
-  private JTextField channel7Text = new JTextField();
-  private JTextField channel10Text = new JTextField();
-  private JTextField channel11Text = new JTextField();
-  private JTextField channel12Text = new JTextField();
-  private JTextField channel13Text = new JTextField();
-  private JTextField channel14Text = new JTextField();
-  private JTextField channel15Text = new JTextField();
-  private JTextField channel16Text = new JTextField();
-  private JTextField channel30Text = new JTextField();
-  private JTextField channel32Text = new JTextField();
-  private JTextField channel33Text = new JTextField();
-  private JTextField channel77Text = new JTextField();
+  private final JTextField channel7Text = new JTextField();
+  private final JTextField channel10Text = new JTextField();
+  private final JTextField channel11Text = new JTextField();
+  private final JTextField channel12Text = new JTextField();
+  private final JTextField channel13Text = new JTextField();
+  private final JTextField channel14Text = new JTextField();
+  private final JTextField channel15Text = new JTextField();
+  private final JTextField channel16Text = new JTextField();
+  private final JTextField channel30Text = new JTextField();
+  private final JTextField channel32Text = new JTextField();
+  private final JTextField channel33Text = new JTextField();
+  private final JTextField channel77Text = new JTextField();
 
   private static final JLabel channel7Label  = new JLabel("07:", SwingConstants.RIGHT);
   private static final JLabel channel10Label = new JLabel("10:", SwingConstants.RIGHT);

@@ -1,5 +1,5 @@
 /*
-  Copyright 2021, William Glasford
+  Copyright 2021-2022, William Glasford
 
   This file is part of the AGC Simulator.  You can redistribute it
   and/or modify it under the terms of the GNU General Public License as
@@ -10,7 +10,8 @@
   Purpose:	This class displays the memory dialog box which displays
             memory values.
 
-  Mods:		  07/15/21 Initial Release.
+  Mods:		  07/15/21  Initial Release.
+            05/14/22  Cleaned up code.
 */
 
 package gui;
@@ -22,7 +23,7 @@ import java.awt.event.ActionListener;
 
 public class MemoryDialog extends JDialog implements ActionListener
 {
-  private JTextArea textArea = new JTextArea();
+  private final JTextArea textArea = new JTextArea();
 
   /**
    * Constructor that draws the initial dialog box.

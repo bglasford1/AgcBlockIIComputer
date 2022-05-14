@@ -1,5 +1,5 @@
 /*
-  Copyright 2021, William Glasford
+  Copyright 2021-2022, William Glasford
 
   This file is part of the AGC Simulator.  You can redistribute it
   and/or modify it under the terms of the GNU General Public License as
@@ -9,7 +9,8 @@
 
   Purpose:	This class displays the lower erasable memory registers.
 
-  Mods:		  07/15/21 Initial Release.
+  Mods:		  07/15/21  Initial Release.
+            05/14/22  Cleaned up code.
 */
 
 package gui;
@@ -20,27 +21,27 @@ import java.awt.*;
 
 public class MemoryRegistersPanel extends JPanel
 {
-  private JTextField aRegText = new JTextField();
-  private JTextField lRegText = new JTextField();
-  private JTextField qRegText = new JTextField();
-  private JTextField ebRegText = new JTextField();
-  private JTextField fbRegText = new JTextField();
-  private JTextField zRegText = new JTextField();
-  private JTextField bbRegText = new JTextField();
-  private JTextField aruptText = new JTextField();
-  private JTextField lruptText = new JTextField();
-  private JTextField qruptText = new JTextField();
-  private JTextField zruptText = new JTextField();
-  private JTextField bbruptText = new JTextField();
-  private JTextField bruptText = new JTextField();
-  private JTextField cyrText = new JTextField();
-  private JTextField srText = new JTextField();
-  private JTextField cylText = new JTextField();
-  private JTextField edopText = new JTextField();
-  private JTextField time2Text = new JTextField();
-  private JTextField time1Text = new JTextField();
-  private JTextField time3Text = new JTextField();
-  private JTextField time4Text = new JTextField();
+  private final JTextField aRegText = new JTextField();
+  private final JTextField lRegText = new JTextField();
+  private final JTextField qRegText = new JTextField();
+  private final JTextField ebRegText = new JTextField();
+  private final JTextField fbRegText = new JTextField();
+  private final JTextField zRegText = new JTextField();
+  private final JTextField bbRegText = new JTextField();
+  private final JTextField aruptText = new JTextField();
+  private final JTextField lruptText = new JTextField();
+  private final JTextField qruptText = new JTextField();
+  private final JTextField zruptText = new JTextField();
+  private final JTextField bbruptText = new JTextField();
+  private final JTextField bruptText = new JTextField();
+  private final JTextField cyrText = new JTextField();
+  private final JTextField srText = new JTextField();
+  private final JTextField cylText = new JTextField();
+  private final JTextField edopText = new JTextField();
+  private final JTextField time2Text = new JTextField();
+  private final JTextField time1Text = new JTextField();
+  private final JTextField time3Text = new JTextField();
+  private final JTextField time4Text = new JTextField();
 
   private static final JLabel aRegLabel    = new JLabel("00      A:", SwingConstants.RIGHT);
   private static final JLabel lRegLabel    = new JLabel("01      L:", SwingConstants.RIGHT);

@@ -1,5 +1,5 @@
 /*
-  Copyright 2021, William Glasford
+  Copyright 2021-2022, William Glasford
 
   This file is part of the AGC Simulator.  You can redistribute it
   and/or modify it under the terms of the GNU General Public License as
@@ -9,7 +9,8 @@
 
   Purpose:	This class displays the control pluse values.
 
-  Mods:		  07/15/21 Initial Release.
+  Mods:		  07/15/21  Initial Release.
+            05/14/22  Cleaned up code.
 */
 
 package gui;
@@ -19,7 +20,7 @@ import java.awt.*;
 
 public class ControlPulsePanel extends JPanel
 {
-  private JTextField controlPulseText = new JTextField(40);
+  private final JTextField controlPulseText = new JTextField(40);
   private static final JLabel controlPulseLabel = new JLabel("Control Pulses:", SwingConstants.RIGHT);
 
   ControlPulsePanel()

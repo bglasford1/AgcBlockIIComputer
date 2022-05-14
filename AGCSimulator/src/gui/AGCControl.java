@@ -1,5 +1,5 @@
 /*
-  Copyright 2021, William Glasford
+  Copyright 2021-2022, William Glasford
 
   This file is part of the AGC Simulator.  You can redistribute it
   and/or modify it under the terms of the GNU General Public License as
@@ -14,7 +14,8 @@
             cycles / timing pulse generator.  The clock thread runs continuously
             or stops periodically depending on the monitor switch settings.
 
-  Mods:		  07/15/21 Initial Release.
+  Mods:		  07/15/21  Initial Release.
+            05/14/22  Cleaned up code.
 */
 
 package gui;
@@ -32,35 +33,35 @@ public class AGCControl
 {
   private boolean singleClock = false;
 
-  private ADR adr = new ADR(this);
-  private ALU alu = new ALU(this);
-  private CLK clk = new CLK(this);
-  private CPM cpm = new CPM(this);
-  private CRG crg = new CRG(this);
-  private CTR ctr = new CTR(this);
-  private DSP dsp = new DSP(this);
-  private EFM efm = new EFM(this);
-  private INT inr = new INT(this);
-  private KBD kbd = new KBD(this);
-  private MBF mbf = new MBF(this);
-  private MON mon = new MON();
-  private PAR par = new PAR(this);
-  private SCL scl = new SCL(this);
-  private SEQ seq = new SEQ(this);
-  private TPG tpg = new TPG(this);
-  private IOS ios = new IOS(this);
+  private final ADR adr = new ADR(this);
+  private final ALU alu = new ALU(this);
+  private final CLK clk = new CLK(this);
+  private final CPM cpm = new CPM(this);
+  private final CRG crg = new CRG(this);
+  private final CTR ctr = new CTR(this);
+  private final DSP dsp = new DSP(this);
+  private final EFM efm = new EFM(this);
+  private final INT inr = new INT(this);
+  private final KBD kbd = new KBD(this);
+  private final MBF mbf = new MBF(this);
+  private final MON mon = new MON();
+  private final PAR par = new PAR(this);
+  private final SCL scl = new SCL(this);
+  private final SEQ seq = new SEQ(this);
+  private final TPG tpg = new TPG(this);
+  private final IOS ios = new IOS(this);
 
-  private Bus writeBus = new Bus();
-  private Bus memoryBus = new Bus();
-  private Bus axBus = new Bus();
-  private Bus lgBus = new Bus();
-  private Bus channelDataBus = new Bus();
+  private final Bus writeBus = new Bus();
+  private final Bus memoryBus = new Bus();
+  private final Bus axBus = new Bus();
+  private final Bus lgBus = new Bus();
+  private final Bus channelDataBus = new Bus();
 
-  private MainFrame mainFrame = new MainFrame(this);
+  private final MainFrame mainFrame = new MainFrame(this);
   private MemoryDialog memoryDialog;
 
   // Temporary buffer for assembling H,L memory data
-  private static int[] loadBuf = new int[0x8FFF + 1];
+  private static final int[] loadBuf = new int[0x8FFF + 1];
 
   // Contains prefix for source filename.  i.e.: the portion of the filename before .obj or .lst
   private String filename = "agc";
@@ -82,7 +83,7 @@ public class AGCControl
     loadEPROM("CPM57_64.hex", CPM.eprom.EPROM57_64);
     loadEPROM("CPM65_72.hex", CPM.eprom.EPROM65_72);
 
-    loadMemory("agc");
+    loadMemory("Test");
 
     // Reset AGC which sets the opcode to 0 and stage to 1 which will trigger a GOJ1 sub-instruction.
     clk.execW_GENRST();
@@ -91,7 +92,7 @@ public class AGCControl
     mainFrame.displayAGC();
 
     ClockThread clockThread = new ClockThread();
-    clockThread.run();
+    clockThread.start();
   }
 
   public ADR getAdr()
@@ -624,7 +625,7 @@ public class AGCControl
   {
     this.filename = filename;
 
-    loadCodeEPROM(DIRECTORY_NAME + filename + "_H.hex");
+    loadCodeEPROM(DIRECTORY_NAME + filename + ".hex");
 
     // EPROM is now in loadBuf; move it to AGC memory.
     // AGC fixed memory only uses NUMBER_OF_F_BANKS banks.
@@ -785,6 +786,8 @@ public class AGCControl
       int counter = 0;
       while (true)
       {
+        // FCLK: 0 = clock is manual or slow, 1 = free running clock
+        // Single clock is set when clock step button is pressed.
         if (mon.FCLK || singleClock)
         {
           do
@@ -818,6 +821,7 @@ public class AGCControl
         if (mon.STEP && tpg.readRegisterSG() == TpType.TP1.ordinal())
             mon.STEP = false;
 
+        // Sleep a bit so as not to overload the CPU.
         try
         {
           Thread.sleep(100);
