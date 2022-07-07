@@ -1,0 +1,387 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A 11000 8500
+encoding utf-8
+Sheet 9 16
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Wire Wire Line
+	6300 4700 6550 4700
+Wire Wire Line
+	6300 4800 6550 4800
+Wire Wire Line
+	6300 5000 6550 5000
+Wire Wire Line
+	6300 4600 6550 4600
+Wire Wire Line
+	6300 1650 6550 1650
+Wire Wire Line
+	6300 1750 6550 1750
+Wire Wire Line
+	6300 2050 6550 2050
+Wire Wire Line
+	6300 2150 6550 2150
+Text HLabel 6550 1750 2    50   Input ~ 0
+RQ
+Text HLabel 6550 1650 2    50   Input ~ 0
+WQ
+Text HLabel 6550 2150 2    50   Input ~ 0
+CRA_CLK2
+Text HLabel 6550 1850 2    50   Input ~ 0
+CLK1
+Text HLabel 6550 4900 2    50   Input ~ 0
+RA
+Text HLabel 6550 4800 2    50   Input ~ 0
+WA
+Text HLabel 6550 4600 2    50   Input ~ 0
+CRA_CLK2
+Text HLabel 6550 5000 2    50   Input ~ 0
+WALS
+Text HLabel 6550 4700 2    50   Input ~ 0
+CLK1
+Text HLabel 9450 1700 2    50   Input ~ 0
+RZ
+Text HLabel 9450 2100 2    50   Input ~ 0
+CR_RST
+Text HLabel 9450 5100 2    50   Input ~ 0
+CLK1
+Text HLabel 9450 5000 2    50   Input ~ 0
+CRB_CLK2
+Text HLabel 9450 4900 2    50   Input ~ 0
+WALS
+Text HLabel 9450 4800 2    50   Input ~ 0
+WL
+Text HLabel 9450 5200 2    50   Input ~ 0
+RL
+Wire Wire Line
+	9200 5100 9450 5100
+Wire Wire Line
+	9200 5000 9450 5000
+Wire Wire Line
+	9200 4900 9450 4900
+Wire Wire Line
+	9200 4800 9450 4800
+Wire Wire Line
+	9200 5200 9450 5200
+$Sheet
+S 5000 1200 1300 1850
+U 60165B3A
+F0 "PROC_CRG_QREG" 50
+F1 "PROC_CRG_QREG.sch" 50
+F2 "IW[1..16]" B R 6300 1300 50 
+F3 "RQ" I R 6300 1750 50 
+F4 "WQ" I R 6300 1650 50 
+F5 "CR_RST" I R 6300 2250 50 
+F6 "CRA_CLK2" I R 6300 2150 50 
+F7 "CLK1" I R 6300 1850 50 
+F8 "CH[1..16]" B L 5000 1350 50 
+F9 "RQC" I R 6300 1950 50 
+F10 "WQC" I R 6300 2050 50 
+$EndSheet
+Wire Wire Line
+	6550 1850 6300 1850
+Wire Wire Line
+	6550 1950 6300 1950
+Text HLabel 6550 1950 2    50   Input ~ 0
+RQC
+Text HLabel 6550 2050 2    50   Input ~ 0
+WQC
+Text HLabel 9450 1500 2    50   Input ~ 0
+Z15
+Text HLabel 9450 1600 2    50   Input ~ 0
+Z16
+Wire Wire Line
+	6550 5100 6300 5100
+Wire Wire Line
+	6550 5200 6300 5200
+Wire Wire Line
+	6550 5300 6300 5300
+Text HLabel 6550 5300 2    50   Input ~ 0
+U16
+Text HLabel 6550 5100 2    50   Input ~ 0
+G1
+Text HLabel 6550 5200 2    50   Input ~ 0
+G16
+Wire Wire Line
+	9200 1600 9450 1600
+Wire Wire Line
+	9200 1500 9450 1500
+Wire Wire Line
+	9200 2100 9450 2100
+Wire Wire Line
+	9200 1700 9450 1700
+$Sheet
+S 7950 1200 1250 1900
+U 60165B72
+F0 "PROC_CRG_ZREG" 50
+F1 "PROC_CRG_ZREG.sch" 50
+F2 "IW[1..16]" B L 7950 1300 50 
+F3 "RZ" I R 9200 1700 50 
+F4 "WZ" I R 9200 1800 50 
+F5 "CRA_CLK2" I R 9200 1900 50 
+F6 "CLK1" I R 9200 2000 50 
+F7 "CR_RST" I R 9200 2100 50 
+F8 "Z15" I R 9200 1500 50 
+F9 "Z16" I R 9200 1600 50 
+$EndSheet
+$Sheet
+S 5000 4000 1300 1700
+U 60165AC5
+F0 "PROC_CRG_AREG" 50
+F1 "PROC_CRG_AREG.sch" 50
+F2 "IW[1..16]" B R 6300 4150 50 
+F3 "RA" I R 6300 4900 50 
+F4 "WA" I R 6300 4800 50 
+F5 "CRA_CLK2" I R 6300 4600 50 
+F6 "WALS" I R 6300 5000 50 
+F7 "CR_RST" I R 6300 4500 50 
+F8 "CLK1" I R 6300 4700 50 
+F9 "AX[1..16]" O L 5000 4400 50 
+F10 "U16" I R 6300 5300 50 
+F11 "G16" I R 6300 5200 50 
+F12 "G1" I R 6300 5100 50 
+F13 "A2X" I R 6300 5400 50 
+F14 "AM[1..16]" O L 5000 4100 50 
+$EndSheet
+Wire Wire Line
+	6550 4900 6300 4900
+Wire Bus Line
+	9200 4300 9500 4300
+Text HLabel 9500 4300 2    50   BiDi ~ 0
+CH[1..16]
+Wire Bus Line
+	6300 1300 7150 1300
+Wire Bus Line
+	5000 1450 5000 1400
+Wire Bus Line
+	4700 1350 5000 1350
+Text HLabel 4700 1350 0    50   BiDi ~ 0
+CH[1..16]
+Wire Bus Line
+	7950 1300 7150 1300
+Wire Bus Line
+	7950 4150 7150 4150
+Wire Bus Line
+	4700 4400 5000 4400
+Text HLabel 4700 4400 0    50   Output ~ 0
+AX[1..16]
+Wire Bus Line
+	7150 4150 6300 4150
+Connection ~ 7150 4150
+Connection ~ 7150 1300
+Wire Bus Line
+	7150 3450 7050 3450
+Text HLabel 7050 3450 0    50   BiDi ~ 0
+IW[1..16]
+Wire Wire Line
+	6550 5400 6300 5400
+Text HLabel 6550 5400 2    50   Input ~ 0
+A2X
+Text HLabel 9450 4700 2    50   Input ~ 0
+L16
+Wire Wire Line
+	9200 4700 9450 4700
+Wire Wire Line
+	2900 2600 3150 2600
+Text HLabel 3150 2600 2    50   Input ~ 0
+WCH
+Text HLabel 1200 3950 0    50   BiDi ~ 0
+CH[1..16]
+Text HLabel 9500 4150 2    50   BiDi ~ 0
+LG[1..16]
+Wire Bus Line
+	9200 4150 9500 4150
+Wire Wire Line
+	2900 2800 3150 2800
+Wire Wire Line
+	2900 2700 3150 2700
+Text HLabel 3150 2800 2    50   Input ~ 0
+WAND0
+Text HLabel 3150 2700 2    50   Input ~ 0
+WRITE0
+Wire Wire Line
+	2900 2900 3150 2900
+Text HLabel 3150 2900 2    50   Input ~ 0
+WOR0
+Wire Bus Line
+	5000 4100 3900 4100
+Wire Bus Line
+	3900 4100 3900 2250
+Wire Bus Line
+	3900 2250 2900 2250
+Wire Bus Line
+	3900 4100 2900 4100
+Connection ~ 3900 4100
+Wire Wire Line
+	2900 4350 3150 4350
+Text HLabel 3150 4350 2    50   Input ~ 0
+RCH
+Wire Wire Line
+	2900 4550 3150 4550
+Wire Wire Line
+	2900 4450 3150 4450
+Text HLabel 3150 4550 2    50   Input ~ 0
+RAND0
+Text HLabel 3150 4450 2    50   Input ~ 0
+READ0
+Wire Wire Line
+	2900 4650 3150 4650
+Text HLabel 3150 4650 2    50   Input ~ 0
+ROR0
+Wire Bus Line
+	1500 1950 1800 1950
+$Sheet
+S 1800 1750 1100 1750
+U 6944AECF
+F0 "PROC_CRG_WCHN" 50
+F1 "PROC_CRG_WCHN.sch" 50
+F2 "CH[1..16]" B L 1800 1950 50 
+F3 "WCH" I R 2900 2600 50 
+F4 "WRITE0" I R 2900 2700 50 
+F5 "WAND0" I R 2900 2800 50 
+F6 "WOR0" I R 2900 2900 50 
+F7 "AM[1..16]" I R 2900 2250 50 
+F8 "CLK1" I R 2900 3000 50 
+$EndSheet
+$Sheet
+S 1800 3750 1100 1500
+U 7E8387F2
+F0 "PROC_CRG_RCHN" 50
+F1 "PROC_CRG_RCHN.sch" 50
+F2 "CH[1..16]" B L 1800 3950 50 
+F3 "IW[1..16]" O R 2900 3850 50 
+F4 "AM[1..16]" I R 2900 4100 50 
+F5 "RCH" I R 2900 4350 50 
+F6 "WRITE0" I R 2900 4850 50 
+F7 "WAND0" I R 2900 4950 50 
+F8 "WOR0" I R 2900 5050 50 
+F9 "READ0" I R 2900 4450 50 
+F10 "RAND0" I R 2900 4550 50 
+F11 "ROR0" I R 2900 4650 50 
+F12 "RXOR0" I R 2900 4750 50 
+F13 "CLK1" I R 2900 4250 50 
+$EndSheet
+Wire Wire Line
+	2900 4950 3150 4950
+Wire Wire Line
+	2900 4850 3150 4850
+Text HLabel 3150 4950 2    50   Input ~ 0
+WAND0
+Text HLabel 3150 4850 2    50   Input ~ 0
+WRITE0
+Wire Wire Line
+	2900 5050 3150 5050
+Text HLabel 3150 5050 2    50   Input ~ 0
+WOR0
+Connection ~ 7150 3850
+Wire Bus Line
+	7150 3850 7150 4150
+Wire Bus Line
+	7150 1300 7150 3450
+Connection ~ 7150 3450
+Wire Bus Line
+	7150 3450 7150 3850
+Wire Bus Line
+	1200 3950 1500 3950
+Wire Bus Line
+	1500 1950 1500 3950
+Connection ~ 1500 3950
+Wire Bus Line
+	1500 3950 1800 3950
+Text HLabel 3150 4350 2    50   Input ~ 0
+RCH
+Text HLabel 3150 4750 2    50   Input ~ 0
+RXOR0
+Wire Wire Line
+	2900 4750 3150 4750
+Text HLabel 9450 5300 2    50   Input ~ 0
+RLC
+Text HLabel 9450 5400 2    50   Input ~ 0
+WLC
+Wire Wire Line
+	9200 5300 9450 5300
+Wire Wire Line
+	9200 5400 9450 5400
+$Sheet
+S 7950 4000 1250 1850
+U 60165B09
+F0 "PROC_CRG_LREG" 50
+F1 "PROC_CRG_LPREG.sch" 50
+F2 "IW[1..16]" B L 7950 4150 50 
+F3 "RL" I R 9200 5200 50 
+F4 "WL" I R 9200 4800 50 
+F5 "WALS" I R 9200 4900 50 
+F6 "CRB_CLK2" I R 9200 5000 50 
+F7 "CLK1" I R 9200 5100 50 
+F8 "CR_RST" I R 9200 5600 50 
+F9 "LG[1..16]" B R 9200 4150 50 
+F10 "CH[1..16]" B R 9200 4300 50 
+F11 "L16" I R 9200 4700 50 
+F12 "RLC" I R 9200 5300 50 
+F13 "WLC" I R 9200 5400 50 
+F14 "L2GD" I R 9200 4500 50 
+F15 "G2LS" I R 9200 4600 50 
+F16 "L15" O R 9200 5500 50 
+F17 "L2" O R 9200 5700 50 
+$EndSheet
+Text HLabel 9450 4600 2    50   Input ~ 0
+G2LS
+Wire Wire Line
+	9200 4600 9450 4600
+Text HLabel 9450 4500 2    50   Input ~ 0
+L2GD
+Wire Wire Line
+	9200 4500 9450 4500
+Text HLabel 9450 5500 2    50   Output ~ 0
+L15
+Wire Wire Line
+	9200 5500 9450 5500
+Wire Bus Line
+	2900 3850 7150 3850
+Wire Wire Line
+	6300 4500 6550 4500
+Text HLabel 6550 4500 2    50   Input ~ 0
+CR_RST
+Wire Wire Line
+	6300 2250 6550 2250
+Text HLabel 6550 2250 2    50   Input ~ 0
+CR_RST
+Wire Wire Line
+	9200 1800 9450 1800
+Wire Wire Line
+	9200 1900 9450 1900
+Wire Wire Line
+	9200 2000 9450 2000
+Text HLabel 9450 1800 2    50   Input ~ 0
+WZ
+Text HLabel 9450 2000 2    50   Input ~ 0
+CLK1
+Text HLabel 9450 1900 2    50   Input ~ 0
+CRA_CLK2
+Text HLabel 9450 5600 2    50   Input ~ 0
+CR_RST
+Wire Wire Line
+	9200 5600 9450 5600
+Wire Wire Line
+	2900 3000 3150 3000
+Text HLabel 3150 3000 2    50   Input ~ 0
+CLK1
+Wire Wire Line
+	2900 4250 3150 4250
+Text HLabel 3150 4250 2    50   Input ~ 0
+CLK1
+Text Notes 6350 7200 0    100  ~ 0
+PROC-CRG: Central Registers Module\nCopyright 2021, William Glasford
+Text HLabel 9450 5700 2    50   Output ~ 0
+L2
+Wire Wire Line
+	9200 5700 9450 5700
+$EndSCHEMATC

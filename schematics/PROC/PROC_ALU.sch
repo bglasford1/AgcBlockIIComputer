@@ -1,0 +1,343 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A 11000 8500
+encoding utf-8
+Sheet 2 16
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Sheet
+S 4200 1700 1450 1800
+U 6F15AE5D
+F0 "PROC_ALU_ADD" 50
+F1 "PROC_ALU_ADD.sch" 50
+F2 "UM[1..16]" O R 5650 1900 50 
+F3 "AUB_CLK2" I L 4200 2400 50 
+F4 "CLXC" I L 4200 2500 50 
+F5 "U16" O R 5650 2450 50 
+F6 "WYD" I L 4200 2600 50 
+F7 "CI" I L 4200 2700 50 
+F8 "WY" I L 4200 2800 50 
+F9 "WY12" I L 4200 2900 50 
+F10 "XM[1..16]" I L 4200 1850 50 
+F11 "YM[1..16]" I L 4200 2000 50 
+F12 "PONEX" I L 4200 3000 50 
+F13 "MONEX" I L 4200 3100 50 
+F14 "PTWOX" I L 4200 3200 50 
+$EndSheet
+Wire Wire Line
+	7800 4400 7950 4400
+Wire Wire Line
+	7800 4500 7950 4500
+Wire Wire Line
+	7800 4600 7950 4600
+Wire Wire Line
+	7800 4700 7950 4700
+Wire Wire Line
+	7800 4800 7950 4800
+Wire Wire Line
+	7800 4900 7950 4900
+Wire Wire Line
+	7800 2700 7950 2700
+Wire Wire Line
+	7800 2800 7950 2800
+Wire Wire Line
+	4050 2800 4200 2800
+Wire Wire Line
+	4050 2900 4200 2900
+Wire Wire Line
+	7800 2900 7950 2900
+Wire Wire Line
+	7800 3000 7950 3000
+Wire Wire Line
+	7800 3100 7950 3100
+Text HLabel 7800 4400 0    50   Input ~ 0
+RB1
+Text HLabel 7800 4500 0    50   Input ~ 0
+RSTRT
+Text HLabel 7800 4600 0    50   Input ~ 0
+R1C
+Text HLabel 7800 4700 0    50   Input ~ 0
+RB2
+Text HLabel 7800 4800 0    50   Input ~ 0
+R15
+Text HLabel 7800 4900 0    50   Input ~ 0
+R6
+Text HLabel 7800 2700 0    50   Input ~ 0
+RA
+Text HLabel 4050 2800 0    50   Input ~ 0
+WY
+Text HLabel 4050 2900 0    50   Input ~ 0
+WY12
+Text HLabel 7800 2900 0    50   Input ~ 0
+RB
+Text HLabel 7800 2800 0    50   Input ~ 0
+CLK1
+Text HLabel 7800 3000 0    50   Input ~ 0
+RC
+Text HLabel 7800 3100 0    50   Input ~ 0
+RU
+Wire Wire Line
+	4050 2400 4200 2400
+Text HLabel 4050 2400 0    50   Input ~ 0
+AUB_CLK2
+Wire Wire Line
+	4050 2500 4200 2500
+Text HLabel 4050 2700 0    50   Output ~ 0
+CI
+Text HLabel 9600 1950 2    50   Output ~ 0
+IW[1..16]
+Wire Bus Line
+	7950 4050 7750 4050
+Text HLabel 7750 4050 0    50   BiDi ~ 0
+IW[1..16]
+Wire Bus Line
+	5650 1900 7950 1900
+Wire Bus Line
+	1650 1850 1400 1850
+Text HLabel 1400 1850 0    50   Input ~ 0
+AX[1..16]
+Wire Bus Line
+	5650 3900 6800 3900
+Wire Wire Line
+	5650 2450 5800 2450
+Text HLabel 4050 2500 0    50   Input ~ 0
+CLXC
+Wire Wire Line
+	4050 2700 4200 2700
+Text HLabel 5800 2450 2    50   Output ~ 0
+U16
+Wire Wire Line
+	4050 2600 4200 2600
+Text HLabel 4050 2600 0    50   Output ~ 0
+WYD
+$Sheet
+S 1650 1700 1300 1600
+U 85E4FBB2
+F0 "PROC_ALU_X" 50
+F1 "PROC_ALU_X.sch" 50
+F2 "AX[1..16]" I L 1650 1850 50 
+F3 "IW[1..16]" I L 1650 2000 50 
+F4 "B15X" I L 1650 2250 50 
+F5 "A2X" I L 1650 2350 50 
+F6 "PONEX" I L 1650 2450 50 
+F7 "PTWOX" I L 1650 2550 50 
+F8 "MONEX" I L 1650 2650 50 
+F9 "WY" I L 1650 2850 50 
+F10 "WYD" I L 1650 2950 50 
+F11 "WY12" I L 1650 3050 50 
+F12 "XM[1..16]" O R 2950 1850 50 
+F13 "AU_RST" I L 1650 2750 50 
+F14 "AUA_CLK2" I L 1650 3150 50 
+$EndSheet
+$Sheet
+S 1650 3750 1300 1550
+U 85E4FC29
+F0 "PROC_ALU_Y" 50
+F1 "PROC_ALU_Y.sch" 50
+F2 "IW[1..16]" I L 1650 3900 50 
+F3 "AUA_CLK2" I L 1650 4100 50 
+F4 "WY" I L 1650 4200 50 
+F5 "WYD" I L 1650 4300 50 
+F6 "WY12" I L 1650 4400 50 
+F7 "NEACOF" I L 1650 4500 50 
+F8 "NEACON" I L 1650 4600 50 
+F9 "PIFL" I L 1650 4700 50 
+F10 "L15" I L 1650 4800 50 
+F11 "YM[1..16]" O R 2950 3900 50 
+F12 "AU_RST" I L 1650 4900 50 
+$EndSheet
+Wire Bus Line
+	1650 2000 1400 2000
+Text HLabel 1400 2000 0    50   Input ~ 0
+IW[1..16]
+Wire Wire Line
+	1500 2250 1650 2250
+Wire Wire Line
+	1500 2350 1650 2350
+Wire Wire Line
+	1500 2450 1650 2450
+Wire Wire Line
+	1500 2550 1650 2550
+Text HLabel 1500 2250 0    50   Input ~ 0
+B15X
+Text HLabel 1500 2350 0    50   Input ~ 0
+A2X
+Text HLabel 1500 2450 0    50   Input ~ 0
+PONEX
+Text HLabel 1500 2550 0    50   Input ~ 0
+PTWOX
+Wire Wire Line
+	1500 2650 1650 2650
+Text HLabel 1500 2650 0    50   Input ~ 0
+MONEX
+Wire Wire Line
+	1500 2850 1650 2850
+Wire Wire Line
+	1500 2950 1650 2950
+Wire Wire Line
+	1500 3050 1650 3050
+Text HLabel 1500 2850 0    50   Input ~ 0
+WY
+Text HLabel 1500 2950 0    50   Input ~ 0
+WYD
+Text HLabel 1500 3050 0    50   Input ~ 0
+WY12
+Wire Bus Line
+	4200 1850 2950 1850
+Wire Bus Line
+	1650 3900 1400 3900
+Text HLabel 1400 3900 0    50   Input ~ 0
+IW[1..16]
+Wire Wire Line
+	1500 4100 1650 4100
+Text HLabel 1500 4100 0    50   Input ~ 0
+AUA_CLK2
+Wire Wire Line
+	1500 4200 1650 4200
+Wire Wire Line
+	1500 4300 1650 4300
+Wire Wire Line
+	1500 4400 1650 4400
+Text HLabel 1500 4200 0    50   Input ~ 0
+WY
+Text HLabel 1500 4300 0    50   Input ~ 0
+WYD
+Text HLabel 1500 4400 0    50   Input ~ 0
+WY12
+Wire Wire Line
+	1500 4500 1650 4500
+Wire Wire Line
+	1500 4600 1650 4600
+Text HLabel 1500 4500 0    50   Input ~ 0
+NEACOF
+Text HLabel 1500 4600 0    50   Input ~ 0
+NEACON
+Wire Wire Line
+	1500 4700 1650 4700
+Wire Wire Line
+	1500 4800 1650 4800
+Text HLabel 1500 4700 0    50   Input ~ 0
+PIFL
+Text HLabel 1500 4800 0    50   Input ~ 0
+L15
+Wire Bus Line
+	6800 2100 6800 3900
+Wire Bus Line
+	9600 1950 9400 1950
+Wire Bus Line
+	3300 3900 3300 2000
+Wire Bus Line
+	3300 2000 4200 2000
+Wire Bus Line
+	2950 3900 3300 3900
+Wire Wire Line
+	4050 3100 4200 3100
+Wire Wire Line
+	4050 3200 4200 3200
+Text HLabel 4050 3100 0    50   Input ~ 0
+MONEX
+Text HLabel 4050 3200 0    50   Input ~ 0
+PTWOX
+Text HLabel 4050 3000 0    50   Input ~ 0
+PONEX
+Wire Wire Line
+	4050 3000 4200 3000
+Wire Bus Line
+	6800 2100 7950 2100
+$Sheet
+S 4200 3750 1450 1500
+U 88CA12C4
+F0 "PROC_ALU_B" 50
+F1 "PROC_ALU_B.sch" 50
+F2 "BM[1..16]" O R 5650 3900 50 
+F3 "WB" I L 4200 4400 50 
+F4 "RL10BB" I L 4200 4300 50 
+F5 "CLK1" I L 4200 4200 50 
+F6 "IW[1..16]" B L 4200 3950 50 
+F7 "AU_RST" I L 4200 4500 50 
+F8 "AUB_CLK2" I L 4200 4600 50 
+$EndSheet
+$Sheet
+S 7950 1750 1450 1600
+U 6EC168B2
+F0 "PROC_ALU_ALU" 50
+F1 "PROC_ALU_ALU.sch" 50
+F2 "IW[1..16]" O R 9400 1950 50 
+F3 "UM[1..16]" I L 7950 1900 50 
+F4 "BM[1..16]" I L 7950 2100 50 
+F5 "RA" I L 7950 2700 50 
+F6 "CLK1" I L 7950 2800 50 
+F7 "RB" I L 7950 2900 50 
+F8 "RC" I L 7950 3000 50 
+F9 "RU" I L 7950 3100 50 
+F10 "RUS" I L 7950 3200 50 
+F11 "AUB_CLK2" I L 7950 2600 50 
+$EndSheet
+Wire Bus Line
+	4200 3950 3950 3950
+Text HLabel 3950 3950 0    50   BiDi ~ 0
+IW[1..16]
+Wire Wire Line
+	4050 4200 4200 4200
+Text HLabel 4050 4200 0    50   Input ~ 0
+CLK1
+Wire Wire Line
+	4050 4300 4200 4300
+Wire Wire Line
+	4050 4400 4200 4400
+Text HLabel 4050 4300 0    50   Input ~ 0
+RL10BB
+Text HLabel 4050 4400 0    50   Input ~ 0
+WB
+$Sheet
+S 7950 3750 1450 1600
+U 6EC16906
+F0 "PROC_ALU_VAL" 50
+F1 "PROC_ALU_VAL.sch" 50
+F2 "IW[1..16]" B L 7950 4050 50 
+F3 "RB1" I L 7950 4400 50 
+F4 "RSTRT" I L 7950 4500 50 
+F5 "R1C" I L 7950 4600 50 
+F6 "RB2" I L 7950 4700 50 
+F7 "R15" I L 7950 4800 50 
+F8 "R6" I L 7950 4900 50 
+$EndSheet
+Wire Wire Line
+	7800 3200 7950 3200
+Text HLabel 7800 3200 0    50   Input ~ 0
+RUS
+Wire Wire Line
+	1500 2750 1650 2750
+Text HLabel 1500 2750 0    50   Input ~ 0
+AU_RST
+Wire Wire Line
+	1500 4900 1650 4900
+Text HLabel 1500 4900 0    50   Input ~ 0
+AU_RST
+Wire Wire Line
+	4050 4500 4200 4500
+Text HLabel 4050 4500 0    50   Input ~ 0
+AU_RST
+Wire Wire Line
+	1500 3150 1650 3150
+Text HLabel 1500 3150 0    50   Input ~ 0
+AUA_CLK2
+Wire Wire Line
+	4050 4600 4200 4600
+Text HLabel 4050 4600 0    50   Input ~ 0
+AUB_CLK2
+Wire Wire Line
+	7800 2600 7950 2600
+Text HLabel 7800 2600 0    50   Input ~ 0
+AUB_CLK2
+Text Notes 6350 7000 0    100  ~ 0
+PROC-ALU: Arithmetic Logic Unit
+$EndSCHEMATC
